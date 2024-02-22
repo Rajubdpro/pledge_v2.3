@@ -1,0 +1,47 @@
+/* 
+    Document   : ie.css
+    Created on : 14-Dec-2012, 17:01:23
+    Author     : AlanDoyle
+    Description:
+        Purpose of the stylesheet follows.
+*/
+
+root { 
+    display: block;
+}
+nav{
+	display:block;
+}
+header{
+	display:block;
+	clear: both;
+}
+article{
+	display:block;
+}
+section{
+	display:block;
+}
+footer{
+	display:block;
+	clear: both;
+}
+hgroup{
+	display:block;
+}
+aside{
+	display:block;
+}
+blockquote{
+	display:block;
+}
+.header{
+	clear: both;
+}
+
+
+
+
+
+
+

@@ -1,0 +1,514 @@
+article.art{
+width:95%;
+padding-left:0px;
+padding-right:0px;
+}
+.blog_menu{
+background: rgba(223, 41, 50, 0.78);
+}
+.menu_tit_cont{
+cursor:pointer;
+}
+.menu_tit,.menu_container{
+max-width: 1280px;
+    width: 95%;
+    margin: auto;
+    float: none;
+}
+.menu_tit i{
+float:right;
+    font-size: 40px;
+    color: white;
+    margin-top: 9px;
+}
+.menu_tit_cont .fa.fa-times{
+display:none;
+}
+.menu_tit_cont.active .fa.fa-times{
+display:block;
+}
+.menu_tit_cont.active .fa.fa-bars{
+display:none;
+}
+.menu_container{
+overflow:hidden;
+clear:both;
+height:0px;
+-moz-transition-property: all;
+    -o-transition-property: all;
+    -webkit-transition-property: all;
+    transition-property: all;
+    -moz-transition-duration: 0.5s;
+    -o-transition-duration: 0.5s;
+    -webkit-transition-duration: 0.5s;
+    transition-duration: 0.5s;
+}
+.menu_container.active{
+height:325px;
+-moz-transition-property: all;
+    -o-transition-property: all;
+    -webkit-transition-property: all;
+    transition-property: all;
+    -moz-transition-duration: 0.5s;
+    -o-transition-duration: 0.5s;
+    -webkit-transition-duration: 0.5s;
+    transition-duration: 0.5s;
+}
+.red_2{
+float:left;
+    margin: 0;
+}
+a.blog_menu_link{
+color: white;
+    display: block;
+font-size: 18px;
+    padding: 5px 0px 5px 0px;
+    margin-bottom: 5px;
+}
+.blog_menu:after{
+content:'';
+  display:block;
+  clear:both;
+}
+.menu_tit:after{
+content:'';
+  display:block;
+  clear:both;
+}
+.title_title:after{
+  content:'';
+  display:block;
+  clear:both;
+}
+.title_post{
+width: 47%;
+    float: left;
+}
+.search_post{
+    margin-top: 17px;
+width: 47%;
+    float: right;
+    text-align: right;
+}
+.search_post form .input{
+	font-size: 20px;
+border: 1px solid #888;
+border-right:0px;
+    padding-left: 0.5em;
+    width: 60%;
+    height: 43px;
+	    border-radius: 0px;
+}
+.search_post form .ser{
+	background-image: url(//www.pledgesports.org/wp-content/uploads/2017/02/searchBakckground.png);
+	font-family: bebas,Impact,Haettenschweiler,"Franklin Gothic Bold",Charcoal,"Helvetica Inserat","Bitstream Vera Sans Bold","Arial Black",sans-serif !important;
+    color: white;
+  border: 0px solid transparent;
+    background-repeat: no-repeat;
+    background-size: cover;
+	  float: right;
+	    padding: 6px 20px !important;
+    width: 22% !important;
+	font-size: 28px !important;
+    cursor: pointer;
+    -moz-transition-property: all;
+    -o-transition-property: all;
+    -webkit-transition-property: all;
+    transition-property: all;
+    -moz-transition-duration: 0.5s;
+    -o-transition-duration: 0.5s;
+    -webkit-transition-duration: 0.5s;
+    transition-duration: 0.5s;
+	    border-radius: 0px;
+}
+.search_post form .ser:hover,.search_post form .ser:focus{
+	border: 0px solid transparent;
+	opacity:0.8;
+	-moz-transition-duration: 0.2s;
+    -o-transition-duration: 0.2s;
+    -webkit-transition-duration: 0.2s;
+    transition-duration: 0.2s;
+	
+}
+.post_news{
+max-width: 98%;
+    margin: auto;
+    width: 100%;
+    float: none;
+}
+.post_news:after{
+  content:'';
+  display:block;
+  clear:both;
+}
+.exc *{
+font-family: OS Reg!important;
+    font-size: 15px!important;
+
+}
+.posts img{
+display:none;
+}
+.posts {
+    background: white;
+    padding: 25px;
+	height: 770px;
+}
+.posts *{
+font-style:normal!important;
+}
+.posts:nth-child(odd){ 
+  width: 49.5%;
+    float: left;
+	margin-bottom: 20px;
+}
+.posts:nth-child(even){
+  width: 49.5%;
+float: right;
+margin-bottom: 20px;
+
+}
+.date{
+padding: 5px!important;
+    background: #f6f6f6!important;  
+}
+.read{
+display: block;
+    font-family: book !important;
+    font-size: 30px !important;
+    background: none repeat scroll 0 0 #4B5C65 !important;
+    padding: 10px 20px !important;
+    display: inline-block !important;
+    color: #fff !important;
+    box-shadow: none !important;
+    -webkit-border-radius: 0px !important;
+    -moz-border-radius: 0px !important;
+    border-radius: 0px !important;
+    margin-top: 20px !important;
+    -moz-transition-property: all;
+    -o-transition-property: all;
+    -webkit-transition-property: all;
+    transition-property: all;
+    -moz-transition-duration: 0.3s;
+    -o-transition-duration: 0.3s;
+    -webkit-transition-duration: 0.3s;
+    transition-duration: 0.3s;
+}
+.read:hover{
+background-color: #df2932!important;
+}
+.post_title{
+   margin-bottom: 20px;
+  }   
+.post_title a:hover{
+  color: #df2932;
+}
+.category{
+clear:both;
+}
+
+.category:after{
+  content:'';
+  display: block;
+  clear: both;
+}
+.category>a{
+display:block;
+      width: 49.5%;
+    margin-bottom: 20px;
+    height: 450px;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.category>a>div{
+ height: 450px;
+    background-repeat: no-repeat;
+    background-size: cover;
+width: 100%;
+    position: relative;
+}
+.textt{
+position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+text-align: center;
+    font-style: normal;
+padding: 20px 0px;
+    background: rgba(106, 12, 12, 0.67);
+}
+.textt h1{
+font-size: 54px;
+    margin-bottom: 10px;
+}
+.textt p{
+margin: 0;
+    font-size: 30px;
+    font-family: bebas,Impact,Haettenschweiler,"Franklin Gothic Bold",Charcoal,"Helvetica Inserat","Bitstream Vera Sans Bold","Arial Black",sans-serif;
+}
+.textt *{
+color:white;
+}
+.category>a:nth-child(odd){
+  float: left;
+}
+.category>a:nth-child(even){
+  float: right;
+}
+.fix_menu{
+width: 98%;
+    right: 0;
+    left: 0;
+    margin: auto;
+    bottom: 0;
+    text-align: center;
+    font-style: normal;
+}
+.fix_slide{
+width: 50%!important;
+    padding: 10px 20px!important;
+border-bottom:0px!important;
+}
+.fix_slide_2{
+border-left:1px solid white;
+}
+.dock .dockslide .closeboxs .closed{
+top:35px;
+}
+.fb_newsfeed{
+width: 49.5%;
+    float: left;
+    text-align: center;
+    margin-bottom: 20px;
+font-style: normal;
+height: 480px;
+    overflow: hidden;
+	  -webkit-overflow-scrolling: touch;
+}
+
+.tw_newsfeed{
+width: 49.5%;
+    float: right;
+    text-align: center;
+    margin-bottom: 20px;
+ height: 480px;
+      overflow: auto;
+	  -webkit-overflow-scrolling: touch;
+}
+.f_award{
+font-style:normal;
+}
+@media(min-width:1269px) and (max-width:1390px){
+		
+	.posts{
+		height: 780px
+	}
+}
+@media(min-width:1025px) and (max-width:1268px){
+	
+	.posts{
+		height: 880px
+	}
+}
+
+@media(min-width:768px) and (max-width:1024px){
+.red_2{
+    font-size: 40px;
+}
+.menu_tit i{
+font-size: 30px;
+}
+.title_post h1{
+font-size: 50px!important;
+}
+.search_post form .ser{
+font-size: 24px !important;
+    padding: 6px 6px !important;
+    width: 40% !important;
+}
+.search_post form .input{
+    width: 60%;
+    height: 40px;
+}
+.search_post{
+    margin-top: 8px;
+}
+.posts{
+	    height: 880px;
+}
+.post_title{
+    font-size: 34px;
+}
+.posts .rrssb-buttons li a .text{
+display:none;
+}
+.posts .read{
+font-size: 24px !important;
+}
+.textt h1{
+    font-size: 40px;
+}
+.textt p{
+    font-size: 24px;
+}
+.category>a>div{
+    background-position: center;
+}
+}
+
+@media(min-width:640px) and (max-width:767px){
+
+.title_post h1{
+font-size: 40px!important;
+}
+.search_post form .input{
+    height: 35px;
+}
+.search_post form .ser{
+font-size: 19px !important;
+    width: 40% !important;
+}
+.search_post{
+margin-top: 5px;
+}
+.menu_tit_cont{
+padding: 10px 0px;
+}
+.menu_tit i{
+    font-size: 24px;
+    margin-top: 3px;
+}
+.red_2{
+    font-size: 24px;
+}
+.posts{
+	    height: 905px;
+}
+.post_title{
+    font-size: 28px;
+}
+.posts .rrssb-buttons li a .text{
+display:none;
+}
+.posts .read{
+font-size: 24px !important;
+}
+.textt h1{
+    font-size: 40px;
+}
+.textt p{
+    font-size: 24px;
+}
+.category>a>div{
+    background-position: center;
+}
+}
+
+@media(max-width:639px){
+.blog{
+padding-top: 120px;
+}
+.posts .acf_blog_img{
+    height: 130px;	
+}
+.post_title{
+margin-bottom:0px;
+}
+.posts *{
+text-align: justify;
+}
+.menu_tit{
+    padding: 10px;
+}
+.red_2{
+font-size: 24px;
+}
+.menu_container.active{
+    height: 285px;
+}
+a.blog_menu_link{
+    font-size: 16px;
+    padding: 2px 0px 5px 0px;
+}
+.menu_tit i{
+font-size: 24px;
+    margin-top: 2px;
+}
+.title_post{
+width: 100%;
+    margin-top: 10px;
+    float: none;
+}
+.title_post h1{
+font-size: 40px!important;
+    text-align: center;
+}
+.search_post{
+margin-top: 10px;
+width: 100%;
+    float: none;
+    text-align: center;
+}
+.search_post form .input{
+    height: 35.9px;
+}
+.search_post form .ser{
+	    margin-top: 0px;
+width: 40% !important;
+font-size: 20.5px !important;
+}
+.posts{
+	height:auto;
+    float: none!important;
+    width: 95%!important;
+    margin: auto auto 20px auto;
+}
+.post_title{
+    font-size: 26px;
+}
+.posts .rrssb-buttons li a .text{
+display:none;
+}
+.posts .read{
+font-size: 24px !important;
+}
+.category>a{
+width: 95%;
+margin:auto auto 20px auto;
+    height: 220px;
+    float: none!important;
+}
+.category>a>div{
+height: 220px;
+    background-position: center;
+}
+.textt{
+padding: 10px 0px;
+}
+.textt h1{
+font-size: 26px;
+}
+.textt p{
+font-size: 18px;
+}
+.fb_newsfeed,.tw_newsfeed{
+width: 95%;
+margin:auto auto 20px auto;
+float:none;
+   height: 300px;
+   overflow: auto;
+    -webkit-overflow-scrolling: touch;
+}
+.fb_newsfeed .cff-header{
+font-size:30px!important;
+}
+.fix_slide{ 
+padding: 10px 15px!important;
+}
+.dock .wrapper p{
+padding: 20px 20px 0px 20px;
+}
+.dock .dockslide .closeboxs .closed{
+    top: 45px;
+}
+}

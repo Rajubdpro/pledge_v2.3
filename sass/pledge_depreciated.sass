@@ -1,0 +1,1487 @@
+/* COLORS */
+
+$dark: #38454c
+$red: #df2932
+
+$background: #f9f9f9
+$text: #333
+$white: #fff9f4
+
+
+
+/* FONT SETTINGS */
+$fs: 16px
+$lh: 24px
+
+@import 'includes'
+@import 'gs'
+@import 'fontface'
+
+
+@mixin bounce
+	transition-timing-function: cubic-bezier(.74,1.84,.51,.81)
+
+@mixin sans
+	font-family: sans-serif
+
+*
+	+border-box // This'll change the box model so everything is contained within it: http://paulirish.com/2012/box-sizing-border-box-ftw/
+	-webkit-tap-highlight-color: transparent // remove webkit tap highlights. Aint nobody got time for that
+
+// SORT OUT VIEWPORT META ON IE10 http://m.netmagazine.com/features/five-steps-gettin-flexy-responsive-web-design
+@viewport
+	width: device-width
+@-ms-viewport
+	width: device-width
+@-o-viewport
+	width: device-width
+
+body
+	background-color: $background
+	color: $text 
+
+.container
+	overflow: auto
+	width: 100%
+	max-width: 1680px
+	margin: 0 auto
+	+sans
+	font-size: $fs
+	line-height: $lh
+	padding: .4166665em
+	
+	
+	a
+		text-decoration: none
+	
+	
+	h1
+		font-size: em(24px)
+		line-height: $lh*2
+		margin-bottom: $lh
+		font-weight: normal
+		font-family: 'bebas_neuebold' 
+	
+	
+	h2, h3, h4
+		font-family: 'bebas_neuebook'
+
+
+
+
+
+
+
+
+
+
+
+.button, .search_button
+	@include border-radius(.25em)
+	
+	border: darken($red, 10%) 1px solid
+	display: inline-block
+	color: #fff
+	
+	
+	
+	@include transition-property(all)
+	@include transition-duration(.5s)
+	padding: .3em 1em
+	color: #fff !important
+	text-decoration: none
+	display: inline-block
+	cursor: pointer
+	text-align: center
+	
+	background-color: $red
+	text-shadow: 0 .1em .1em darken($red, 10%)
+	@include filter-gradient(rgba(lighten($red, 10%), .5), rgba(darken($red, 10%), .5), vertical)
+	@include background-image(linear-gradient(rgba(lighten($red, 10%), .5), rgba(darken($red, 10%), .5) ) )
+	box-shadow: inset 0 0 .2em 0 lighten($red, 30%)
+	
+	
+	&:hover, &:focus
+		@include transition-duration(.1s)
+		background-color: lighten($red, 10%)
+	
+
+
+
+
+//				- COPY -
+
+.copy
+	h1, h2, h3, h4, p, q, li, blockquote
+		&.center
+			text-align: center
+			padding-left: 0 !important
+		
+	h1
+		color: $red
+		font-weight: bold
+		font-size: 3em
+		line-height: 1em
+	h2
+		color: $red
+		font-weight: bold
+		font-size: 2.25em
+		margin-bottom: 1.222222222em
+		line-height: 1.2em
+		
+		@media only screen and (max-height : 40em)
+			margin-bottom: .6em
+	h3
+		color: $red
+		font-weight: bold
+		font-size: 1.25em
+		margin-bottom: 1em
+		@media only screen and (max-height : 40em)
+			margin-bottom: .5em
+	h4
+		color: $red
+		font-weight: bold
+		font-size: 1em
+		margin-bottom: 1em
+		@media only screen and (max-height : 40em)
+			margin-bottom: .5em
+	p, q
+		line-height: 2em
+		margin-bottom: 1em
+		@include transition-property(all)
+		@include transition-duration(.5s)
+		@media only screen and (max-height : 65em)
+			line-height: 1.5em
+	
+	p, li, q
+		font-size: 1.125em
+		
+	
+	a
+		font-weight: bold
+		text-decoration: none
+		color: $red
+		@include transition-property(all)
+		@include transition-duration(.5s)
+		&:hover, &:focus
+			background-color: $red
+			@include transition-duration(.2s)
+			color: #fff
+	
+	em
+		font-style: italic
+		font-weight: normal
+	
+	img
+		height: auto
+		
+		@media only screen and (max-width : 40em)
+			width: 95%
+			margin: 1em 2.5%
+	
+	strong
+		font-weight: bold
+	
+	ul
+		list-style: none
+		
+		li
+			margin-bottom: .5em
+			line-height: 1.2em
+			margin-left: 1em
+			&:before
+				content: ''
+				color: #df2932
+				position: absolute
+				left: 7%
+				width: 0.5em
+				height: 0.5em
+				display: block
+				background-color: $red
+				margin-top: .4em
+				
+	
+	ol
+		counter-reset: my-badass-counter
+		li
+			margin-bottom: .5em
+			line-height: 1.2em
+			margin-left: 1em
+			&:before
+				content: counter(my-badass-counter, lower-roman)
+				counter-increment: my-badass-counter
+				color: $red
+				position: absolute
+				left: 6%
+				width: 2em
+				text-align: center
+
+
+
+
+
+
+
+
+
+//			- R E U S A B L E S - 
+.js_hidden
+	display: none
+
+
+
+.site_soc
+	display: inline-block
+	
+	float: left
+	list-style: none
+	
+	li 	
+		float: left
+		
+		a
+			width: 24px
+			height: 24px
+			display: inline-block
+			
+			filter: alpha(opacity=100)
+			opacity: 1
+			@include transition-property(all)
+			@include transition-duration(.5s)
+			
+			background-size: 100% 100%
+			background-repeat: no-repeat
+			color: transparent
+			font-size: 0
+			
+			margin-left: 9px
+			
+			&.face
+				background-image: url(../img/face.png)
+			&.twit
+				background-image: url(../img/twit.png)
+			
+			&:hover, &:focus
+				cursor: pointer
+				@include transition-duration(.2s)
+				filter: alpha(opacity=100)
+				opacity: 1
+
+
+
+
+
+
+.site_head
+	background-color: $dark
+	width: 100%
+	display: block
+	color: #fff
+	position: relative
+	height: 2.5em
+	overflow: visible
+	
+	margin-top: 2em
+	
+	
+	
+	.container
+		overflow: visible
+		padding: 0
+	
+	.site_logo
+		display: block
+		height: 3em
+		top: -.5em
+		position: relative
+		filter: alpha(opacity=100)
+		opacity: 1
+		font-family: 'Open Sans', sans-serif
+		font-weight: 700
+		font-size: 2em
+		float: left
+		color: #fff
+		
+		
+		.text
+			position: relative
+			top: -1em
+			margin-left: .25em
+		
+		.b
+			color: $red
+		
+		
+		
+		&:hover, &:focus
+			filter: alpha(opacity=80)
+			opacity: .8
+	
+	@media only screen and (min-height : 60em)
+		height: 3.5em
+		margin-top: 3em
+		
+		.site_logo .text
+			top: -.75em
+	
+	
+	.site_soc
+		li
+			a
+				position: relative
+				top: 3px
+				@media only screen and (min-height : 60em)
+					top: 12px
+				
+	
+	
+	.site_nav
+		float: right
+		margin-top: .5em
+		li
+			display: inline-block
+			margin-left: 1em
+			z-index: 2
+			&:first-child
+				margin-left: 0
+			
+			a
+				color: #fff
+				position: relative
+				@include transition-property(all)
+				@include transition-duration(.4s)
+				+bounce
+				padding: .5em 1em
+				display: block
+				z-index: 2
+				
+				&:after
+					
+					z-index: -1
+					content: ''
+					position: absolute
+					top: .85em
+					left: 0
+					display: inline-block
+					width: .75em 
+					height: .75em
+					background-color: $red
+					@include transition-property(all)
+					@include transition-duration(.4s)
+					transition-timing-function: cubic-bezier(.74,1.84,.51,.81)
+				
+				
+				
+				&:hover, &:focus, &.active, &.current-page
+					&:after
+						
+						-webkit-transform: rotate(5deg)
+						-moz-transform: rotate(5deg)
+						-ms-transform: rotate(5deg)
+						-o-transform: rotate(5deg)
+						transform: rotate(5deg)
+						@include transition-duration(.2s)
+						height: 1.5em
+						top: .4em
+						left: -.25em
+						width: 110%
+			
+			
+			
+			&:nth-child(2n) a:hover
+				&:after
+					-webkit-transform: rotate(-2deg)
+					-moz-transform: rotate(-2deg)
+					-ms-transform: rotate(-2deg)
+					-o-transform: rotate(-2deg)
+					transform: rotate(-2deg)
+			&:nth-child(3n) a:hover
+				&:after
+					-webkit-transform: rotate(4deg)
+					-moz-transform: rotate(4deg)
+					-ms-transform: rotate(4deg)
+					-o-transform: rotate(4deg)
+					transform: rotate(4deg)
+			&:nth-child(5n) a:hover
+				&:after
+					-webkit-transform: rotate(-4deg)
+					-moz-transform: rotate(-4deg)
+					-ms-transform: rotate(-4deg)
+					-o-transform: rotate(-4deg)
+					transform: rotate(-4deg)
+			
+			
+			
+			
+			
+	
+	@media only screen and (max-width : 50em)
+		height: auto
+		overflow: auto
+		margin-top: 0
+		
+		
+		.site_logo, .site_nav
+			width: 100%
+			
+		.site_nav, .site_soc, .site_logo
+			text-align: center
+			top: 0
+			margin-top: 1em
+		
+		.site_nav
+			margin-top: 1em
+		
+		.site_soc
+			margin: 0 auto
+			float: none
+			display: block
+			li, li a
+				display: inline-block
+				text-align: center
+				float: none
+	
+
+
+
+
+
+.site_foot
+	background-color: $dark
+	width: 100%
+	display: block
+	color: #fff
+	position: relative
+	overflow: auto
+	
+	
+	.container
+		margin-top: 3em
+		margin-bottom: 3em
+	
+	.bottom_menu, .bottom_menu a
+		font-weight: bold
+		color: #fff
+		
+	
+	.soc_share
+		li
+			display: inline-block
+	
+	.soc_share, .bottom_menu
+		text-align: right
+
+
+
+
+
+
+
+.content_main, .goal
+	background-color: #fff
+	background-color: rgba(#fff, .8)	
+
+.content_main
+	padding-bottom: 1em
+
+
+.goal
+	
+	.the_goal
+		text-align: center
+		font-size: 2.25em
+		font-family: 'bebas_neue_regular'
+	.raised
+		font-size: 3em
+		font-family: 'bebas_neuebold'
+		text-align: center
+	
+	.button
+		text-align: center
+		margin: 0 auto
+		display: block
+		font-family: 'bebas_neuebold'
+		font-size: 2em
+		margin-bottom: .5em
+		letter-spacing: 1px
+		
+		@media only screen and (min-width : 30em)
+			margin: 0 20% .5em
+			width: 60%
+			padding-left: 0
+			padding-right: 0
+
+
+
+
+.totally_regular_bg_box
+	position: relative
+	overflow: visible
+	z-index: 2
+	
+	&:after
+		background-color: #fff
+		background-color: rgba(#fff, .7)
+		position: absolute
+		content: ''
+		top: .4em
+		left: .4em
+		right: .4em
+		bottom: .4em
+		z-index: -1
+
+
+.totally_rad_bg_box
+	position: relative
+	overflow: visible
+	z-index: 2
+	
+	&:after
+		background-color: #fff 
+		background-color: rgba(#fff, .7)
+		position: absolute
+		content: ''
+		top: -.4em
+		left: -.4em
+		right: -.4em
+		bottom: -.4em
+		z-index: -1
+		@include transition-duration(.3s)
+		
+		-webkit-transform: rotate(2deg) 
+		-moz-transform: rotate(2deg) 
+		-ms-transform: rotate(2deg) 
+		-o-transform: rotate(2deg) 
+		transform: rotate(2deg) 
+		// -webkit-transform: scaleY(50deg)
+		// -moz-transform: scaleY(25deg)
+		// -ms-transform: scaleY(25deg)
+		// -o-transform: scaleY(25deg)
+		// transform: scaleY(50deg)
+	
+	
+	&:nth-child(2n)
+		&:after
+			-webkit-transform: rotate(-2deg)
+			-moz-transform: rotate(-2deg)
+			-ms-transform: rotate(-2deg)
+			-o-transform: rotate(-2deg)
+			transform: rotate(-2deg)
+	&:nth-child(3n)
+		&:after
+			-webkit-transform: rotate(4deg)
+			-moz-transform: rotate(4deg)
+			-ms-transform: rotate(4deg)
+			-o-transform: rotate(4deg)
+			transform: rotate(4deg)
+	&:nth-child(5n)
+		&:after
+			-webkit-transform: rotate(-4deg)
+			-moz-transform: rotate(-4deg)
+			-ms-transform: rotate(-4deg)
+			-o-transform: rotate(-4deg)
+			transform: rotate(-4deg)
+	// &.full:after
+		// left: -20em
+		// right: -20em
+		
+
+
+
+
+
+
+.search
+	background-color: #fff
+	background-color: rgba(#fff, .8)
+	overflow: hidden
+	padding: 1em
+	
+	
+	
+	
+	
+	
+	.category_list a
+		color: $red
+		display: inline-block
+		@include border-radius(.2em)
+		@include transition-property(all)
+		@include transition-duration(.5s)
+		border: 1px solid transparent
+		padding: .2em .75em
+		
+		margin-right: .5em
+		margin-top: 1em
+		
+		
+		&:hover, &:focus
+			
+			@include transition-duration(.1s)
+			background-color: rgba($red, .1)
+			border-color: $red
+	
+	h3
+		font-size: 2em
+		margin-bottom: .25em
+	
+	
+	.searchform
+		position: relative
+		padding-bottom: 6em
+		label, input
+			display: inline-block
+			
+			position: absolute
+		
+		label
+			left: 0
+			width: 15em
+			top: .35em
+			font-size: 5em
+			font-family: 'bebas_neuebook' 
+		
+		
+		.search_box
+			left: 6em
+			right: 0
+			
+			
+			font-size: 2em
+			padding: .5em
+			@include transition-property(all)
+			@include transition-duration(.5s)
+			border: solid 1px #666
+			
+			&:focus
+				border-color: $red
+				outline: 0
+				@include transition-duration(.2s)
+				
+					
+				
+		
+		
+		.search_button
+			top: .25em
+			right: .25em
+			font-size: 2em
+			font-family: 'bebas_neuebold' 
+			
+		@media only screen and (max-width : 40em)
+			font-size: .75em
+		
+		@media only screen and (max-width : 30em)
+			label
+				display: none
+			.search_box
+				left: 0
+		
+			
+	
+	
+	&.stickem	
+			
+		&.stickit
+			top: 0 
+			position: fixed
+			left: .8em
+			right: .8em
+			z-index: 50
+
+
+
+
+
+.ex_measure
+	width: 110%
+	overflow: auto
+	margin-left: -5%
+	
+	
+.team
+	.box
+		background-color: rgba($dark, .6)
+		width: 100%
+		position: absolute
+		bottom: 0
+		
+		z-index: 10
+		padding: .25em .5em .5em
+		h1, h2, h3
+			margin: 0
+			text-align: center
+			color: #fff
+			font-size: 2em
+			
+		
+	li
+		z-index: 1
+		position: relative
+		min-height: 20em
+		overflow: hidden
+		img
+			width: 100%
+			height: auto
+			position: absolute
+			bottom: 0
+			
+
+
+	
+.totally_rad_hover
+	position: relative
+	overflow: visible
+	z-index: 2
+
+	&:after
+		background-color: #fff
+		background-color: rgba(#fff, .7)
+		position: absolute
+		content: ''
+		top: 0
+		left: 0
+		right: 0
+		bottom: 0
+		z-index: -1
+		@include transition-duration(.3s)
+a.totally_rad_hover
+	&:hover, &:focus
+		h1, p
+			color: #fff !important
+		
+		&:after
+			background-color: $red
+			@include transition-property(all)
+			+bounce
+			@include transition-duration(.1s)
+			-webkit-transform: rotate(2deg)
+			-moz-transform: rotate(2deg)
+			-ms-transform: rotate(2deg)
+			-o-transform: rotate(2deg)
+			transform: rotate(2deg)
+			top: -.5em
+			left: -.5em
+			right: -.5em
+			bottom: -.5em
+	
+	&:nth-child(2n)
+		&:hover, &:focus
+			&:after
+				-webkit-transform: rotate(-2deg)
+				-moz-transform: rotate(-2deg)
+				-ms-transform: rotate(-2deg)
+				-o-transform: rotate(-2deg)
+				transform: rotate(-2deg)
+	&:nth-child(3n)
+		&:hover, &:focus
+			&:after
+				-webkit-transform: rotate(4deg)
+				-moz-transform: rotate(4deg)
+				-ms-transform: rotate(4deg)
+				-o-transform: rotate(4deg)
+				transform: rotate(4deg)
+	&:nth-child(5n)
+		&:hover, &:focus
+			&:after
+				-webkit-transform: rotate(-4deg)
+				-moz-transform: rotate(-4deg)
+				-ms-transform: rotate(-4deg)
+				-o-transform: rotate(-4deg)
+				transform: rotate(-4deg)
+		
+	
+.deal
+	display: block
+	margin-top: .8333330em
+	padding: 1em
+	&:first-child
+		margin-top: 0
+	
+	&:hover, &:focus
+		h1, p
+			color: #fff !important
+	
+	
+	h1
+		color: $red
+		font-size: 2.25em
+		margin-bottom: .2em
+		line-height: 1em
+	
+	.desc
+		color : $text
+		font-size: 1.125em
+	
+	
+.progress_bar
+	height: 18px
+	width: 100%
+	display: block
+	background-color: $dark
+	
+	span
+		height: 18px
+		background-color: $red
+		@include transition-property(all)
+		@include transition-duration(.4s)
+		+bounce
+		
+		width: 1%
+		float: left
+		display: block
+		font-size: 0
+
+
+.section_in
+	img
+		float: left
+		margin-right: 1em
+	
+	
+	h1
+		padding-top: .25em
+	
+	p, h1, h2, h3, q, ol, ul, .meta
+		padding-left: 8.75%
+		
+	@media only screen and (max-width : 40em)
+		p, h2, h3, q, ol, ul, .meta
+			padding-left: 2.5%
+			padding-right: 2.5%
+		
+		ul
+			li:before
+				left: 5%
+		ol
+			li:before
+				left: 2%
+
+
+
+.page_out
+	background-color: #fff
+
+.page
+	.container
+		overflow: visible
+	.page_head
+		
+		.totally_rad_bg_box
+			@media only screen and (min-height : 60em)
+				margin-top: 1em
+				margin-bottom: 1.5em
+			@media only screen and (min-height : 70em)
+				margin-top: 1.2em
+				margin-bottom: 1.5em
+	
+	.totally_rad_bg_box
+		@media only screen and (min-height : 60em)
+			margin-top: 2.5em
+			margin-bottom: 1.5em
+		@media only screen and (min-height : 70em)
+			margin-top: 5em
+			margin-bottom: 2.5em
+	
+	
+
+.full_bg_img
+	position: fixed
+	top: 0
+	left: 0
+	right: 0
+	bottom: 0
+	z-index: -1
+	background-position: center center
+	background-size: 100% autp
+	background-size: cover
+	background-repeat: no-repeat
+	
+
+.splash_bg
+	position: fixed
+	top: 0
+	z-index: -1
+	
+	
+	position: fixed
+	top: -50% 
+	left: -50% 
+	width: 200% 
+	height: 200%
+	
+	
+	
+	img, video
+		width: 100%
+		height: auto
+		min-width: 1000px
+		position: fixed
+		top: -100px
+		background-color: $dark
+		z-index: 0
+	
+		@include transition-property(all)
+		@include transition-duration(.5s)
+		
+		filter: alpha(opacity=100)
+		opacity: 1
+		
+		
+		
+		position: absolute
+		top: 0 
+		left: 0 
+		right: 0 
+		bottom: 0
+		margin: auto
+		min-width: 50%
+		min-height: 50%
+	
+	&.display_video
+		video
+			@include transition-duration(.5s)
+			
+			filter: alpha(opacity=0)
+			opacity: 0
+
+
+
+.box_top
+	min-height: 20em
+	@include transition-property(min-height)
+	@include transition-duration(.5s)
+	
+	@media only screen and (min-height : 30em)
+		min-height: 20em
+	@media only screen and (min-height : 40em)
+		min-height: 30em
+	@media only screen and (min-height : 50em)
+		min-height: 40em
+	@media only screen and (min-height : 60em)
+		min-height: 47em
+	@media only screen and (min-height : 70em)
+		min-height: 55em
+	
+
+
+.cta
+	list-style: none
+	
+	@include transition-property(all)
+	@include transition-duration(.5s)
+	+bounce
+	
+	-webkit-transform: translateX(0em)
+	-moz-transform: translateX(0em)
+	-ms-transform: translateX(0em)
+	-o-transform: translateX(0em)
+	transform: translateX(0em)
+	filter: alpha(opacity=100)
+	opacity: 1
+	
+	li
+		display: block
+		margin-top: 1em
+		
+		&:first-child
+			margin-top: 0
+			
+		
+		a
+			color: $white
+			padding: .388888889em .388888889em .388888889em 1.944444444em
+			display: inline-block
+			background-repeat: no-repeat
+			background-size: auto 100%
+			background-position: 0% 50%
+			background-color: $dark
+			@include transition-property(all)
+			@include transition-duration(.5s)
+			font-family: 'bebas_neue_regular'
+			font-size: 2.25em
+			
+			&:hover, &:focus
+				@include transition-duration(.1s)
+				background-color: lighten($dark, 10%)
+				background-size: auto 110%
+				background-position: 0 45%
+				
+			
+			&.mag
+				background-image: url(../img/mag.png)
+			
+			&.star
+				background-image: url(../img/star.png)
+			
+			&.what
+				background-image: url(../img/what.png)
+
+
+
+
+
+
+
+
+
+
+
+
+.splash
+	min-height: 20em
+	@include transition-property(min-height)
+	@include transition-duration(.5s)
+	
+	@media only screen and (min-height : 30em)
+		min-height: 20em
+	@media only screen and (min-height : 40em)
+		min-height: 30em
+	@media only screen and (min-height : 50em)
+		min-height: 40em
+	@media only screen and (min-height : 60em)
+		min-height: 47em
+	@media only screen and (min-height : 70em)
+		min-height: 55em
+	
+	
+	h1
+		font-size: 4.375em
+		line-height: 1em
+		color: $white
+		
+		
+		margin-top: .5em
+		
+		@media only screen and (min-height : 50em)
+			margin-top: 1em
+		@media only screen and (min-height : 60em)
+			margin-top: 3em
+	
+		@media only screen and (max-width : 40em)
+			font-size: 3.5em
+	
+	.play
+		@include border-radius(100px)
+		font-size: 0
+		height: 72px
+		width: 72px
+		color: transparent
+		display: block
+		background-color: #fff
+		
+		display: block
+		margin: 0 auto
+		
+		background-position: 50% 50%
+		background-image: url(../img/play.png)
+		background-repeat: no-repeat
+		@include transition-property(all)
+		@include transition-duration(.3s)
+		+bounce
+		
+		
+		&:hover, &:focus
+			
+			@include transition-duration(.1s)
+			margin-top: -16px
+			height: 104px
+			width: 104px
+			
+	.sell
+		@include transition-property(all)
+		@include transition-duration(.5s)
+		+bounce
+		
+		-webkit-transform: translateX(0em)
+		-moz-transform: translateX(0em)
+		-ms-transform: translateX(0em)
+		-o-transform: translateX(0em)
+		transform: translateX(0em)
+		filter: alpha(opacity=100)
+		opacity: 1
+	
+	.cta
+		margin-top: 6em
+		@media only screen and (min-height : 30em)
+			margin-top: 10em
+		@media only screen and (min-height : 40em)
+			margin-top: 14em
+		@media only screen and (min-height : 50em)
+			margin-top: 16em
+		@media only screen and (min-height : 60em)
+			margin-top: 18em
+	
+	&.display_video
+		.sell
+			@include transition-duration(.2s)
+			-webkit-transform: translateX(-50em)
+			-moz-transform: translateX(-50em)
+			-ms-transform: translateX(-50em)
+			-o-transform: translateX(-50em)
+			transform: translateX(-50em)
+			
+			filter: alpha(opacity=0)
+			opacity: 0
+				
+			
+		
+		.cta
+			@include transition-duration(.2s)
+			-webkit-transform: translateX(50em)
+			-moz-transform: translateX(50em)
+			-ms-transform: translateX(50em)
+			-o-transform: translateX(50em)
+			transform: translateX(50em)
+			
+			filter: alpha(opacity=0)
+			opacity: 0
+
+
+
+
+
+.expand
+	> a
+		color: $white
+		padding: .388888889em .388888889em .388888889em 1.944444444em
+		display: block
+		margin: 0 1em 1em
+		background-repeat: no-repeat
+		background-size: auto 100%
+		background-position: 0% 50%
+		background-color: $dark
+		@include transition-property(all)
+		@include transition-duration(.5s)
+		font-family: 'bebas_neue_regular'
+		font-size: 2.25em
+		
+		
+		&:nth-child(1)
+			background-image: url(../img/smile.png)
+		&:nth-child(2)
+			background-image: url(../img/smile.png)
+		
+		
+		&:hover, &:focus
+			@include transition-duration(.1s)
+			background-color: lighten($dark, 10%)
+			background-size: auto 110%
+			background-position: 0 45%
+			
+		
+		&.mag
+			background-image: url(../img/mag.png)
+
+
+
+
+
+
+
+
+
+
+.profile
+	.sell
+		h1, h2
+			color: $white
+			text-align: center
+			font-size: 4.625em
+			line-height: 1em
+			margin-bottom: .2em
+		
+		
+		h1
+			@media only screen and (min-height : 30em)
+				margin-top: 0em
+			@media only screen and (min-height : 40em)
+				margin-top: 1em
+			@media only screen and (min-height : 50em)
+				margin-top: 2em
+			@media only screen and (min-height : 60em)
+				margin-top: 3em
+		
+		
+	
+	.goal
+		
+		@media only screen and (min-height : 30em)
+			margin-top: 0em
+		@media only screen and (min-height : 40em)
+			margin-top: 4em
+		@media only screen and (min-height : 50em)
+			margin-top: 8em
+		@media only screen and (min-height : 60em)
+			margin-top: 13em
+	
+		
+		.the_goal
+			margin: .5em 0
+		.progress_bar, .done
+			height: 52px
+		
+		.progress_bar
+			position: relative
+			
+			.done, .remain
+				position: absolute
+				top: 0
+				bottom: 0
+				color: #fff
+				overflow: visible
+				font-size: 1.5em
+				padding: .5em
+				font-family: 'bebas_neuebold'
+				display: block
+				
+			.done
+				left: 0
+				z-index: 3
+			
+			.remain
+				text-align: right
+				z-index: 4
+				right: 0
+				width: 100%
+				background-color: transparent
+			
+			
+		.raised
+			margin: .5em 0
+			line-height: 1.2em
+		h4
+			font-family: 'bebas_neuebold'
+			text-align: center
+			font-size: 1.5em
+			margin-bottom: .5em
+			color: $text
+
+
+
+.project_list
+	
+
+.project_excerpt
+	margin-bottom: .8333em
+	position: relative
+	
+	&.grid_6
+		@media only screen and (max-width : 60em)
+			width: 50%
+			&.project_excerpt:before
+				padding-top:  125.8064516%
+	
+	&.grid_24, &.grid_12, &.grid_8, &.grid_6
+		&.project_excerpt
+			&:before
+				content: ""
+				display: block
+	
+			
+		h1
+			font-size: 2.375em
+		
+		h2
+			font-size: 2.375em
+	
+	&.grid_8, &.grid_6
+		header
+			width: 100%
+	
+	&.grid_24
+		h1
+			font-size: 4.875em
+		
+		h2
+			font-size: 4.875em
+		
+		header
+			width: 50%
+			left: 50%
+		
+		&.project_excerpt
+			&:before
+				padding-top:  50.6849315%
+	
+	&.grid_12
+		header
+			width: 75%
+			left: 25%
+			
+		&.project_excerpt
+			&:before
+				padding-top: 67.6595745%
+		
+	
+		
+	
+	&.grid_8
+		&.project_excerpt
+			&:before
+				padding-top: 125.8064516%
+	&.grid_6
+		&.project_excerpt
+			&:before
+				padding-top: 200%
+		
+	&.grid_12, &.grid_8, &.grid_6, &.grid_24
+		@media only screen and (max-width : 37em)
+			width: 100%
+			header
+				width: 100%
+				left: 0
+			&.project_excerpt:before
+				padding-top:  125.8064516%
+	&.grid_24
+		@media only screen and (max-width : 37em)
+			&.project_excerpt:before
+				padding-top:  175%
+			
+				
+	
+	.project_excerpt_in
+		margin: 0 .5em
+		position:  absolute
+		top: 0
+		left: 0
+		bottom: 0
+		right: 0
+		overflow: hidden
+		z-index: 2
+		
+		.progress
+			text-transform: uppercase
+		
+		
+		header
+			position: absolute
+			z-index: 2
+			color: #fff
+			overflow: visible
+			text-align: center
+			bottom: 0
+			padding: .5em
+			&:after
+				background-color: rgba($dark, .7)
+				position: absolute
+				content: ''
+				top: 0
+				left: 0
+				bottom: 0
+				right: 0
+				z-index: -1
+				
+				@include transition-property(all)
+				@include transition-duration(.4s)
+				+bounce
+			
+			
+			h1, h2
+				margin-bottom: .2em
+				line-height: .8em
+			span
+				font-weight: bold
+				.number
+					display: block
+			
+					
+				
+		
+		img
+			top: 0 
+			left: -25%
+			right: -25%
+			bottom: 0
+			display: inline
+			text-align: center
+			z-index: 1
+			width: auto
+			margin: auto
+			position: absolute
+			min-height: 100%
+			min-width: 100%
+	
+	&:hover, &:focus
+		.project_excerpt_in header
+			
+			&:after
+				@include transition-property(all)
+				@include transition-duration(.1s)
+				+bounce
+				-webkit-transform: rotate(2deg)
+				-moz-transform: rotate(2deg)
+				-ms-transform: rotate(2deg)
+				-o-transform: rotate(2deg)
+				transform: rotate(2deg)
+				
+				background-color: $red
+				top: -1em
+				left: -1em
+				right: -1em
+				bottom: -1em
+			
+			
+			.progress_bar span
+				@include transition-duration(.2s)
+				background-color: #fff
+	
+	
+	&:nth-child(2n)
+		&:hover, &:focus
+			.project_excerpt_in header
+				&:after
+					-webkit-transform: rotate(-2deg)
+					-moz-transform: rotate(-2deg)
+					-ms-transform: rotate(-2deg)
+					-o-transform: rotate(-2deg)
+				transform: rotate(-2deg)
+	&:nth-child(3n)
+		&:hover, &:focus
+			.project_excerpt_in header
+				&:after
+					-webkit-transform: rotate(4deg)
+					-moz-transform: rotate(4deg)
+					-ms-transform: rotate(4deg)
+					-o-transform: rotate(4deg)
+					transform: rotate(4deg)
+	&:nth-child(5n)
+		&:hover, &:focus
+			.project_excerpt_in header
+				&:after
+					-webkit-transform: rotate(-4deg)
+					-moz-transform: rotate(-4deg)
+					-ms-transform: rotate(-4deg)
+					-o-transform: rotate(-4deg)
+					transform: rotate(-4deg)
+					
+.page_head
+	h1
+		font-size: 4.625em
+		
+		@media only screen and (max-width : 45em)
+			font-size: 3em
+		
+		@media only screen and (min-width : 45em)
+			line-height: 1.2em
+	
+	
+
+
+.collection_of_projects
+	header
+		h1
+			margin-top: .5em
+
+
+
+.end_cta
+	background-color: #fff
+	
+	
+		
+	h1
+		margin-top: .5em
+	.title
+		color: $red
+		font-size: 3.375em

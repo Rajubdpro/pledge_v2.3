@@ -1,0 +1,65 @@
+/*
+Theme Name: Pledge Sports 2.3
+Author: the excellent gents at lightbox
+Author URI: http://lightbox.ie
+Description: The 2014 theme for Pledge Sports
+Version: 2.3
+*/
+
+/* 
+	CHANGE LOG
+	
+	2.2 March 24, 2014, 5:05 pm
+		- beginning version 2, from scratch
+	
+	2.1 March 24, 2014, 5:05 pm
+		- beginning version 2, without Ignition Deck
+	
+	1.13 March 18, 2014, 3:39 pm
+		- comments layout fixed for short projects
+		
+	1.12 March 11, 2014, 3:59 pm
+		- memberdeck fix & dashboard styling fix
+	
+	1.11 March 7, 2014, 2:27 pm
+		- reformatting support buttons
+	
+	1.10 February 28, 2014, 3:09 pm
+		- blog formatting
+	
+	1.09 February 26, 2014, 10:53 am
+		- footer menu
+	
+	1.08 February 25, 2014, 4:16 pm
+		- font stack for bebas
+	
+	1.07 February 25, 10:02 am
+		- force refresh
+	
+	1.06 February 25, 2014 9:22 am
+		- added CSS to ensure that the first pledge on the front page is a more plesant ratio
+	
+	1.05 February 24, 2014, 3:37 pm
+		- majorly simplified the front end loop
+		- various mobile layout issues
+	
+	1.04 February 21, 2014 4:07 pm
+		- responsive issues 
+		- form fixes 
+	
+	1.03 February 17, 2014 6:50 pm
+		- line height issue on the comments section title
+	
+	1.02 February 17, 2014
+		- login form redone to dropdown
+	
+	1.01 captin's log stardate February 14, 2014
+		- comments sections & encapsulation div 'comments_out'
+	
+	1.0
+		- begin captin's log stardate February 13, 2014
+		
+*/
+
+
+tr.field.sub_field.field_type-text.field_key-field_53343b6b132a4 { display : none; }

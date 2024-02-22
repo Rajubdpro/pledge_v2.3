@@ -1,0 +1,53 @@
+/* button styling error */
+.support .ign-supportnow a{
+	background-color: #38454c !important;
+	background-color: rgba(56,69,76,0.8);
+	color: #fff;
+	float: left;
+	font-family: bebas,Impact,Haettenschweiler,"Franklin Gothic Bold",Charcoal,"Helvetica Inserat","Bitstream Vera Sans Bold","Arial Black",sans-serif;
+	font-size: 50px;
+	padding: 30px;
+	text-align: center;
+	width: 100%;
+	-webkit-transition-property: all;
+	-moz-transition-property: all;
+	-o-transition-property: all;
+	transition-property: all;
+	-webkit-transition-duration: 0.5s;
+	-moz-transition-duration: 0.5s;
+	-o-transition-duration: 0.5s;
+	transition-duration: 0.5s;
+}
+.support .ign-supportnow a:hover, .support .ign-supportnow a:focus{
+	color: #fff;
+	cursor: pointer;
+	background-color: #df2932 !important;
+	background-color: rgba(223,41,50,0.8);
+	-webkit-transition-duration: 0.1s;
+	-moz-transition-duration: 0.1s;
+	-o-transition-duration: 0.1s;
+	transition-duration: 0.1s
+}
+.bottom_logos {
+	position: absolute;
+	bottom: 30px;
+	padding-left: 125px;
+}
+.bottom_logos div{
+	display: inline-block;
+}
+.bottom_logos img{
+	margin-right: 10px;
+	height: 70px;
+}
+@media (max-width:780px) {
+	.bottom_logos {
+		position: static;
+		padding: 0;
+		margin-top: 30px;
+		padding-left: 10px;
+	}
+	.bottom_logos div{
+		margin-top: 30px;
+	}
+}

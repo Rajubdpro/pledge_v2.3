@@ -1,0 +1,24 @@
+[21-Sep-2022 06:53:06 America/Chicago] PHP Fatal error:  Uncaught Error: Call to undefined function get_header() in /home/richardtalen/pledgesports.org/wp-content/themes/pledge_v2.3/index.php:1
+Stack trace:
+#0 {main}
+  thrown in /home/richardtalen/pledgesports.org/wp-content/themes/pledge_v2.3/index.php on line 1
+[23-Sep-2022 01:33:26 America/Chicago] PHP Fatal error:  Uncaught Error: Call to undefined function get_header() in /home/richardtalen/pledgesports.org/wp-content/themes/pledge_v2.3/index.php:1
+Stack trace:
+#0 {main}
+  thrown in /home/richardtalen/pledgesports.org/wp-content/themes/pledge_v2.3/index.php on line 1
+[26-Sep-2022 05:55:17 America/Chicago] PHP Fatal error:  Uncaught Error: Call to undefined function get_header() in /home/richardtalen/pledgesports.org/wp-content/themes/pledge_v2.3/index.php:1
+Stack trace:
+#0 {main}
+  thrown in /home/richardtalen/pledgesports.org/wp-content/themes/pledge_v2.3/index.php on line 1
+[06-Oct-2022 01:38:48 America/Chicago] PHP Fatal error:  Uncaught Error: Call to undefined function get_header() in /home/richardtalen/pledgesports.org/wp-content/themes/pledge_v2.3/index.php:1
+Stack trace:
+#0 {main}
+  thrown in /home/richardtalen/pledgesports.org/wp-content/themes/pledge_v2.3/index.php on line 1
+[11-Nov-2022 11:52:59 America/Chicago] PHP Fatal error:  Uncaught Error: Call to undefined function get_header() in /home/richardtalen/pledgesports.org/wp-content/themes/pledge_v2.3/index.php:1
+Stack trace:
+#0 {main}
+  thrown in /home/richardtalen/pledgesports.org/wp-content/themes/pledge_v2.3/index.php on line 1
+[11-Nov-2022 11:55:21 America/Chicago] PHP Fatal error:  Uncaught Error: Call to undefined function get_header() in /home/richardtalen/pledgesports.org/wp-content/themes/pledge_v2.3/index.php:1
+Stack trace:
+#0 {main}
+  thrown in /home/richardtalen/pledgesports.org/wp-content/themes/pledge_v2.3/index.php on line 1

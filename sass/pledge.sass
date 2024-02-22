@@ -1,0 +1,7227 @@
+*, *:before, *:after
+	-moz-box-sizing: border-box
+	-webkit-box-sizing: border-box
+	box-sizing: border-box
+ 
+
+
+/* COLORS */
+$background: #f9f9f9
+$text: #333
+$grey: lighten($text, 20%)
+$dark: #38454c
+$red: #df2932
+
+/* FONT SETTINGS */
+$fs: 16px
+$lh: 24px
+
+/* COMPASS */
+
+@import "compass/css3"
+@import "compass/typography/links/link-colors"
+@import "compass/utilities/general"
+
+@import 'member_deck'
+
+
+
+@mixin bebas
+	font-family: bebas, Impact, Haettenschweiler, "Franklin Gothic Bold", Charcoal, "Helvetica Inserat", "Bitstream Vera Sans Bold", "Arial Black", sans-serif
+@mixin bebasimp
+	font-family: bebas, Impact, Haettenschweiler, "Franklin Gothic Bold", Charcoal, "Helvetica Inserat", "Bitstream Vera Sans Bold", "Arial Black", sans-serif !important
+
+
+@mixin bounce
+	transition-timing-function: cubic-bezier(.74,1.84,.51,.81)
+
+@font-face
+	font-family: OS Light
+	src: url('../fonts/opensans-light-webfont.eot')
+	src: url('../fonts/opensans-light-webfont.eot?#iefix') format('embedded-opentype'), url('../fonts/opensans-light-webfont.woff') format('woff'), url('../fonts/opensans-light-webfont.ttf') format('truetype'), url('../fonts/opensans-light-webfont.svg#AftaserifRegular') format('svg')
+
+@font-face
+	font-family: OS Bold
+	src: url('../fonts/opensans-bold-webfont.eot')
+	src: url('../fonts/opensans-bold-webfont.eot?#iefix') format('embedded-opentype'), url('../fonts/opensans-bold-webfont.woff') format('woff'), url('../fonts/opensans-bold-webfont.ttf') format('truetype'), url('../fonts/opensans-bold-webfont.svg#AftaserifRegular') format('svg')
+
+
+@font-face
+	font-family: OS Reg
+	src: url('../fonts/opensans-regular-webfont.eot')
+	src: url('../fonts/opensans-regular-webfont.eot?#iefix') format('embedded-opentype'), url('../fonts/opensans-regular-webfont.woff') format('woff'), url('../fonts/opensans-regular-webfont.ttf') format('truetype'), url('../fonts/opensans-regular-webfont.svg#AftaserifRegular') format('svg')
+
+@font-face
+	font-family: bebas
+	src: url('../fonts/bebasneue_bold-webfont.eot')
+	src: url('../fonts/bebasneue_bold-webfont.eot?#iefix') format('embedded-opentype'), url('../fonts/bebasneue_bold-webfont.woff') format('woff'), url('../fonts/bebasneue_bold-webfont.ttf') format('truetype'), url('../fonts/bebasneue_bold-webfont.svg#AftaserifRegular') format('svg')
+
+@font-face
+	font-family: book
+	src: url('../fonts/bebasneue_book-webfont.eot')
+	src: url('../fonts/bebasneue_book-webfont.eot?#iefix') format('embedded-opentype'), url('../fonts/bebasneue_book-webfont.woff') format('woff'), url('../fonts/bebasneue_book-webfont.ttf') format('truetype'), url('../fonts/bebasneue_book-webfont.svg#AftaserifRegular') format('svg')
+
+div.wpcf7-validation-errors
+	border: 2px solid #DF2932 !important
+	float: left !important
+	margin-left: 0 !important
+	color: #DF2932 !important
+	margin-top: 0px !important
+	width: 100% !important
+
+div.wpcf7-mail-sent-ok
+	float: left !important
+	margin-left: 0 !important
+	color: $dark !important
+	margin-top: 0px !important
+	width: 100% !important
+
+
+.stripe-details
+	color: #81898D
+	margin-left: 37%
+	margin-bottom: 0%
+
+span.wpcf7-not-valid-tip
+	float: left
+	padding-bottom: 10px
+.dock
+	bottom: 0
+	color: #FFFFFF
+	position: fixed
+	-moz-border-radius: 5px 5px 0px 0px
+	-webkit-border-radius: 5px 5px 0px 0px
+	border-radius: 5px 5px 0px 0px
+	right: 12px
+	cursor: pointer
+	width: 320px
+	z-index: 9999
+
+	@media only screen and (max-width : 480px)
+		right: 0px
+		width: 100%
+		.dockslide
+			width: 50% !important
+			font-size: 18px !important
+			border-left: 1px solid black
+			border-bottom: 1px solid black
+			.closeboxs
+				top: -10px !important
+
+	.dockslide
+		background: none repeat scroll 0 0 #DF2932
+		background-color: rgba(223, 41, 50, 0.8)
+		float: left
+		margin-bottom: 0px
+		font-family: bebas
+		padding: 12px 20px
+		font-size: 24px
+		width: 100%
+		.closeboxs
+			background: none repeat scroll 0 0 #fff
+			cursor: pointer
+			height: 0
+			position: absolute
+			display: none
+			right: 5px
+			top: 44px
+			width: 100%
+			z-index: 99999
+			.closed
+				height: 29px
+				padding: 10px
+				width: 58px
+				position: absolute
+				right: 0px
+				top: 12px
+				img
+					width: 100%
+	.dockslide_campaign
+		color: white
+		border-bottom: 1px solid black
+		&:hover
+			color: white
+		&:visited
+			color: white
+			
+	.wrapper
+		display: none
+		float: left
+		width: 100%
+		background: white
+		p
+			color: $dark
+			padding: 0px 20px
+			float: left
+		form
+			padding: 0px 20px
+			background: white
+			p
+				padding: 0px !important
+				float: none
+			input
+				border: 1px solid #808080
+				color: #000000
+				float: left
+				font-size: 14px
+				margin-bottom: 10px
+				padding: 5px
+				width: 100%
+				-moz-appearance: none
+				-webkit-appearance: none
+			input[type="submit"]
+				border: none
+				background: #DF2932
+				color: white
+				float: left
+				font-size: 14px
+				margin-bottom: 3px
+				padding: 5px
+				width: 100%
+				-moz-appearance: none
+				-webkit-appearance: none
+
+			textarea
+				float: left
+				padding: 5px
+				margin-top: 0 !important
+				min-height: 90px
+				width: 100%
+				height: 80px
+				margin-bottom: 5px !important
+		
+.followus
+	background-color: rgba(255, 255, 255, 0.5)
+	display: block
+	margin-bottom: 1em
+	overflow: visible
+	padding: 20px
+	position: relative
+	transition-duration: 0.5s
+	padding-bottom: 35px
+	transition-property: all
+	h1
+		margin-bottom: 15px
+
+
+.rrssb-buttons
+	.instagram
+		a
+			background-color: #4E7BA0 !important
+			color: #FFFFFF
+			transition-duration: 0.2s
+
+			&:hover
+				background-color: #366687 !important
+
+
+.ign-level-desc
+	.rrssb-buttons
+		padding-left: 0
+		li
+			list-style: none
+			margin-bottom: 15px
+
+			.icon
+				display: block
+				height: 100%
+				left: 10px
+				padding-top: 9px
+				position: absolute
+				top: 0
+				width: 10%
+				svg 
+					height: 17px
+					width: 17px
+		.facebook
+			a
+				background-color: #6D7676
+				color: #FFFFFF
+				transition-duration: 0.2s
+		.twitter
+			a
+				background-color: #6D7676
+				color: #FFFFFF
+				transition-duration: 0.2s
+		
+		.instagram
+			a
+				background-color: #4E7BA0 !important
+				color: #FFFFFF
+				transition-duration: 0.2s
+
+				&:hover
+					background-color: #366687 !important
+				
+
+.rrssb-buttons.clearfix
+	margin: 20px 0
+
+
+.rrssb-buttons li
+	@media only screen and (max-width : 480px)
+		width: 20% !important	
+
+
+.rrssb-buttons li a .text
+	color: #FFFFFF
+	padding-left: 8px
+	@media only screen and (max-width : 480px)
+		display: none
+
+
+.rrssb-buttons li a 
+	padding: 11px 16px 12px 27px !important
+
+::selection
+	background: $red
+	color: #fff
+::-moz-selection
+	background: $red
+	color: #fff
+.ignition_project
+	background-image: url('../img/crossword.png')
+body
+	background-image: url('../img/crossword.png')
+	background-repeat: repeat repeat
+	background-color: #f4f4f4
+	
+	font-family: OS Reg
+	font-size: 15px
+	margin: 0px
+
+.yui
+	display: none
+
+.loctn
+	background: none repeat scroll 0 0 #FFFFFF
+	border-radius: 0 0 5px 5px
+	float: right
+	height: 46px
+	margin-left: 0 !important
+	margin-right: 12px
+	margin-top: -55px
+	padding-left: 0 !important
+
+	ul
+		padding: 0px 3px
+		li
+			list-style: none
+			margin: 3px
+			float: left
+p
+	a
+		img
+			max-width: 100%
+			height: auto
+			vertical-align: bottom
+			
+			&.alignright
+				float: right
+				margin-left: 1em
+			
+			&.alignleft
+				float: left
+				margin-right: 1em
+		
+.vid
+	display: block
+	background: black
+	padding-bottom: 100%
+	margin-top: -166px
+	width: 100%
+
+.closebox
+	height: 85px
+	background: black
+	position: relative
+	z-index: 99999
+	cursor: pointer
+	width: 100%
+	.close
+		height: 29px
+		padding: 10px
+		width: 58px
+		position: absolute
+		right: 0px
+		top: 12px
+		img
+			width: 100%
+.red
+	color: $red
+	
+	li
+		list-style: none outside none !important
+
+
+
+
+//font reset
+h1, h2, h3, h4, h5
+	font-weight: normal
+
+
+h1
+	+bebas
+	margin-top: 0px
+	color: white
+	font-size: 50px
+h2
+	font-family: book
+	font-size: 38px
+	color: white
+	margin-top: -40px
+a
+	text-decoration: none
+	color: #df2932
+	&:hover
+		color: #4B5C65
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//				- COPY -
+
+
+.copy
+	h1, h2, h3, h4, p, q, li, blockquote
+		&.center
+			text-align: center
+			padding-left: 0 !important
+		
+	h1
+		color: $red
+		font-weight: lighter
+		font-size: 3em
+		line-height: 1em
+	h2
+		color: $red
+		font-weight: bold
+		font-size: 2.25em
+		margin: .25em 0
+		line-height: 1.2em
+		margin-top: 0
+		
+		@media only screen and (max-height : 40em)
+			margin-bottom: .6em
+	h3
+		color: $red
+		font-weight: bold
+		font-size: 1.25em
+		margin-bottom: 1em
+		@media only screen and (max-height : 40em)
+			margin-bottom: .5em
+	h4
+		color: $red
+		font-weight: bold
+		font-size: 1em
+		margin-bottom: 1em
+		@media only screen and (max-height : 40em)
+			margin-bottom: .5em
+	p, q
+		line-height: 2em
+		margin-bottom: 1em
+		@include transition-property(all)
+		@include transition-duration(.5s)
+		@media only screen and (max-height : 65em)
+			line-height: 1.5em
+	
+	p, li, q
+		font-size: 1.125em
+		
+	
+	a
+		font-weight: bold
+		text-decoration: none
+		color: $red
+		@include transition-property(all)
+		@include transition-duration(.5s)
+		&:hover, &:focus
+			background-color: $red
+			@include transition-duration(.2s)
+			color: #fff
+	
+	em
+		font-style: italic
+		font-weight: normal
+	
+	img
+		height: auto
+		max-width: 100%
+		
+		@media only screen and (max-width : 40em)
+			width: 95%
+			max-width: 95% !important
+			clear: both
+			margin: 1em auto
+			float: none
+	
+	strong
+		font-weight: bold
+	ul, ol
+		padding-left: 1em
+		li
+			
+			line-height: 1.2em
+			list-style: none
+			margin-left: .5em
+			margin-bottom: .5em
+			position: relative
+			&:before
+				position: absolute
+	ul
+		
+		li
+			&:before
+				content: ''
+				color: #df2932
+				position: absolute
+				width: 0.5em
+				height: 0.5em
+				display: block
+				background-color: $red
+				margin-top: .4em
+				left: -1.25em
+	
+	ol
+		counter-reset: my-badass-counter
+		li
+			&:before
+				content: counter(my-badass-counter, lower-roman)
+				counter-increment: my-badass-counter
+				color: $red
+				width: 2em
+				text-align: center
+				left: -2.25em
+
+	
+	table, .wp-list-table
+		width: 100%
+		margin-bottom: 2em
+		
+		
+		
+		th, td
+			padding: .5em
+			
+		
+		thead
+			.th
+				&.desc a:after, &.asc a:after
+					content: ''
+					display: inline-block
+					color: $red
+				
+				
+				
+				&.desc 
+					border: red 1px solid
+					a
+						font-style: italic
+						&:after
+							content: '\25BC'
+					
+				
+				
+				
+				&.asc a:after
+					content: '\25B2'
+				
+				
+				
+		
+		
+		tbody
+			tr
+				background-color: lighten($red, 40%)
+				
+				td:nth-child(odd)
+					background-color: lighten($red, 42%)
+					
+				
+				&:nth-child(odd)
+					background-color: lighten($red, 35%)
+					
+					td:nth-child(odd)
+						background-color: lighten($red, 37%)
+				
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// a most default FORM style
+.nice_form
+	width: 100%
+	display: inline-block
+
+	
+	.form-allowed-tags
+		display: none
+		color: transparent
+		font-size: 0
+		height: 0
+		width: 0
+	
+	
+	
+	.form-submit
+		max-width: 100%
+		width: 581px
+		margin: 0 auto
+		
+		.button
+			font-size: 1.2em
+	
+	
+	.field
+		max-width: 600px
+		width: 98%
+		overflow: auto
+		margin: .25em auto
+		padding: .5em
+		
+		clear: both
+		float: none
+		
+		border: 1px solid transparent
+		@include transition-property(all)
+		@include transition-duration(.5s)
+		background-color: transparent
+		
+		position: relative
+		z-index: 2
+		
+		
+		&.error
+			border-color: $red
+		
+
+			
+		
+		label, input, select, textarea
+			font-size: 1em
+			margin: 0
+			text-align: left
+		
+		input, select, textarea
+			float: left
+		
+		label
+			width: auto
+			max-width: 50%
+		
+		input, label, textarea, select
+			padding: .2em
+			
+			&.half
+				width: 25%
+				
+			&.third
+				width: 16.666666667%
+			
+				
+				
+		
+		textarea
+			margin-top: 0 !important
+			margin-bottom: 0 !important
+		
+		input, select, textarea
+			
+			float: right
+			width: 50%
+			border: 1px $grey solid
+			@include transition-property(all)
+			@include transition-duration(.5s)
+			
+			
+			+ input, + select, + textarea
+				&.multiple
+					margin-top: .5em
+				
+			
+			&:focus
+				outline: 0
+				@include transition-duration(.2s)
+				border-color: $red
+				background-color: #fff
+		
+		
+		
+		// NICE CHECKBOX
+		
+		input[type="checkbox"]
+			filter: alpha(opacity=0)
+			opacity: 0
+			border: 0 none transparent
+			width: 0
+			height: 0
+			padding: 0
+			margin: 0
+		
+		input[type="checkbox"]+label
+			
+			&:after
+				position: relative
+				top: .5em
+				margin-left: .5em
+				
+				content: ''
+				display: inline-block
+				width: 1.5em
+				height: 1.5em
+				background-color: transparent
+				border: 1px $grey solid
+				@include transition-property(background-color)
+				@include transition-duration(.5s)
+				
+				
+				&:hover, &:focus, &:active
+					@include transition-duration(.2s)
+					background-color: rgba(#fff, .2)
+					border: 1px solid #fff
+					
+				
+			
+			&:checked, &:hover, &:focus, &:active
+				&:after
+					@include transition-duration(.2s)
+					
+		input[type="checkbox"]
+			&:active+label
+				&:after
+					background-color: $red
+					@include transition-duration(.1s)
+				
+			
+			&:checked+label
+				&:after
+					background-image: url(../img/tick.png)
+					background-repeat: no-repeat
+					background-position: center
+	.form-submit
+		clear: both
+		display: block
+		overflow: auto
+			
+		#submit
+			margin: 0 auto
+			float: none
+			display: block
+			border: 0 none transparent
+			@include border-radius(.2em)
+			@include transition-property(all)
+			@include transition-duration(.5s)
+			cursor: pointer
+			
+			&:hover, &:focus
+				@include transition-duration(.2s)
+				background-color: lighen($red, 20%) !important
+	
+	
+	.form-error
+		font-size: .8em !important
+		font-style: italic
+		filter: alpha(opacity=70)
+		opacity: .7
+		padding: .5em
+		display: inline-block
+		width: auto !important
+		position: relative
+		top: .2em
+
+.nice_select
+
+	&.hasCustomSelect
+		cursor: pointer
+		position: relative
+		z-index: 1
+		margin: 0 !important
+		+ .customSelect.nice_select
+			border: 1px solid $dark
+			display: block
+			padding: .2em 1.5em .2em .5em
+			position: relative
+			z-index: 0
+			
+			@include transition-property(all)
+			@include transition-duration(.5s)
+			
+			&:after
+				border: 0 transparent solid
+				border-top-color: $red
+				border-width: .7em .4em
+				position: absolute
+				content: ''
+				right: .5em
+				top: .5em
+				width: 0
+				height: 0
+				@include transition-property(all)
+				@include transition-duration(.5s)
+		
+		&:hover + .customSelect.nice_select
+			border: 1px solid $red
+			@include transition-duration(.2s)
+			
+			&:after
+				-webkit-transform: translateY(.3em)
+				-moz-transform: translateY(.3em)
+				-ms-transform: translateY(.3em)
+				-o-transform: translateY(.3em)
+				transform: translateY(.3em)
+				@include transition-duration(.2s)
+		
+		
+	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#sb-site
+	background: none !important
+
+.button
+	background: $red
+	color: white
+	padding: 10px 20px
+	border: 1px solid $red
+	@include transition-property(all)
+	@include transition-duration(.5s)
+	cursor: pointer
+	display: inline-block
+	
+	
+	&:hover, &:focus
+		color: #fff
+		background-color: lighten($red, 10%)
+		@include transition-duration(.2s)
+		
+	&.transparent
+		background-color: transparent
+		color: $red
+		
+		&:hover, &:focus
+			background-color: rgba($red, .1)
+			color: $red
+	
+	
+	&.button_play
+		position: relative
+		padding-right: 3em
+		color: #fff
+		
+		&:after
+			border: .5em transparent solid
+			border-left-color: #fff
+			content: ''
+			display: block
+			position: absolute
+			right: .75em
+			top: .9em
+			width: 0
+			height: 0
+			@include transition-property(all)
+			@include transition-duration(.5s)
+		&:hover, &:focus
+			background-color: lighten($red, 5%)
+			&:after
+				right: .5em
+				@include transition-duration(.2s)
+			
+			
+	
+	
+
+.left
+	float: left
+
+.right
+	float: right !important
+
+
+.video
+	clear: both
+	background-image: url('../img/poster.jpg')
+	background-repeat: no-repeat
+	background-position: center center
+	
+	height: 700px !important
+	position: relative
+	z-index: 0
+	
+	.container
+		width: 100%
+		position: absolute
+		z-index: 501
+		top: 175px
+		article
+			max-width: 1280px
+			width: auto
+			margin: auto
+			.message
+				width: 48%
+				float: left
+				margin-top: 0px
+				
+				
+				@media only screen and (max-width : 780px)
+					float: left
+					margin-top: 0px
+					width: 100%
+				
+				@media only screen and (max-width : 380px)
+					float: left
+					margin-top: 0
+					width: 100%
+
+				h1
+					font-size: 70px
+					padding: 0 .25em
+					@include transition-property(all)
+					@include transition-duration(.5s)
+					@media only screen and (max-width : 1300px)
+						font-size: 56px
+					
+					@media only screen and (max-width : 1271px)
+						font-size: 54px
+					
+					@media only screen and (max-width : 1024px)
+						font-size: 50px
+					
+					@media only screen and (max-width : 780px)
+						font-size: 41px
+						font-size: 35px
+						
+					
+					@media only screen and (max-width : 380px)
+						font-size: 36px
+						margin-top: -36px
+					
+				.open
+					float: left
+					width: 15%
+					margin-left: 220px
+					margin-top: -30px
+					img
+						width: 100%
+.controls_front
+	width: 40%
+	margin-top: 120px
+	float: right
+	right: .5em
+	position: absolute
+	top: -2em
+	
+	
+	
+	
+	ul
+		list-style: none outside none !important
+		li
+			float: left
+			margin-bottom: 30px
+			display: block
+			width: 100%
+			overflow: hidden
+			a
+				background: url('../img/trans.png')
+				+bebas
+				margin-left: 55px
+				color: white
+				padding: .2em .4em
+				display: block
+				font-size: 35px
+				width: 100%
+				&:hover
+					background: #ca3433
+		.search
+			background: url('../img/search.png')
+			background-repeat: no-repeat
+			list-style: none outside none !important
+		.star
+			background: url('../img/star.png')
+			background-repeat: no-repeat
+			list-style: none outside none !important
+		.question
+			background: url('../img/question.png')
+			background-repeat: no-repeat
+
+			list-style: none outside none !important
+	
+	@media only screen and (max-width : 480px)
+		ul li a
+			font-size: 25px
+			margin-left: 37px
+		.star, .question, .search
+			background-size: 37px !important
+
+	@media only screen and (max-width : 780px)
+		float: left
+		margin-top: 0px
+		width: 40%
+		
+	
+	@media only screen and (max-width : 40em)
+		width: 100%
+		float: none
+		position: static
+		top: 0
+		
+		ul
+			margin: 1em 0
+			padding: 0
+
+
+.media-uploader-status 
+	padding-top: 30px
+
+
+.hidden
+	display: none
+
+.js_slide
+	cursor: pointer
+
+
+.social
+	ul
+		.fb
+			a
+				background: url('../img/fb.png')
+				heght: 50px 
+				width: 50px
+header
+	width: 100%
+	padding-top: 40px
+	height: 100px
+	position: absolute
+	z-index: 10
+	background-position: center !important
+	background-size: cover !important
+	nav
+		width: auto
+		background-color: $dark
+		background-color: rgba($dark, .6)
+		height: 65px
+		@include transition-duration(.2s)
+
+		@media only screen and (max-width : 1120px)
+			background-color: rgba($dark, .85)
+		
+		.nav_in
+			width: auto
+			max-width: 1280px
+			margin: auto
+			.logo
+				margin-top: -10px
+				float: left
+				width: 330px
+
+				@media only screen and (max-width : 1200px)
+					margin-top: 0px
+					float: left
+					width: 255px
+				
+				img
+					max-width: 100%
+				
+				*
+					border: none 0 transparent
+			.social
+				float: left
+				list-style: none
+				margin-top: 13px
+				padding-left: 5px
+				
+				*
+					border: none 0 transparent
+				
+				li
+					float: left
+					list-style: none
+					margin: 0px 5px
+					@media only screen and (max-width : 400px)
+						a
+							img
+								height: 25px
+					@media only screen and (min-width : 401px)
+						a
+							img
+								height: 40px
+
+			.desk
+				display: block
+				float: right
+				font-size: 17px
+				list-style-type: none
+				margin-top: 12px
+				//margin-left: 18%
+				padding-left: 0
+				//width: 38%
+				
+				
+				
+				*, *:before, *:after
+					-moz-box-sizing: border-box
+					-webkit-box-sizing: border-box
+					box-sizing: border-box
+					
+				
+				> li
+					position: relative
+					
+					&:before
+						content: ''
+						width: .8em
+						height: .8em
+						background-color: $red
+						position: absolute
+						left: -2%
+						top: .9em
+						@include transition-property(all)
+						@include transition-duration(.5s)
+						z-index: 0
+					
+					&:hover, &:focus, &.current_page_item
+						&:before
+							@include transition-duration(.1s)
+							+bounce
+							width: 100%
+							height: 2em
+							top: .2em
+						
+				
+				li
+					float: left
+					color: red
+					list-style-type: none
+					margin-left: 6px !important
+					padding: 8px 7px
+					z-index: 1
+					position: relative
+					
+					@media only screen and (max-width : 72em)
+						margin-left: 12px
+					
+					a
+						color: white
+						padding: 7px 10px
+						font-size: 24px
+						+bebas
+						z-index: 1
+						position: relative
+					
+					
+					.second_lv, .sub-menu
+						position: absolute
+						top: -22em
+						right: 2px
+						background-color: #fff
+						background-color: rgba(#fff, .8)
+						border: 1px solid $red
+						z-index: -1
+						padding: 0 .25em
+						min-width: 10em
+						-webkit-transform: rotate(4deg) 
+						-moz-transform: rotate(4deg) 
+						-ms-transform: rotate(4deg) 
+						-o-transform: rotate(4deg) 
+						transform: rotate(4deg) 
+						@include transition-property(all)
+						@include transition-duration(.3s)
+						+bounce
+						filter: alpha(opacity=0)
+						opacity: 0
+						
+						li
+							margin-left: 0
+							width: 100%
+							padding: .125em
+							
+							&:first-child
+								padding-top: .35em
+						
+						a
+							display: block
+							width: 100%
+							text-align: left
+							color: $red
+							margin: .25em 0
+							background-color: transparent
+							@include transition-property(background-color)
+							@include transition-duration(.5s)
+							
+							&:hover, &:focus
+								color: $red
+								background-color: rgba($red, .2)
+								@include transition-duration(.2s)
+					
+					ul.sub-menu a 
+						margin: 0 0 .25em
+						
+					
+					
+					
+					
+					// the super login form
+					.loginform_out
+						position: absolute
+						top: -22em
+						right: 0
+						background-color: #fff
+						background-color: rgba(#fff, .8)
+						border: 1px solid $red
+						z-index: -1
+						padding: 0 1em
+						
+						-webkit-transform: rotate(4deg) 
+						-moz-transform: rotate(4deg) 
+						-ms-transform: rotate(4deg) 
+						-o-transform: rotate(4deg) 
+						transform: rotate(4deg) 
+						@include transition-property(all)
+						@include transition-duration(.3s)
+						+bounce
+						filter: alpha(opacity=0)
+						opacity: 0
+						
+						
+						
+						.create_acc
+							display: block
+							width: 100%
+							color: $red
+							font-size: 1em
+							padding-left: 0
+							padding-right: 0
+							text-align: center
+							margin: 1em 0
+						
+						#loginform
+							.login-username, .login-password
+								
+								label, input
+									width: 95%
+									font-size: 1em
+							
+							input
+								padding: .2em
+								
+								&:focus
+									outline: 0
+							.login-submit
+								margin: 0
+							
+							#wp-submit
+								margin-top: .5em !important
+								border: 1px solid $red
+								@include transition-property(background-color)
+								@include transition-duration(.5s)
+								&:hover, &:focus
+									cursor: pointer !important
+									@include transition-duration(.2s)
+									background-color: lighten($red, 10%) !important
+							
+					
+					&:hover, &:focus, &.view_login, &.intent
+						.loginform_out, .second_lv, .sub-menu
+							+bounce
+							top: 3.1em
+							z-index: 100
+							filter: alpha(opacity=100)
+							opacity: 1
+							@include transition-duration(.15s)
+							-webkit-transform: rotate(0) 
+							-moz-transform: rotate(0) 
+							-ms-transform: rotate(0) 
+							-o-transform: rotate(0) 
+							transform: rotate(0) 
+						
+					
+					
+					
+
+				
+						
+			.log
+				display: block
+				background: url('../img/trans2.png')
+				-moz-border-radius: 0px 0px 10px 10px
+				-webkit-border-radius: 0px 0px 10px 10px
+				border-radius: 0px 0px 10px 10px
+				float: right
+				font-size: 14px
+				clear: both
+				list-style-type: square
+				margin-top: -20px
+				padding-left: 0
+				margin-right: 15px
+				width: 25%
+				li
+					float: right
+					color: red
+					list-style-type: square
+					list-style-color: #ca3433
+					margin-left: 20px
+					padding: 8px 7px
+					a
+						color: #CA3433
+						padding: 7px 19px
+						&:hover
+							background: none repeat scroll 0 0 #FFFFFF
+							color: #CA3433
+				.twit
+					list-style: none !important
+					margin-top: 7px
+					margin-left: 5px
+					margin-right: 5px
+					padding: 0px
+					width: 7%
+					a
+						padding: 0px
+						img
+							width: 100%
+						&:hover
+							background: none
+				.fb
+					list-style: none !important
+					margin-top: 7px	
+					margin-left: 5px	
+					margin-right: 5px
+					padding: 0px	
+					width: 7%
+					a
+						padding: 0px	
+						img
+							width: 100%
+						&:hover
+							background: none
+			.mob
+				display: none
+				float: left
+				font-size: 17px
+				list-style: none !important
+				padding-left: 2%
+				padding-top: 12px
+				width: 30%
+				margin: 0px !important
+				height: 64px
+				width: 40% !important
+				li
+					float: left
+					color: red
+					list-style: none !important
+					list-style-color: #ca3433
+					margin-left: 0px !important
+					padding: 8px 7px
+					color: white !important
+					cursor: pointer
+
+					&:before
+						background: url("../img/menu_icon.svg") no-repeat scroll 0 0 rgba(0, 0, 0, 0)
+						content: ""
+						display: block
+						float: left
+						height: 40px
+						position: relative
+						top: -7px
+						width: 40px
+						margin-right: 10px !important
+
+
+
+
+
+.fund
+	width: 100%
+	padding: 0
+	overflow: auto
+	height: 100%
+	padding-top: 1em
+	
+	.fund-single-a
+		width: 24%
+		
+		@media only screen and (max-width : 70em)
+			width: 32.333%
+			
+		@media only screen and (max-width : 50em)
+			width: 49%
+			
+		@media only screen and (max-width : 38em)
+			width: 99%
+		
+	.post, .second, .three, .first, .fund-single
+		background-position: center !important
+		background-repeat: no-repeat
+		background-size: 100% auto
+		background-size: cover !important
+		overflow: hidden
+		display: block
+		
+		&.new
+			&:after
+				width: 12em
+				padding: .25em 1em .25em
+				
+				position: absolute
+				@include transition-property(all)
+				@include transition-duration(.5s)
+				left: -5em
+				top: 0
+				-webkit-transform: rotate(-45deg)
+				-moz-transform: rotate(-45deg)
+				-ms-transform: rotate(-45deg)
+				-o-transform: rotate(-45deg)
+				transform: rotate(-45deg)
+				content: 'New'
+				display: block
+				text-align: center
+				+bebas
+				font-size: 1.5em
+				background-color: $red
+				color: #fff
+			
+			&:hover, &:focus
+				&:after
+					left: -4.5em
+					top: .5em
+					@include transition-duration(.2s)
+		
+		
+		.status
+			background-color: $dark
+			background-color: rgba($dark, .7)
+			@include transition-property(all)
+			@include transition-duration(.5s)
+			height: 250px
+			overflow: auto
+			position: absolute
+			bottom: 2%
+			padding: 5px 5px 0
+			width: 96%
+			left: 2%
+			right: 2%
+			overflow: visible
+
+			h2
+				font-size: 30px
+				margin-bottom: 15px
+				margin-top: -20px
+				max-height: 37px
+				overflow: hidden
+				padding: 8px 10px
+
+			h1
+				font-size: 35px
+				overflow: hidden
+				height: auto
+				line-height: 35px
+				margin-top: 14px
+				max-height: 72px
+
+
+		
+		.progress
+			background-color: $red
+			@include transition-property(all)
+			@include transition-duration(.5s)
+		&:hover, &:focus
+			.status
+				@include transition-duration(.1s)
+				background-color: $red
+				background-color: rgba($red, .8) !important
+			.progress
+				background-color: #fff !important
+				@include transition-duration(.1s)
+				
+	
+	.fund-single
+		margin: .5%
+		padding: 10px
+		position: relative
+		float: left
+		text-align: center
+		height: 520px
+		background-position: center !important
+		background-repeat: no-repeat
+		background-size: 100% auto
+		background-size: cover !important
+		.funding
+			max-width: 80%
+			margin: auto
+			position: relative
+			top: 10px
+			height: 5px
+			background: black
+			.progress
+				background: none repeat scroll 0 0 $red
+				float: left
+				height: 10px
+				margin-top: -2px
+				max-width: 100% !important
+				position: relative
+		.pledge
+			width: 100%
+			ul
+				width: 100%
+				padding: 0px
+				float: left
+				li
+					display: block
+					float: left
+					width: 32.133%
+					+bebas
+					color: white
+					font-size: 25px
+					padding: 10px 0
+					span
+						font-family: book
+	
+	
+	
+	
+	&.fancy_arrangement
+		// Using the sibling selector, we can arrange the projects in a tierd way without the need of classes
+	
+
+
+		// feature
+		section, .fund-single-a
+			min-height: 0
+			.status	
+				height: auto
+				h2
+					font-size: 38px
+					margin-bottom: 15px
+					margin-top: -20px
+					max-height: auto
+					padding: 0px 10px
+				h1
+					font-size: 50px
+					line-height: 50px
+					max-height: 95px
+		
+
+
+
+
+			@include transition-property(min-height)
+			@include transition-duration(.5s)
+			
+			// &:first-child
+				// @media only screen and (min-height : 50em)
+				//	min-height: 30em
+				// @media only screen and (min-height : 60em)
+				// 	min-height: 40em
+				// @media only screen and (min-height : 70em)
+				//	min-height: 50em
+			
+		
+		// 1st & 2nd at 1/2  
+		
+
+		section, .fund-single-a, 
+
+
+		section, section + section, .fund-single-a, .fund-single-a + .fund-single-a
+
+			width: 49%
+			.status
+				background-color: $dark
+				background-color: rgba($dark, .7)
+				@include transition-property(all)
+				@include transition-duration(.5s)
+				height: 250px
+				overflow: auto
+				position: absolute
+				bottom: 2%
+				padding: 5px 5px 0
+				width: 96%
+				left: 2%
+				right: 2%
+				overflow: visible
+
+				h2
+					font-size: 30px
+					margin-bottom: 15px
+					margin-top: -20px
+					max-height: 37px
+					overflow: hidden
+					padding: 8px 10px
+
+				h1
+					font-size: 35px
+					overflow: hidden
+					height: auto
+					line-height: 35px
+					margin-top: 14px
+					max-height: 72px
+			
+			@media only screen and (max-width : 38em)
+				width: 99%
+		
+		// 3th, 4th & 5th at 1/3
+		section + section + section, section + section + section + section, section + section + section + section + section, .fund-single-a + .fund-single-a + .fund-single-a, .fund-single-a + .fund-single-a + .fund-single-a + .fund-single-a, .fund-single-a + .fund-single-a + .fund-single-a + .fund-single-a .fund-single-a 
+			width: 32.333%
+			
+			@media only screen and (max-width : 50em)
+				width: 49%
+			
+			@media only screen and (max-width : 38em)
+				width: 99%
+		
+		// everything after at 1/4
+		section + section + section + section + section + section, .fund-single-a + .fund-single-a + .fund-single-a + .fund-single-a + .fund-single-a + .fund-single-a
+			width: 24%
+			
+			@media only screen and (max-width : 70em)
+				width: 32.333%
+				
+			@media only screen and (max-width : 50em)
+				width: 49%
+				
+			@media only screen and (max-width : 38em)
+				width: 99%
+			
+	
+	
+	
+
+.sup, .support .ign-supportnow a
+	background-color: $dark !important
+	background-color: rgba($dark, .8)
+	color: white 
+	float: left
+	+bebas
+	font-size: 50px
+	padding: 30px
+	text-align: center
+	width: 100%
+	@include transition-property(all)
+	@include transition-duration(.5s)
+	&:hover, &:focus
+		color: white
+		cursor: pointer
+		background-color: $red !important
+		background-color: rgba($red, .8) 
+		@include transition-duration(.1s)
+
+
+.creator
+	background: #CA3433
+	width: 100%
+	p
+		margin: auto
+		text-align: center
+		margin: auto
+		padding: 15px 0px
+		a
+			color: white
+			&:hover
+				color: black
+
+
+.donors_page
+	
+	section, .top, .bottom
+		width: 100%
+		
+		.button
+			margin-bottom: 2em
+	
+	form
+		width: 100% !important
+		
+		.actions
+			select, .button
+				float: left
+			
+			select
+				width: 25% !important
+			
+			.button
+				width: 25% !important
+				float: left
+				margin-top: 0 !important
+				margin-left: 32%
+			
+			@media only screen and (max-width : 768px)
+				select
+					width: 65% !important
+				.button
+					margin-right: 1em
+					float: right
+	
+	.bottom
+		background-image: none !important
+		background-color: #fff
+	 
+
+.js_select_style
+	padding: .65em .5em
+	border: 1px solid $red
+	@include transition-property(all)
+	@include transition-duration(.5s)
+	display: inline-block
+	cursor: pointer
+	position: absolute
+	z-index: 0
+	
+	&.hasCustomSelect
+		margin-top: 0 !important
+		z-index: 10
+	
+	&:after
+		border: .5em transparent solid
+		border-top-color: $red
+		height: 0
+		width: 0
+		content: ''
+		position: absolute
+		top: 50%
+		margin-top: -.25em
+		right: 1em
+	
+	
+	&:hover, &:focus
+		@include transition-duration(.2s)
+		border-color: lighten($red, 10%)
+		background-color: #fff
+
+		
+	
+	
+	
+
+
+
+
+
+
+
+
+/* ------------  single project page  ------------ */
+
+
+
+
+.single
+	width: 100%
+	overflow: auto
+	height: 100%
+
+	article
+		width: auto
+		margin: auto
+		height: 500px
+
+		.first
+			width: 100%
+			position: relative
+			float: left
+			text-align: center
+			height: 700px
+			background-position: center !important
+			background-repeat: no-repeat
+			background-size: 100% auto
+			background-size: cover !important
+			-webkit-background-size: cover
+			-moz-background-size: cover
+			-o-background-size: cover
+			background-size: cover
+			-webkit-transform: translateZ(0) !important
+
+
+			.overlay
+				-webkit-transition: background 0.2s ease-out  /* Safari 3.2+, Chrome */
+				-moz-transition: background 0.2s ease-out  /* Firefox 4-15 */
+				-o-transition: background 0.2s ease-out  /* Opera 10.5Ð12.00 */
+				transition: background 0.2s ease-out  /* Firefox 16+, Opera 12.50+ */	
+				margin-top: -237px
+				padding: 195px
+				display: none
+				position: relative
+
+			.single_wrapper
+				max-width: 1220px
+				margin: 0 auto
+
+
+
+			.status
+				background: url('../img/trans.png')
+				height: auto
+				overflow: auto
+				position: absolute
+				bottom: 0
+				top: inherit !important
+				//max-width: 1280px
+				width: 100%
+				margin: auto
+				padding: 5px 5px 0
+			
+				h1
+					font-size: 70px !important
+					line-height: 70px
+					margin-bottom: 45px
+					margin-top: 20px
+
+					@media all and (max-width: 699px)
+						font-size: 40px !important
+				h2
+					font-size: 40px
+					margin-bottom: 10px !important
+
+					@media all and (max-width: 699px)
+						font-size: 30px !important
+			.funding
+				max-width: 80%
+				margin: auto
+				position: relative
+				top: 10px
+				height: 5px
+				background: rgba(31, 41, 55, 0.9)
+
+				.progress
+					background: none repeat scroll 0 0 $red
+					float: left
+					height: 10px
+					margin-top: -2px
+					max-width: 100% !important
+					position: relative
+			.pledge
+				width: 100%
+				ul
+					width: 100%
+					padding: 0px
+					float: left
+					margin-bottom: 20px !important
+
+					li
+						display: block
+						float: left
+						width: 31.333%
+						+bebas
+						color: white
+						font-size: 25px
+						padding: 10px 0
+						
+						span
+							font-family: book
+							@media all and (max-width: 480px)
+								display: block
+								width: 100%
+			a
+
+				&:hover
+					.overlay
+						display: block
+						background: url('../img/red.png')
+						-webkit-transition: background 0.2s ease-in   /* Safari 3.2+, Chrome */
+						-moz-transition: background 0.2s ease-in   /* Firefox 4-15 */
+						-o-transition: background 0.2s ease-in   /* Opera 10.5Ð12.00 */
+						transition: background 0.2s ease-in   /* Firefox 16+, Opera 12.50+ */
+
+
+
+
+.single_profile
+	color: #4b5c65
+
+	#sidebar
+		@media all and (max-width: 480px)
+			padding: 20px
+
+	.nb_backers	
+		display: block
+		border: 3px solid #4b5c65
+		padding: 20px !important
+		overflow: hidden
+		width: 100% !important
+		opacity: 0.8
+		@include transition-property(all)
+		@include transition-duration(.3s)
+		margin-bottom: 25px
+		position: relative
+
+		&:hover
+			opacity: 1
+
+		h3
+			font-family: bebas !important
+			font-size: 80px !important
+			margin: 15px 0 0 !important
+			width: auto !important
+			display: inline-block
+			color: #4b5c65 !important
+			line-height: 25px !important
+
+			&:after
+				content: "+"
+				display: block
+				font-family: book
+				position: absolute
+				right: 20px
+				top: 40px
+
+			small
+				color: #4b5c65 !important
+				font-size: 30px !important
+				font-family: book !important
+				margin-left: 10px	
+
+		.open
+			&:after
+				content: "-" !important
+				display: block
+				font-family: book
+				position: absolute
+				right: 20px
+				top: 40px
+
+
+
+
+
+		p
+			display: block
+			color: #4b5c65
+			margin: 0 !important
+
+		table
+			border-spacing: 0
+			margin-top: 25px
+
+			.s_t_name
+				font-family: book
+				font-size: 25px
+				letter-spacing: 1px
+
+			td
+				background-color: transparent !important
+				border-bottom: 1px solid rgba(75, 92, 101, 0.3)
+				padding: 15px !important
+			tr
+				background-color: transparent !important
+
+			tr:nth-child(2n+1)
+				background-color: transparent !important
+	.support_button
+		margin-bottom: 20px
+
+	.support
+		section
+			a
+				color: #374851	
+
+
+	.ign-level-desc
+		margin-top: 10px
+
+	.ign-level-counts
+		span
+			display: block
+			margin-top: 10px
+
+
+	.single_detail
+		.top, .bottom
+			@media all and (max-width: 480px)
+				display: none 
+
+	.button.transparent
+		font-family: OS Reg !important
+		font-size: 15px !important
+		background: transparent !important
+		padding: 10px 20px !important
+		display: none !important
+		color: #4B5C65 !important
+		box-shadow: none
+		-webkit-border-radius: 0px
+		-moz-border-radius: 0px
+		border-radius: 0px
+		margin: 0 0 20px 0 !important
+		height: auto !important
+		line-height: 20px !important
+		@include transition-property(all)
+		@include transition-duration(.3s)
+		border: 1px solid #4B5C65 !important
+		float: right
+
+		&:hover, &:focus
+			background-color: #4B5C65 !important
+			color: white !important
+
+		&:visited
+			background: transparent !important
+
+		@media only screen and (max-width : 699px)
+			display: block !important
+
+
+
+.single_share
+	background-color: rgba(24, 35, 40, 0.6)
+	display: block
+	overflow: hidden
+	height: auto
+	color: #fff
+	padding: 25px 0
+
+
+
+
+
+	.single_wrapper
+		max-width: 1220px
+		margin: 0 auto
+		display: block
+
+		.rrssb-buttons
+			margin: 0px !important
+
+			li
+				padding: 0 !important
+				margin: 0 2% 0 0 !important
+				width: 18% !important
+			
+			a
+				webkit-border-radius: 4px
+				-moz-border-radius: 4px
+				border-radius: 4px
+
+
+			.text
+				display: block
+				@media only screen and (max-width : 480px)
+					display: none
+
+
+			li.email a
+				background-color: #4b5c65
+
+				&:hover
+					background-color: #374851
+
+			li.googleplus a
+				background-color: #DF2932 !important
+		
+
+
+
+		.share_buttons
+			display: block
+			float: left
+			width: 60%
+			padding-left: 25px
+
+			@media all and (max-width: 699px)
+				width: 100%
+				text-align: center
+			
+			h2
+				color: #fff !important
+				font-family: bebas !important
+				font-size: 40px !important
+				letter-spacing: 1px
+				margin: 0 0 10px 0 !important
+
+			p
+				margin: 0 !important
+				font-style: italic !important
+
+				@media all and (max-width: 699px)
+					display: none
+
+		.like_buttons
+			display: block
+			float: left
+			width: 36%
+			float: right
+			padding-left: 4%
+			border-left: 3px solid rgba(0, 0, 0, 0.2)
+			float: right
+			padding-left: 21px
+
+			@media all and (max-width: 699px)
+				padding: 0 25px
+				width: 100%
+				border-left: none
+				border-top: 3px solid rgba(0, 0, 0, 0.2)
+				margin-top: 25px
+				padding-top: 20px
+		
+			h2
+				color: #fff !important
+				font-family: bebas !important
+				font-size: 40px !important
+				letter-spacing: 1px
+				margin: 0 0 10px !important
+			
+				@media all and (max-width: 699px)
+					width: 100%
+					text-align: center
+			.rrssb-buttons
+				li
+					width: 31% !important
+
+
+
+		.end_share_buttons
+			margin-top: 10px !important	
+
+			li
+				@media only screen and (max-width : 480px)
+					width: 48% !important
+
+			a
+				margin-top: 0px !important
+
+			.text
+				display: block
+				@media only screen and (max-width : 480px)
+					display: block
+
+
+
+
+.comments_out
+	margin-top: 4em
+	margin-bottom: 4em
+	padding: 0
+	-webkit-margin-before: 0
+	-webkit-margin-after: 0
+	-webkit-margin-start: 0
+	-webkit-margin-end: 0
+	@media only screen and (min-height : 40em)
+		margin-top: 6em
+		margin-bottom: 6em
+	
+	
+	
+	
+	*, *:before, *:after
+		-moz-box-sizing: border-box
+		-webkit-box-sizing: border-box
+		box-sizing: border-box
+	
+	.logged-in-as
+		margin: 0 1%
+		padding-left: .5em
+	
+	.comment-content
+		padding-left: 1em !important
+		padding-right: 1em !important
+	.comment-respond
+		position: relative
+		overflow: hidden
+		&:before
+			display: block
+			
+			background-color: #fff
+			background-color: rgba(#fff, .7)
+			position: absolute
+			content: ''
+			top: -.4em
+			left: -.4em
+			right: -.4em
+			bottom: -.4em
+			z-index: -1
+			@include transition-duration(.3s)
+			
+			-webkit-transform: rotate(2deg) 
+			-moz-transform: rotate(2deg) 
+			-ms-transform: rotate(2deg) 
+			-o-transform: rotate(2deg) 
+			transform: rotate(2deg) 
+			
+	.comment-reply-title
+		padding: .25em
+		display: inline-block
+	.comment-notes
+		padding: .5em
+		margin: 1%
+		display: inline-block
+	
+	form, #loginform
+		width: 100%
+		
+		.form-allowed-tags
+			display: none
+			color: transparent
+			font-size: 0
+			height: 0
+			width: 0
+		
+		.field, .comment-form-comment, .comment-form-url, .comment-form-email, .comment-form-author
+			
+			width: 98%
+			clear: both
+			float: left
+			
+			padding: .5em
+			border: 1px solid transparent
+			margin: .5em 1%
+			@include transition-property(all)
+			@include transition-duration(.5s)
+			background-color: transparent
+			
+			position: relative
+			overflow: visible
+			z-index: 2
+			
+			
+			&.intent
+				@include transition-duration(.2s)
+				background-color: rgba($red, .2)
+				border-color: $red
+				
+			
+			label, input, select, textarea
+				font-size: 1em
+				float: left
+				margin: 0
+				text-align: left
+			
+			label
+				width: 50%
+			
+			input, label, textarea
+				padding: .2em
+			
+			textarea
+				margin-top: 0 !important
+				margin-bottom: 0 !important
+			
+			input, select, textarea
+				width: 50%
+				border: 1px $grey solid
+				@include transition-property(all)
+				@include transition-duration(.5s)
+				
+				&:focus
+					outline: 0
+					@include transition-duration(.2s)
+					border-color: $grey
+		.form-submit
+			clear: both
+			display: block
+			overflow: auto
+			margin-top: 60px
+			margin-bottom: 60px
+			
+			#submit
+				margin: 0 auto
+				float: none
+				display: block
+				border: 0 none transparent
+				@include border-radius(.2em)
+				@include transition-property(all)
+				@include transition-duration(.5s)
+				cursor: pointer
+				
+				&:hover, &:focus
+					@include transition-duration(.2s)
+					background-color: lighen($red, 20%) !important
+			
+		
+		.comment-form-comment, .comment-form-url, .comment-form-email, .comment-form-author
+			
+			label, input, select, textarea
+				float: left
+			
+			label
+				width: 30%
+			input, select, textarea
+				width: 70%
+	
+	
+	
+	.comments-title
+		font-family: book
+		font-size: 30px
+		color: $text
+		clear: both
+		line-height: 1em
+	
+	.commentlist
+		padding: 0
+		-webkit-margin-before: 0
+		-webkit-margin-after: 0
+		-webkit-margin-start: 0
+		-webkit-margin-end: 0
+		
+		.comment
+			padding: 1em
+			background-color: #fff
+			background-color: rgba(#fff, .5)
+			
+			@media only screen and (max-height : 40em)
+				padding-left: .5em
+				padding-right: .5em
+			
+			.comment-meta
+				font-family: book
+				font-size: 30px
+				
+				.fn
+					font-style: normal
+					margin-right: .25em
+			
+			
+			.comment-awaiting-moderation
+				font-style: italic
+				margin-bottom: 0
+			
+			.comment-content
+				background-color: transparent !important
+				padding-left: 0 !important
+				padding-right: 0 !important
+				background-image: none !important
+			
+			
+			
+			.reply 
+				span
+					display: none
+				.comment-reply-link
+					
+					padding: 5px 10px
+					background: $red
+					color: #fff
+					color: #fff
+					@include transition-property(all)
+					@include transition-duration(.5s)
+					cursor: pointer
+					
+					&:after
+						position: relative
+						content: ' \2193'
+						color: #fff
+						top: 0
+						@include transition-property(top)
+						@include transition-duration(.5s)
+					
+					&:hover, &:focus
+						background-color: lighten($red, 10%)
+						@include transition-duration(.2s)
+						
+						&:after
+							@include transition-duration(.2s)
+							top: 5px
+
+
+
+.screen-reader-text
+	width: 0
+	height: 0
+	font-size: 0
+	color: transparent
+
+
+.archive_projects
+	.searchform
+		clear: both
+		width: 100%
+		overflow: visible
+		position: relative
+		margin-bottom: 1em
+		height: 3em
+		
+		input[type="text"], input[type="submit"]
+			position: absolute
+			bottom: 0
+			top: 0
+		
+		input[type="text"]
+			left: 0
+			right: 20%
+			font-size: 1.5em
+			border: 1px solid #888
+			padding-left: .5em
+			width: 100%
+			
+			&:focus
+				border: 1px solid $red
+				outline: 0
+				
+			
+		
+		input[type="submit"]
+			left: 80%
+			right: 0
+	
+	
+	
+	.nice_select
+		text-transform: uppercase
+		
+		
+		&.hasCustomSelect
+			cursor: pointer
+			max-width: 20em
+			width: 100%
+			
+			
+	
+	
+	
+	.sorting_buttons
+		margin-bottom: 1em
+		width: 50%
+		float: left
+		
+		@media only screen and (min-width : 40em)
+			padding-left: .5em
+			
+			
+			&:first-child
+				border-left: 1px solid $dark
+				padding-left: 0
+				padding-right: .5em
+				
+			
+			
+		
+		@media only screen and (max-width : 40em)
+			width: 100%
+		
+		.sorting_buttons_title
+			color: $dark !important 
+			font-weight: light !important 
+			font-size: 2em !important 
+		
+		.button
+			padding-top: .25em
+			padding-bottom: .25em
+			margin-bottom: .35em
+			border-color: $dark
+			background-color: $dark
+			//background-color: rgba($dark, .6)
+			text-transform: uppercase
+			color: #fff
+			font-weight: bold
+			position: relative
+			@include transition-property(all)
+			@include transition-duration(.5s)
+			
+			&:after
+				border: 0 transparent solid
+				position: absolute
+				content: ''
+				right: .5em
+				top: .5em
+				width: 0
+				height: 0
+				@include transition-property(all)
+				@include transition-duration(.3s)
+			
+			&.asc, &.desc
+				padding-right: 3em
+				&:after
+					border-width: .4em .7em
+					border-left-color: #fff
+					-webkit-transform: rotate(0deg)
+					-moz-transform: rotate(0deg)
+					-ms-transform: rotate(0deg)
+					-o-transform: rotate(0deg)
+					transform: rotate(0deg)
+			
+			&.desc:after
+				-webkit-transform: rotate(30deg) 
+				-moz-transform: rotate(30deg) 
+				-ms-transform: rotate(30deg) 
+				-o-transform: rotate(30deg) 
+				transform: rotate(30deg) 
+				top: .75em
+			
+			&.asc:after
+				-webkit-transform: rotate(90deg) 
+				-moz-transform: rotate(90deg) 
+				-ms-transform: rotate(90deg) 
+				-o-transform: rotate(90deg) 
+				transform: rotate(90deg) 
+				top: .8em
+				right: .25em
+			
+			
+			
+			&:hover, &:focus, &.active, &.asc, &.desc,
+				@include transition-duration(.2s)
+				border-color: $red
+				background-color: $red
+
+
+
+.slider-wrapper
+	position: relative
+	clear: both
+	
+	.slides
+		position: relative
+		overflow: hidden
+		width: 100%
+		height: auto
+
+		@media only screen and (max-width : 1920px) 
+			height: 700px
+
+
+		@media only screen and (max-width : 768px) 
+			height: 800px
+
+		@media only screen and (min-width : 1920px) 
+			height: 900px
+
+		
+		&:before
+			content: ""
+			display: block
+			padding-top: 55%
+			@include transition-property(padding-top)
+			@include transition-duration(.4s)
+			
+			
+		@media only screen and (max-width : 480px)
+			.copy
+				margin-top: 0em !important
+		
+		.slide
+			position: absolute
+			
+			left: 0
+			bottom: 0
+			right: 0
+			top: 127px
+			width: 100%
+			@include transition-property(all)
+			@include transition-duration(.5s)
+			margin-left: 0
+			z-index: 1
+			
+			@media only screen and (max-width : 40em)
+				top: 60px
+			img
+				width: 100%
+				height: auto
+				margin-top: -137px
+
+				@media only screen and (max-width : 1297px) 
+					width: 170%
+
+				@media only screen and (max-width : 768px) 
+					width: 250%	
+					margin-left: -50%
+
+				@media only screen and (max-width : 640px) 
+					width: 350%	
+					margin-left: -100%
+
+				@media only screen and (max-width : 580px) 
+					width: 450%	
+					margin-left: -150%
+
+				@media only screen and (max-width : 480px) 
+
+					width: 600%	
+					margin-left: -200%
+
+			
+			@media only screen and (min-width : 1300px)
+				.container
+					max-width: 1300px
+					margin: auto -650px
+					left: 50%
+			.copy
+				h1	
+					font-size: 5em
+					margin-bottom: .1em
+					@media only screen and (max-width : 65em)
+						margin-top: 0
+						
+				
+				h1, p
+					color: #fff
+				
+				p
+					font-size: 1.2em
+					font-weight: bold
+					line-height: 1em
+					margin-bottom: 1em
+			
+			
+			.basic_info
+				max-width: 35em
+				
+				padding: .5em
+				background-color: rgba($dark, .6)
+				
+				
+				.button
+					color: #fff !important
+			
+			
+			.with_img
+				background-color: #fff
+				
+				color: $text !important
+				font-weight: 100
+				
+				h1
+					color: $text !important
+					font-weight: 500
+					margin-left: 30%
+				
+				p
+					width: 66%
+					float: left
+
+				.button
+					margin-left: 30%
+					
+			
+			&.next, &.prev
+				filter: alpha(opacity=0)
+				opacity: 0
+				z-index: 0
+				
+			&.next
+				-webkit-transform: translate(10em,0)
+				-ms-transform: translate(10em,0)
+				transform: translate(10em, 0)
+				
+				.box
+					-webkit-transform: translate(5em,0)
+					-ms-transform: translate(5em,0)
+					transform: translate(5em, 0)
+			
+			&.prev
+				-webkit-transform: translate(-10em,0)
+				-ms-transform: translate(-10em,0)
+				transform: translate(-10em, 0)
+				.box
+					-webkit-transform: translate(-5em,0)
+					-ms-transform: translate(-5em,0)
+					transform: translate(-5em, 0)
+				
+			&.active
+				-webkit-transform: translate(0,0)
+				-ms-transform: translate(0,0)
+				transform: translate(0, 0)
+				filter: alpha(opacity=100)
+				opacity: 1
+			
+			
+
+		.content_out, .first_slide
+			position: absolute
+			max-width: 100%
+		
+		.first_slide
+			background-color: transparent !important
+			
+			.copy
+				width: 50%
+				margin-top: 4em
+				
+				@media only screen and (max-width : 40em)
+					width: 100%
+					margin-top: 2em
+					float: none
+				
+				.button_play
+					margin: 0 auto
+					width: 100%
+					max-width: 10em
+					text-align: center
+					font-size: 2em
+					padding: .2em
+					+bebas
+					font-weight: normal
+					display: block
+					
+					
+					&:after
+						border-width: .4em
+						top: .4em
+				
+	
+	
+	.slide_navigation 
+		position: absolute
+		width: 100%
+		display: inline
+		text-align: center
+		z-index: 10
+		
+		
+		ul
+			li
+				list-style: none
+				display: inline-block
+				
+				margin-left: 1em
+				
+				
+				&:first-child
+					margin-left: 0
+				
+				a
+					cursor: pointer
+					display: block
+					@include border-radius(5em)
+					color: transparent
+					width: 1em 
+					height: 1em
+					@include transition-property(all)
+					@include transition-duration(.5s)
+					overflow: hidden
+					
+					
+					&.active
+						@include transition-duration(.2s)
+						
+						
+
+.full-slider-wrapper
+	.slides 
+		.content_out
+			max-width: 30em
+		.content_out, .first_slide
+			position: absolute
+			top: 4em
+			width: 100%
+			padding: 1em
+			background-color: transparent
+			
+			// @media only screen and (max-width : 40em)
+			// 	padding: .5em
+			// 	background-color: rgba($dark, .6)
+			
+			.copy
+				@media only screen and (max-width : 65em)
+					p 
+						font-size: 1.5em
+				@media only screen and (max-width : 50em)
+					img
+						height: auto
+				@media only screen and (max-width : 47em)
+					h1
+						font-size: 2em
+						margin-left: 0
+						margin-bottom: .2em
+					p 
+						font-size: 1.1em
+	
+	.slide_navigation
+			
+		bottom: 1em
+		
+		ul 
+			
+			display: block
+			margin: 0 auto
+			
+			li a
+				border: 2px solid #fff
+				width: 1em 
+				height: 1em
+				background-color: #fff
+				
+				&:hover, &:focus
+					border-color: $red
+				
+				&.active
+					background-color: $red
+
+
+
+
+
+
+.about
+	width: 100%
+	padding-bottom: 50px
+	padding-top: 130px
+	clear: both
+	article
+		max-width: 1280px
+		width: auto
+		margin: auto
+		padding: 40px
+		padding-bottom: 0px
+		overflow: auto
+		.title
+			width: 100%
+			float: left
+			h1
+				font-size: 70px
+		section
+			float: left
+			background: url('../img/trans2.png')
+			padding: 40px
+			padding-bottom: 0px
+			width: 100%
+			h2
+				margin-top: 0px
+			p
+				width: 95%
+				
+		
+				
+
+				
+		
+		.bottom, .top
+			height: 59px
+			clear: both
+			background-size: 100% 100%
+		
+		.bottom
+			background: url('../img/bg1.png')
+			
+		.top
+			background: url('../img/bg2.png')
+
+.about_hero
+	position: relative
+	background-image: none !important
+	background-color: transparent !important
+	.bg
+		position: absolute
+		top: -1em
+		left: -1em
+		right: -1em
+		bottom: -1em
+		background-color: #fff
+		z-index: -1
+
+		@include transition-property(all)
+		@include transition-duration(.5s)
+		overflow: hidden
+		.bg_in
+			@include transition-property(all)
+			@include transition-duration(.5s)
+			position: absolute
+			top: -2em
+			left: -2em
+			right: -2em
+			bottom: -2em
+			-webkit-transform: rotate(2deg)
+			-moz-transform: rotate(2deg)
+			-ms-transform: rotate(2deg)
+			-o-transform: rotate(2deg)
+			
+			background-size: 100% auto
+			background-size: cover
+			background-repeat: no-repeat
+			background-position: center center
+			
+		&.other
+			-webkit-transform: rotate(2deg)
+			-moz-transform: rotate(2deg)
+			-ms-transform: rotate(2deg)
+			-o-transform: rotate(2deg)
+			.bg_in
+				-webkit-transform: rotate(-2deg)
+				-moz-transform: rotate(-2deg)
+				-ms-transform: rotate(-2deg)
+				-o-transform: rotate(-2deg)
+				
+			
+		
+.blog
+	width: 100%
+	padding-bottom: 50px
+	padding-top: 130px
+	clear: both
+	article
+		max-width: 1280px
+		width: auto
+		margin: auto
+		padding: 40px
+		padding-bottom: 0px
+		overflow: auto
+		.title
+			width: 100%
+			float: left
+			h1
+				font-size: 70px
+				margin-bottom: 0px
+				
+				@media only screen and (max-width : 30em)
+					font-size: 60px
+				
+		section
+			float: left
+			background: url('../img/trans2.png')
+			padding: 40px
+			padding-bottom: 0px
+			h2
+				margin-top: 0px
+			p
+				width: 95%
+		
+		.bottom, .top
+			height: 59px
+			clear: both
+			background-size: 100% 100%
+		.bottom
+			background: url('../img/bg1.png')
+		.top
+			background: url('../img/bg2.png')
+
+.pldg
+	width: 100%
+	padding-bottom: 50px
+	padding-top: 130px
+	clear: both
+	article
+		max-width: 1280px
+		width: auto
+		margin: auto
+		padding: 40px
+		padding-bottom: 0px
+		.title
+			width: 60%
+			float: left
+			h1
+				font-size: 70px
+		section
+			float: left
+			background: url('../img/trans2.png')
+			padding: 40px
+			padding-bottom: 0
+			width: 100%
+			
+			h1
+				font-size: 70px
+				margin-bottom: 0px
+			h2
+				margin-top: 30px
+				line-height: px
+				color: #CA3433
+			p
+				width: 95%
+			.controls
+				width: 40%
+				margin-top: 50px
+				float: left
+				ul
+					li
+						float: left
+						margin-bottom: 30px
+						display: block !important
+						a
+							float: left
+							background: url('../img/trans.png')
+							font-family: book
+							font-size: 30px
+							color: white
+							margin-left: 55px
+							padding: 11px
+							width: 100%
+							&:hover
+								background: #ca3433
+					.search
+						background: url('../img/search.png')
+						background-repeat: no-repeat
+					.star
+						background: url('../img/star.png')
+						background-repeat: no-repeat
+					.question
+						background: url('../img/question.png')
+						background-repeat: no-repeat
+			
+			.cut_content
+				width: 45%
+				float: left
+			.cut_image
+				float: right
+				width: 50%
+				img
+					width: 100%
+					margin-top: 50px
+			.staff
+				width: 20%
+				background: url('../img/staff.png')
+				float: left
+				height: 276px
+				margin-top: 30px
+				margin-right: 10px
+				text-align: center
+				h1
+					font-size: 30px
+					margin: 20px 0px
+				.info
+					margin-top: 171px
+					background: url('../img/trans.png')
+					overflow: auto
+
+		.bottom, .top
+			height: 59px
+			clear: both
+			background-size: 100% 100%
+		.bottom
+			background: url('../img/bg1.png')
+		.top
+			background: url('../img/bg2.png')
+		.small
+			width: 45%
+			margin-top: 50px
+			margin-bottom: 30px
+			padding: 20px
+			background: url('../img/trans2.png')
+			h1
+				margin-bottom: 0px
+.cat
+	float: left
+	width: 50%
+	span
+		width: 100%
+		padding: 10px
+		color: white
+		font-size: 35px
+		font-family: book
+	ul
+		padding: 10px
+		margin: 0px
+		li
+			display: block
+			float: left
+			a
+				padding: 10px 20px
+
+.filler
+	background: url('../img/trans.png')
+	height: 17px
+.detail
+	width: 100%
+	padding-bottom: 50px
+	clear: both
+	article
+		max-width: 1280px
+		width: auto
+		margin: auto
+		padding: 2.6666em
+		padding-bottom: 0
+		overflow: auto
+	
+		@media only screen and (max-width : 34em)
+			padding: 2.666em 1.333em
+		@media only screen and (max-width : 28em)
+			padding: 1.333em .6665em
+		
+		.meet
+			
+			width: 60%
+			float: left
+			.title
+				width: 60%
+				float: left
+				h1
+					font-size: 70px
+			
+			
+			
+			.vd
+				margin: 2em 0
+			
+			.support_button
+				width: 100%
+				text-align: center
+				display: none
+				margin-bottom: 1em
+				@media only screen and (max-width : 1024px)
+					display: block
+					
+			
+			
+			
+			
+			section
+				float: left
+				background: url('../img/trans2.png')
+				padding: 2.666666667em
+				padding-bottom: 0px
+				width: 100%
+				
+				
+				@media only screen and (max-width : 36em)
+					padding: 2.666em 1.333em
+				
+				h1
+					font-size: 70px
+					margin-bottom: 0px
+				h2
+					margin-top: 0px
+				p
+					width: 100%
+				.controls
+					width: 40%
+					margin-top: 50px
+					float: left
+					ul
+						li
+							float: left
+							margin-bottom: 30px
+							display: block !important
+							a
+								float: left
+								background: url('../img/trans.png')
+								font-family: book
+								font-size: 30px
+								color: white
+								margin-left: 55px
+								padding: 11px
+								width: 100%
+								&:hover
+									background: #ca3433
+						.search
+							background: url('../img/search.png')
+							background-repeat: no-repeat
+						.star
+							background: url('../img/star.png')
+							background-repeat: no-repeat
+						.question
+							background: url('../img/question.png')
+							background-repeat: no-repeat
+				form
+					float: left
+					width: 60%
+					padding: 50px 0px
+					label
+						width: 100%
+						padding: 10px
+						color: white
+						font-size: 35px
+						font-family: book
+					input[type="text"]
+						width: 70%
+						padding: 10px
+						font-size: 20px
+						border: none
+						margin-left: 10px
+						margin-top: 20px
+						background: #4b5c65
+						color: white
+					input[type="submit"]
+						width: 24%
+						padding: 9px
+						font-size: 20px
+						border: none
+						margin-left: -4px
+						margin-top: 20px
+						background: #ca3433
+						color: white
+				.cut_content
+					width: 100%
+					margin-top: 50px
+					float: left
+				.cut_image
+					float: right
+					width: 100%
+					img
+						width: 100%
+						margin-top: 50px
+				.staff
+					width: 20%
+					background: url('../img/staff.png')
+					float: left
+					height: 276px
+					margin-top: 30px
+					margin-right: 10px
+					text-align: center
+					h1
+						font-size: 30px
+						margin: 20px 0px
+					.info
+						margin-top: 171px
+						background: url('../img/trans.png')
+						overflow: auto
+
+			.bottom, .top
+				height: 59px
+				clear: both
+				background-size: 100% 100%
+			.bottom
+				background: url('../img/bg1.png')
+			.top
+				background: url('../img/bg2.png')
+			.small
+				width: 45%
+				margin-top: 50px
+				margin-bottom: 30px
+				padding: 20px
+				background: url('../img/trans2.png')
+				h1
+					margin-bottom: 0
+		.comments_out
+			width: 36%
+			float: right
+			clear: right
+			@media only screen and (max-width : 1024px)
+				width: 100%
+		
+		.support
+			width: 36%
+			padding-right: 0px
+			padding-top: 33px
+			float: right
+			.title
+				width: 60%
+				float: left
+				h1
+					font-size: 70px
+			section
+				float: left
+				//background: url('../img/trans2.png')
+				padding-bottom: 0px
+				h1
+					font-size: 70px
+					margin-bottom: 0px
+				h2
+					margin-top: 0px
+				p
+					width: 95%
+				
+				
+				a
+					position: relative
+					display: block
+					overflow: visible
+					padding: 20px
+					background-color: rgba(#fff, .5)
+					margin-bottom: 1em
+					@include transition-property(all)
+					@include transition-duration(.5s)
+					
+					.level-group
+						z-index: 3
+						position: relative
+					
+						
+					&:not(.disabled)
+						&:hover, &:focus
+							
+							background-color: $red
+							color: #fff
+							@include transition-duration(.2s)
+							
+							
+							.ign-level-title h1
+								color: #fff
+							
+							.ign-level-desc, .ign-level-counts
+								color: #fff !important
+								
+					&.disabled
+						cursor: not-allowed
+			
+			
+			.support_button
+				display: block
+				overflow: auto
+				clear: both
+				
+				.cta_text, .subtitle
+					display: block
+					text-align: center
+				
+				.cta_text
+					+bebas
+					font-size: 3em
+					
+				
+				.subtitle
+					font-style: italic
+					
+			
+			
+			
+			
+			
+			.small
+				width: 100%
+				margin-bottom: 20px
+				//background: url('../img/trans2.png')
+				h1
+					margin-bottom: 0px
+					font-size: 35px
+					
+			
+				
+				
+				
+			.bottom, .top
+				height: 59px
+				clear: both
+				background-size: 100% 100%
+			.bottom
+				background: url('../img/bg1.png')
+			.top
+				background: url('../img/bg2.png')
+.news
+	width: auto
+	margin: auto
+	article
+		padding-bottom: 60px
+		max-width: 1280px
+		width: auto
+		margin: auto
+		overflow: auto
+		.arch
+			width: 16%
+			padding: 20px
+			float: right
+			margin-top: 20px
+			background: url('../img/trans2.png')
+			h1
+				font-weight: bold
+			ul
+				padding-left: 0px
+				li
+					margin-top: 20px
+					list-style: none
+					.count
+						color: #FFFFFF
+						padding: 1px 6px
+						text-align: center
+						margin-right: 10px
+						background: #df2932
+
+			.read
+				float: left
+				display: block	
+				clear: both
+				font-family: book !important
+				font-size: 30px !important
+				background: none repeat scroll 0 0 #4B5C65 !important
+				padding: 10px 20px !important
+				display: inline-block !important
+				color: #fff !important
+				box-shadow: none !important
+				-webkit-border-radius: 0px !important
+				-moz-border-radius: 0px !important
+				border-radius: 0px !important
+				margin: 10px !important
+				@include transition-property(all)
+				@include transition-duration(.3s) 
+
+				&:hover
+					background-color: $red !important
+		.inner
+			width: 75%
+			padding-top: 20px
+			float: left
+			section
+				width: 100%
+				padding: 20px
+				background: url('../img/trans2.png')
+				margin-bottom: 10px
+				overflow: auto
+				
+				.title
+					float: left
+					width: 100%
+					margin-right: 45px
+					h1
+						font-family: +bebas
+						color: #df2932
+						line-height: 50px
+						padding-bottom: 10px
+						margin-bottom: 0
+						a
+							color: #df2932
+					
+					p
+						line-height: 30px
+					.date
+						padding: 5px
+						background: #f6f6f6
+						float: left
+						clear: both
+				
+				.read
+					float: left
+					display: block	
+					clear: both
+					font-family: book !important
+					font-size: 30px !important
+					background: none repeat scroll 0 0 #4B5C65 !important
+					padding: 10px 20px !important
+					display: inline-block !important
+					color: #fff !important
+					box-shadow: none !important
+					-webkit-border-radius: 0px !important
+					-moz-border-radius: 0px !important
+					border-radius: 0px !important
+					margin-top: 10px !important
+					@include transition-property(all)
+					@include transition-duration(.3s) 
+
+					@media only screen and (max-width : 520)
+
+					&:hover
+						background-color: $red !important
+
+				.img
+					float: left
+					width: 55%
+					
+					img
+						clear: both
+						height: auto
+						max-width: 100%
+	.post
+		.meta
+			font-style: italic
+			filter: alpha(opacity=80)
+			opacity: .8
+		.singlethumb
+			float: left
+			max-width: 75%
+			height: auto
+			margin-right: .8em
+			display: inline-block
+
+
+.news-single
+	width: auto
+	padding-top: 130px
+	margin: auto
+	article
+		padding-bottom: 60px
+		max-width: 1280px
+		width: auto
+		margin: auto
+		overflow: auto
+		
+		.bottom, .top
+			height: 59px
+			clear: both
+			background-size: 100% 100%
+		.bottom
+			background: url('../img/bg1.png')
+		.top
+			background: url('../img/bg2.png')
+		.inner
+			width: 100%
+			float: left
+
+			section
+				width: 100%
+				padding: 30px 0px
+				background: url('../img/trans2.png')
+				overflow: auto
+
+				.read
+					float: left
+					width: 40%
+					clear: both
+					color: #df2932
+					text-transform: capitalize
+					&:hover
+						color: #38454C
+
+
+				.img
+					float: right
+					width: 21%
+					.button
+						float: left
+						margin-top: 20px
+						margin-right: 20px
+					
+				.title
+					float: left
+					padding: 0px 20px
+					width: 60%
+					margin-left: 19%
+					h1
+						font-family: +bebas
+						font-size: 50px
+						color: #df2932
+						line-height: 50px
+						padding-bottom: 20px
+						a
+							color: #df2932
+					p
+						line-height: 30px
+
+				.date
+					padding: 5px
+					background: #f6f6f6
+					float: left
+					margin-left: 20px
+					margin-top: 20px
+
+
+
+
+
+.how_to
+
+	*, *:before, *:after
+		-moz-box-sizing: border-box
+		-webkit-box-sizing: border-box
+		box-sizing: border-box
+	
+	
+	section
+		width: 100%
+		
+		p
+			font-size: 1.5em
+	
+	ol
+		list-style: none
+			
+		padding: 0
+		-webkit-margin-before: 0
+		-webkit-margin-after: 0
+		-webkit-margin-start: 0
+		-webkit-margin-end: 0
+		
+		max-width: 50em
+		margin: 3em auto 0
+		width: 100%
+		
+		li
+			+clearfix
+			overflow: visible
+			padding: 1em
+			float: left
+			width: 100%
+			margin: 0 auto 1em
+			position: relative
+
+			
+			@include transition-property(margin)
+			@include transition-duration(.5s)
+			
+			@media only screen and (min-height : 40em)
+				margin-bottom: 3em
+			@media only screen and (min-height : 60em)
+				margin-bottom: 6em
+			
+			
+			
+			
+			
+			
+			&:after
+				background-color: $dark
+				background-color: rgba($dark, .5)
+				position: absolute
+				content: ''
+				top: -.4em
+				left: -.4em
+				right: -.4em
+				bottom: -.4em
+				z-index: -1
+				@include transition-duration(.3s)
+				border-bottom: 2px solid rgba($dark, .8)
+				
+			// 	-webkit-transform: rotate(1deg) 
+			// 	-moz-transform: rotate(1deg) 
+			// 	-ms-transform: rotate(1deg) 
+			// 	-o-transform: rotate(1deg) 
+			// 	transform: rotate(1deg) 
+			// 	-webkit-transform: scaleY(50deg)
+			// 	-moz-transform: scaleY(25deg)
+			// 	-ms-transform: scaleY(25deg)
+			// 	-o-transform: scaleY(25deg)
+			// 	transform: scaleY(50deg)
+			
+			
+			// &:nth-child(2n)
+			// 	&:after
+			// 		-webkit-transform: rotate(-1deg)
+			// 		-moz-transform: rotate(-1deg)
+			// 		-ms-transform: rotate(-1deg)
+			// 		-o-transform: rotate(-1deg)
+			// 		transform: rotate(-1deg)
+			// &:nth-child(3n)
+			// 	&:after
+			// 		-webkit-transform: rotate(2deg)
+			// 		-moz-transform: rotate(2deg)
+			// 		-ms-transform: rotate(2deg)
+			// 		-o-transform: rotate(2deg)
+			// 		transform: rotate(2deg)
+			// &:nth-child(5n)
+			// 	&:after
+			// 		-webkit-transform: rotate(-2deg)
+			// 		-moz-transform: rotate(-2deg)
+			// 		-ms-transform: rotate(-2deg)
+			// 		-o-transform: rotate(-2deg)
+			// 		transform: rotate(-2deg)
+			
+			
+			
+			
+			
+			
+			
+			
+			h1
+				margin-bottom: .2em
+				color: $red
+				font-size: 40px
+				letter-spacing: 1px
+			p
+				color: #374851
+				font-size: 16px
+				
+			
+			img, .content_in
+				float: left
+			
+			img
+				width: 30%
+				position: relative
+				left: 2.8em
+				
+			.content_in
+				width: 70%
+			
+			
+			&:nth-child(odd)
+				
+				.content_in, img
+					float: right
+				
+				img
+					left: -2.8em
+		
+
+
+
+
+
+
+
+
+footer
+	width: 100%
+	position: relative
+	background-color: #6D7676
+	///background-color: rgba($dark, .6)
+	overflow: hidden
+	padding: 40px 10px
+	//margin-top: 40px
+	.foot
+		max-width: 1280px
+		width: auto
+		margin: auto
+		img, form, .bottom_menu
+			float: left
+		form
+			width: 60%
+			label
+				width: 100%
+				padding: 0 10px
+				color: white
+				font-size: 35px
+				display: inline-block
+				font-family: book
+				
+			input[type="text"], input[type="email"]
+				width: 70%
+				float: left
+				padding: 10px
+				font-size: 20px
+				border: none
+				margin-left: 10px
+				margin-top: 20px
+				background: #4b5c65
+				color: white
+				
+				&:focus
+					outline: 0
+				
+			input[type="submit"]
+				width: 100%
+				padding: 9px
+				font-size: 20px
+				border: none
+				margin-left: -4px
+				margin-top: 20px
+				background: #ca3433
+				color: white
+
+			#mc_embed_signup_scroll > div
+				float: left
+				width: 24%
+
+			.mce_inline_error
+				background: none repeat scroll 0 0 #9f0908 !important
+		
+		.bottom_menu
+			width: 23%
+			
+			padding-left: 1em
+			.socials
+				float: left
+				list-style: none
+				margin-left: 23px
+				width: 100%
+				margin-top: 22px
+				padding-left: 0
+				
+				*
+					border: none 0 transparent
+				
+				li
+					float: left
+					list-style: none
+					margin: 0px 5px
+			.desk
+				li
+					line-height: 1.2em
+					list-style: none
+					margin-left: .5em
+					margin-bottom: .5em
+					position: relative
+					a:before
+						position: absolute
+						content: ''
+						color: #df2932
+						position: absolute
+						width: 0.5em
+						height: 0.5em
+						display: block
+						background-color: #fff
+						margin-top: .4em
+						margin-left: 0
+						left: -1.25em
+						@include transition-property(all)
+						@include transition-duration(.5s)
+					
+					a
+						color: #fff
+						
+						&:hover, &:focus
+							&:before
+								margin-top: .15em
+								margin-left: -.25em
+								width: 1em
+								height: 1em
+								@include transition-duration(.1s)
+								+bounce
+					
+		
+
+
+
+
+
+
+
+
+#payment-form
+	position: relative
+	&:after
+		background-image: url(../img/stripe.png)
+		background-repeat: no-repeat
+		background-position: center center
+		display: block
+		content: ""
+		width: 269px
+		height: 59px
+		position: absolute
+		bottom: 0
+		left: 0
+
+
+
+.memberdeck 
+	#payment-form
+		background: url('../img/trans2.png') !important
+		border-radius: 4px !important
+		margin-bottom: 10px !important
+		margin-left: auto !important
+		margin-right: auto !important
+		margin-top: 53px !important
+		max-width: 650px !important
+		overflow: hidden !important
+		padding: 20px !important
+		position: relative !important
+		width: 100% !important
+		
+		border: 1px solid #fff
+	
+	p
+		max-width: 650px
+		width: 100%
+		margin: 0 auto
+	
+.end_share_buttons a
+	margin-top: 1em
+
+.end_share_cta
+	margin-top: 2em
+
+small.help_cta
+	font-family: OS Bold
+	margin-bottom: .5em
+	font-size: 1em
+	display: block
+
+h4.support_levels
+	margin-bottom: 10px
+	font-size: 40px !important
+	color: $dark !important
+
+.project_fesubmit
+	background: #df2932 !important
+	color: white !important
+	padding: 10px 20px !important
+	+bebasimp
+	border: none !important
+	font-size: 28px !important
+.submit-button
+	background: #df2932 !important
+	color: white !important
+	padding: 10px 20px !important
+	font-family: bebas !important
+	font-size: 28px !important
+
+#searchsubmit
+	background: none repeat scroll 0 0 $red
+	color: #FFFFFF !important
+	float: right
+	+bebasimp
+	font-size: 28px !important
+	padding: 6px 20px !important
+	width: 22% !important
+	border: 1px solid $red
+	cursor: pointer
+	@include transition-property(all)
+	@include transition-duration(.5s)
+	
+	&:hover, &:focus
+		@include transition-duration(.2s)
+		background-color: lighten($red, 10%)
+	
+
+.button-medium
+	background: none repeat scroll 0 0 #DF2932 !important
+	color: #FFFFFF !important
+	float: right
+	+bebasimp
+	font-size: 28px !important
+	padding: 6px 20px !important
+	width: 23% !important
+	
+	&:hover, &:focus
+		color: #fff !important
+
+
+.button-primary
+	background: #df2932 !important
+	
+	color: white !important
+	padding: 10px 70px !important
+	+bebasimp
+	font-size: 28px !important
+	margin-top: 50px !important
+
+.comment-respond #submit
+	background: #df2932
+	color: white
+	padding: 10px 70px
+	+bebas
+	font-size: 28px
+
+
+
+.ignitiondeck .id-purchase-form-wrapper, .ignitiondeck .id-fes-form-wrapper
+	background: none !important
+
+content.ignition_project
+	background-image: url(../img/crossword.png)
+
+.md-requiredlogin 
+	h3
+		@media only screen and (max-width : 45em)
+			font-size: 30px !important
+	p
+		color: $text
+	#loginform
+		background: url('../img/trans2.png') !important
+		border: medium none !important
+		box-shadow: none !important
+		margin: 0 auto 150px !important
+		padding: 4.666666667em !important
+		max-width: 500px !important
+		width: 90% !important
+		
+		@media only screen and (max-width : 45em)
+			padding: 1.16em !important
+
+.idfield_label 
+	font-size: 28px !important
+
+.ignitiondeck 
+	form
+		background: url('../img/trans2.png') !important
+		border: medium none !important
+		color: #444444 !important
+		padding: 2.666666667em !important
+		
+		max-width: 55.6em !important
+		width: 100% !important
+		
+		@media only screen and (max-width : 40em)
+			padding: 2.666666667em .5em !important
+		
+		.form-row.half,  .half
+			width: 100% !important
+		
+		.payment-errors
+			font-size: 17px !important
+		li
+			font-family: book !important
+			font-size: 28px !important
+		.form-row 
+			input, textarea
+				background-color: #fff !important
+				margin: 20px 0 !important
+				@include transition-property(border-color)
+				@include transition-duration(.5s)
+				max-width: 100%
+				min-width: 5em
+				&:focus
+					outline: 0
+					border-color: $red
+					@include transition-duration(.1s)
+			
+			label .required-mark 
+				color: #df2932 !important
+				float: right !important
+				font-size: 18px !important
+				margin-top: 6px !important
+			
+			@media only screen and (max-width : 34em)
+				&.twothird, &.third
+					width: 98% !important
+					
+				
+		
+
+
+
+.memberdeck form .form-row label
+	font-family: book !important
+	font-size: 28px !important
+
+
+.md-requiredlogin #loginform p.login-username label, .md-requiredlogin #loginform p.login-password label
+	color: #2A2A2A !important
+	float: left !important
+	font-size: 28px !important
+	line-height: 19.2px !important
+	margin: 20px 0 !important
+	font-family: book !important
+	text-align: left !important
+	width: 100% !important
+
+
+
+.main-btn	
+	background: #df2932 !important
+	color: white !important
+	padding: 10px 20px !important
+	+bebasimp
+	font-size: 28px !important
+
+	
+	// thanks microsoft
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#df2932', endColorstr='#df2932',GradientType=0 ) !important
+h4
+	+bebasimp
+	font-size: 50px !important
+	margin-top: 0 !important
+	color: #df2932 !important
+
+h3
+	+bebasimp
+	font-size: 50px !important
+	margin-top: 0 !important
+	color: #df2932 !important
+	margin-bottom: 0px !important
+
+
+.sb-slidebar.sb-left > ul
+	list-style: none outside none
+
+.project_disclaimer
+	display: none
+
+.ignitiondeck.id-purchase-form-full
+	margin-top: -150px
+
+.alignright.size-full.wp-image-294
+	width: 100%
+
+
+textarea
+	margin: 20px 0px !important
+
+.id-checkout-description 
+	font-family: book !important
+	font-size: 28px !important
+	margin: auto !important
+	text-align: center !important
+	max-width: 55em !important
+	width: 100% !important
+	
+	h1, h2
+		text-align: center 
+
+
+
+
+
+#site-description
+	clear: both !important
+	margin-bottom: auto !important
+	margin-left: auto !important
+	margin-right: auto !important
+	padding-top: 160px !important
+	text-align: center !important
+	
+	max-width: 55em !important
+	width: 100% !important
+	
+	h1
+		color: #DF2932 !important
+	p
+		display: none !important
+		line-height: 40px !important
+
+
+
+
+
+
+
+
+.ignitiondeck form .form-row label
+	font-size: 28px !important
+
+.md-requiredlogin form .input, .md-requiredlogin input[type="text"]
+	float: left !important
+
+select
+	margin: 20px 0
+
+.sb-slidebar.sb-left
+	li
+		list-style: none
+		a
+			background: none repeat scroll 0 0 $red
+			color: #FFFFFF
+			float: left
+			margin-bottom: 10px
+			padding: 10px
+			width: 100%
+			@include transition-property(background)
+			@include transition-duration(.5s)
+			&:hover, &:focus
+				@include transition-duration(.2s)
+				background: lighten($red, 10%)
+			
+			&:active
+				@include transition-duration(.1s)
+				background: #38454C
+			
+			
+		form
+			input[type="text"]
+				background: none repeat scroll 0 0 #0b2433
+				color: #FFFFFF
+				float: left
+				font-size: 14px
+				border: none
+				margin-bottom: 3px
+				padding: 11px
+				width: 80%
+			input[type="submit"]
+				background: none repeat scroll 0 0 #f2a139
+				color: #FFFFFF
+				float: left
+				font-size: 14px
+				border: none
+				-moz-appearance: none
+				-webkit-appearance: none
+				text-align: left !important
+				margin-bottom: 3px
+				padding: 10px
+				width: 20%
+
+.md-requiredlogin
+	color: #FFFFFF
+	text-align: center
+
+#search-inputs
+	input
+		background: none repeat scroll 0 0 #4B5C65
+		border: medium none
+		color: #FFFFFF
+		font-size: 20px
+		margin-left: 10px
+		margin-top: 20px
+		padding: 10px
+		width: 70%
+
+#search-2
+	form 
+		margin-bottom: 50px
+
+.memberdeck .md-profile li.myprojects:nth-child(2n)
+	background: url('../img/trans.png')
+	color: white !important
+	a
+		&:hover
+			color: white !important
+
+.memberdeck form .form-row label
+	color: #434F60
+	display: block
+	font-weight: 200
+	margin: 10px 0
+	text-indent: 3px
+	vertical-align: text-bottom
+	
+
+.form-row
+	textarea 
+		min-height: 219px !important
+
+
+.ignitiondeck form .form-item-error-msg
+	color: #FF0000
+	font-size: 19.667px
+	font-weight: bold
+
+
+.ignitiondeck form .id-checkout-level-desc
+	font-size: 35.546px
+	margin: 0 auto
+	padding: 10px 20px
+
+
+
+
+
+
+
+
+
+
+.message_box
+	border: $dark 1px solid
+	background-color: lighten($dark, 30%)
+	background-color: rgba($dark, .2)
+	padding: 1em
+	width: auto
+	text-align: center
+	color: $dark
+	font-weight: bold
+	margin: 1em 0
+	
+	&.bad
+		border-color: $red
+
+
+
+
+
+
+
+
+
+
+.entry-content
+	
+	width: 100%
+	.memberdeck
+		margin: auto auto 4em
+		max-width: 1280px
+		width: 100%
+		
+		
+		.dashboardmenu
+			border: medium none
+			padding: 20px
+			background: #CA3433
+			li
+				margin: 0
+				padding: 1px 0 0 0
+				display: inline-block
+				height: 32px
+				line-height: 32px
+
+				@media only screen and (max-width : 520px)
+					width: 30% 
+				@media only screen and (max-width : 320px)
+					width: 100% 
+					margin: 5px 0px !important
+				a
+					color: #eee
+					padding: 8px 16px
+					margin: 0
+					font-size: 28px
+					font-family: book
+					@include transition-property(all)
+					@include transition-duration(.5s)
+					
+					@media only screen and (max-width : 520px)
+						padding: 8px
+						font-size: 22px
+						width: 100%
+						display: inline-block
+						text-align: center
+		
+				a:hover, a:focus, &.current_page_item a
+					@include transition-duration(.2s)
+					background-color: #eee
+					color: $red
+				
+		.md-dash-sidebar 
+			ul 
+				li 
+					h3 
+						border-bottom: 1px solid rgba(0, 0, 0, 0.2) !important
+						font-size: 38px !important
+						line-height: 24px !important
+						margin: 10px 0 !important
+						padding: 20px 0 !important
+			
+		.md-profile
+			
+			h3
+				overflow: auto
+				line-height: 2em
+			
+			.how
+				clear: both
+			
+			.md-membership
+				color: #434F60
+				+bebas
+				font-size: 42px
+				line-height: 40px
+				margin: 0 0 0 108px
+		
+		form 
+			.form-row.half
+				display: inline-block
+				padding-right: 33px
+				width: 46.5%
+				
+				@media only screen and (max-width : 40em)
+					padding-right: 0
+					width: 100%
+		
+		.md-box-wrapper
+			background: url('../img/trans2.png')
+		.md-profile
+			h2 
+				margin: 30px 0 !important
+				color: #CA3433 !important
+
+.ignitiondeck form .dd-option-description
+	font-size: 31.333px !important
+
+
+.sb-slidebar
+	background: #38454C !important
+
+.about article .title h1
+	font-size: 70px
+
+@media only screen and (max-width : 1600px)
+
+	.fund 
+		article 
+			.second
+				width: 24%
+			.three
+				width: 49%
+			.post 
+				width: 32.333%
+			.first 
+				width: 99%
+				.pledge 
+					ul 
+						li
+							width: 32.333% !important
+			
+			.post, .three, .second, .first
+				.pledge 
+					ul 
+						li
+							width: 32.333%
+
+@media only screen and (max-width : 1500px)
+	.vid
+		margin-top: 0px
+
+	.fund 
+		article 
+			.second
+				width: 49%
+			.three
+				width: 49%
+			.post 
+				width: 32.333%
+			.post, .three, .second, .first
+				.pledge 
+					ul 
+						li
+							width: 32.333%
+
+
+@media only screen and (max-width : 1230px)
+
+	header nav .nav_in .log
+		display: block
+		float: left
+		font-size: 17px
+		list-style-type: square
+		margin-top: 12px
+		padding-left: 0
+		width: 26%
+	
+	
+	
+	
+@media only screen and (max-width : 1300px)
+	header nav .nav_in .log
+		display: block
+		float: right
+		font-size: 17px
+		list-style-type: square
+		margin-top: -19px
+		padding-left: 0
+		width: 29%
+	
+	.fund 
+		article 
+			.three, .post, .second, .first
+				width: 100%
+			
+			.post, .three, .second, .first
+				.pledge 
+					ul 
+						li
+							width: 32.333%
+
+@media only screen and (max-width : 1120px)
+	header nav .nav_in .desk
+		display: none
+	header nav .nav_in .mob
+		display: block
+		float: left
+		width: 25%
+
+@media only screen and (max-width : 780px)				
+	.fund 
+		article 
+			section
+				background-position: center !important
+				background-repeat: no-repeat
+				background-size: 100% auto
+				background-size: cover !important
+			.first 
+				float: left
+				height: 480px
+				margin: 0px
+				padding: 0px
+				position: relative
+				text-align: center
+				width: 100%
+				a
+					.status
+						top: 233px !important
+			.post 
+				float: left
+				height: 480px
+				margin: 0px
+				margin-bottom: 40px
+				padding: 0px
+				position: relative
+				text-align: center
+				width: 100%
+				a
+					.status
+						top: 233px !important
+			.second 
+				float: left
+				height: 480px
+				margin: 0px
+				margin-bottom: 40px
+				padding: 0px
+				position: relative
+				text-align: center
+				width: 100%
+				a
+					.status
+						top: 233px !important
+			.three 
+				float: left
+				height: 480px
+				margin: 0px
+				margin-bottom: 40px
+				padding: 0px
+				position: relative
+				text-align: center
+				width: 100%
+				a
+					.status
+						top: 233px !important
+	.single 
+		article 
+			.first 
+				.pledge 
+					ul 
+						li
+							color: #FFFFFF
+							display: block
+							float: left
+							+bebas
+							font-size: 25px
+							padding: 10px 0
+							width: 33.333%
+	.detail 
+		article 
+			.meet, .support, .comments_out
+				width: 100%
+			
+	
+	footer 
+		padding: 20px !important
+		.foot 
+			.footer_logo
+				display: none
+			form
+				float: left
+				width: 100%
+
+				input[type="text"]
+					width: 70% !important
+					margin-left: 0px !important
+					display: block
+					float: left
+
+				#mc_embed_signup_scroll > div
+					width: 28% !important
+
+			.bottom_menu
+				padding-left: 0px
+				width: 100%
+
+				.desk
+					margin: 20px 0 !important
+
+				.socials
+					display: block !important
+					float: none !important
+					margin: 0 auto !important
+					padding-left: 0px !important
+					width: 160px !important
+
+	.news article .inner
+		float: left
+		padding: 20px
+		width: 100%
+
+	.news article .inner section .title
+		float: left
+		margin-right: 45px
+		padding-bottom: 40px
+		width: 100%
+
+	.news article .arch
+		float: left
+		margin: 20px
+		padding: 20px
+		width: 89%
+	
+	.pldg article section .controls
+		float: left
+		margin-top: 50px
+		width: 80%
+
+	.pldg article .small
+		margin-bottom: 30px
+		margin-top: 50px
+		padding: 20px
+		width: 100%
+
+	.pldg article section .cut_image
+		float: right
+		width: 100%
+
+	.pldg article section .cut_content
+		float: left
+		width: 100%
+	
+	.pldg article section .staff
+		float: left
+		height: 276px
+		margin-right: 10px
+		margin-top: 30px
+		text-align: center
+		width: 48%
+	
+	.news-single article .inner section .title
+		float: left
+		padding: 0 20px
+		width: 92%
+		margin-left: 0
+
+	.news-single article .inner section .img
+		float: left
+		padding: 20px
+		width: 45%
+
+	
+	.pldg article section form input[type="submit"]
+		-webkit-appearance: none
+	
+
+	header 
+		nav 
+			.nav_in 
+				.mob 
+					display: block
+					float: left
+					margin-left: 20px
+					li
+						margin-left: 27px
+				.desk
+					display: none
+				.log
+					display: none
+	.fund 
+		article 
+			.first 
+				a 
+					.pledge 
+						ul 
+							li
+								color: #FFFFFF
+								display: block
+								float: left
+								+bebas
+								font-size: 25px
+								padding: 10px 0
+								width: 33.333%
+			.post 
+				.pledge 
+					ul 
+						li 
+							width: 33.333%
+			.second 
+				.pledge 
+					ul 
+						li
+							width: 33.333%
+			.three 
+				.pledge 
+					ul 
+						li
+							width: 33.333%
+	
+	.news article .inner section .img
+		float: left
+		margin-top: 40px
+		width: 100%
+
+	.news article .inner section .title
+		float: left
+		margin-right: 45px
+		width: 100%
+
+	.about article section 
+		width: 91.5%
+
+	.about article section h2
+		line-height: 1
+
+	.single article .first .status
+		top: 35%
+	
+	.detail article .meet .top
+		background: url("../img/bg2.png") repeat scroll 0 0 rgba(0, 0, 0, 0)
+		clear: both
+		height: 59px
+		width: 100%
+	.detail article .meet
+		float: left
+		width: 100%
+	.detail article .meet
+		float: left
+		width: 100%
+
+	.detail article .meet .bottom
+		background: url("../img/bg1.png") repeat scroll 0 0 rgba(0, 0, 0, 0)
+		clear: both
+		height: 59px
+		width: 100%
+
+	.detail article .support
+		float: right
+		padding: 33px 0 40px
+		width: 100%
+	
+	.detail article .support .top
+		background: url("../img/left.png") repeat scroll 0 0 rgba(0, 0, 0, 0)
+		clear: both
+		display: none
+		height: 59px
+
+	.sup
+		background-color: $dark
+		background-color: rgba($dark, .8)
+		color: #FFFFFF
+		float: left
+		+bebas
+		font-size: 50px
+		padding: 30px
+		text-align: center
+		width: 100%
+		
+		@include transition-property(all)
+		@include transition-duration(.5s)
+		
+		&:hover, &:focus
+			background-color: $red
+			background-color: rgba($red, .8)
+			@include transition-duration(.2s)
+			
+
+
+@media only screen and (max-width : 780px)
+
+	.video .container article .controls ul li
+		display: block
+		float: left
+		margin-bottom: 5px
+		width: 100%
+
+	.video .container article .message .open 
+		float: right
+		margin-right: 177px
+		margin-top: -30px
+		width: 9%
+	
+	header 
+		nav 
+			.nav_in 
+				.mob 
+					float: left
+					margin-left: 20px
+					li
+						margin-left: 27px
+
+	.video .container article .controls
+		float: left
+		margin-top: 0
+		width: 100%
+
+	.video .container article .controls ul li
+		display: block
+		float: left
+		margin-bottom: 8px
+	
+	.video .container article .controls ul
+		float: left
+		list-style: none outside none !important
+		margin-left: 0 !important
+		padding-left: 0
+
+	.fund article .first .overlay
+		background: none repeat scroll 0 0 #DF2932
+		display: none
+		height: 300px
+		margin-top: -304px
+		padding: 200px 0 0
+		position: relative
+		transition: background 0.2s ease-out 0s
+
+
+	.fund 
+		height: 100%
+		overflow: auto
+		padding: 0 0 120px
+		width: 100%
+	
+
+	.fund article .first .pledge ul li
+		color: #FFFFFF
+		display: block
+		float: left
+		+bebas
+		font-size: 25px
+		padding: 8px 0
+		width: 33.333% !important
+	
+	.fund article .first .status
+		background: url("../img/trans.png") repeat scroll 0 0 rgba(0, 0, 0, 0)
+		height: auto
+		overflow: auto
+		padding: 5px 5px 0
+		position: relative
+		top: 200px
+	
+	.fund article .post .pledge ul li
+		color: #FFFFFF
+		display: block
+		float: left
+		+bebas
+		font-size: 25px
+		padding: 5px 0
+		width: 29.333%
+	
+
+	.fund article .post .status
+		height: auto
+		overflow: auto
+		padding: 5px 5px 0
+		position: relative
+		top: 42%
+	
+	.fund article .second .pledge ul li
+		color: #FFFFFF
+		display: block
+		float: left
+		font-family: bebas
+		font-size: 25px
+		width: 33.333%
+
+	.fund article .three .pledge ul li
+		color: #FFFFFF
+		display: block
+		float: left
+		+bebas
+		font-size: 25px
+		width: 33.333%
+
+	.fund article .second .status
+		background: url("../img/trans.png") repeat scroll 0 0 rgba(0, 0, 0, 0)
+		height: auto
+		overflow: auto
+		padding: 5px 5px 0
+		position: relative
+		top: 41%
+	
+	.fund
+		height: 100%
+		overflow: auto
+		padding: 0
+		width: 100%
+
+	footer .foot form label
+		color: #FFFFFF
+		font-family: book
+		font-size: 30px
+		padding: 10px
+		width: 100%
+
+	footer .foot form input[type="text"]
+		width: 100%
+
+	footer .foot form input[type="submit"]
+		-webkit-appearance: none
+		margin-left: 10px
+
+	#mc_embed_signup_scroll > div
+		width: 54%
+
+	.pldg article section h1
+		font-size: 35px
+		margin-bottom: 0
+
+	.pldg article section form label
+		padding: 0px
+		width: 100%
+	
+	.pldg article section form
+		width: 100%
+	
+
+	.pldg article section form input[type="text"]
+		margin-left: 0px
+		width: 92%
+	
+
+
+	.pldg article section form input[type="submit"]
+		margin-left: 0
+		//width: 62%
+
+	.cat 
+		float: left
+		width: 100%
+		span
+			padding: 0px
+	
+
+	.cat ul li
+		clear: both
+		display: block
+		float: left
+
+	.cat ul li a
+		clear: both
+		float: left
+		padding: 10px 20px
+		width: 100%
+
+
+	.pldg article
+		padding: 0px
+
+	.news article .inner
+		float: left
+		padding: 0px
+		width: 100%
+	
+	.news 
+		article 
+			.inner 
+				section 	
+					.img
+						float: left
+						width: 100%
+						img
+							width: 100%
+
+	.pldg article section
+		padding: 20px
+	.pldg article section .controls
+		float: left
+		width: 100%
+	
+	.controls > ul
+		padding-left: 0
+
+	.news-single 
+		article 
+			.inner 
+				section 
+					.img
+						float: left
+						padding: 20px
+						width: 100%
+						img
+							width: 100%
+	.about
+		article
+			padding: 0px
+
+@media only screen and (max-width : 380px)
+	body
+		background-attachment: fixed
+		background-repeat: no-repeat
+		background-position: center
+		font-size: 15px
+		margin: 0px	
+	
+	.video .container article .message .open
+		float: right
+		margin-right: 137px
+		margin-top: -30px
+		width: 19%
+	.fund article .first .pledge ul li
+		color: #FFFFFF
+		display: block
+		float: left
+		+bebas
+		font-size: 25px
+
+	article
+		padding: 0px !important
+
+
+
+
+
+#form_pay
+	input
+		position: relative
+		
+		:after 
+			content: 'hello'
+			position: absolute
+			bottom: 130%
+			left: 20%
+			background: #ffcb66
+			padding: 5px 15px
+			color: black
+			-webkit-border-radius: 10px
+			-moz-border-radius: 10px
+			border-radius: 10px
+			white-space: nowrap
+			opacity: 1
+			-webkit-transition: all 0.4s ease
+			-moz-transition: all 0.4s ease
+			
+		&:before 
+			content: ""
+			position: absolute
+			width: 0
+			height: 0
+			border-top: 20px solid #ffcb66
+			border-left: 20px solid transparent
+			border-right: 20px solid transparent
+			-webkit-transition: all 0.4s ease
+			-moz-transition   : all 0.4s ease
+			opacity: 0
+			left: 30%
+			bottom: 90%
+		
+		&.input_error:before
+			top: -3em
+			@include transition-duration(.2s)
+			filter: alpha(opacity=100)
+			opacity: 1
+			
+			
+		
+		&.too_big:before
+			content: 'Please enter a valid number.'
+			
+
+div#post-9
+	margin-bottom: 10em
+	position: relative
+	overflow: auto
+	top: 10em
+
+
+.social-share .fa.fa-code
+	display: none
+	width: 0
+	height: 0
+			
+
+.wp-core-ui .button.button-hero, .wp-core-ui .button-group.button-hero .button
+	font-size: 14px
+	height: 46px
+	line-height: 44px
+	margin-top: 30px
+	padding: 0 36px
+
+.attachment-details.save-ready > h3
+	font-size: 34px !important
+	margin-top: 30px !important
+
+
+.attachment-display-settings > h3
+	font-size: 34px !important
+	margin-top: 30px !important
+	line-height: 37px !important
+
+
+.uploader-inline .has-upload-message .upload-instructions 
+	color: #464646
+	font-size: 14px
+	font-weight: 400
+	line-height: 93px
+
+.id-purchase-form form
+	position: relative
+	&:after
+		background-image: url(../img/stripe.png)
+		background-repeat: no-repeat
+		background-position: center center
+		display: block
+		content: ''
+		width: 269px 
+		height: 59px
+		position: absolute
+		bottom: 40px 
+		left: 25px
+
+.button.media-button
+	margin-top: 6px !important
+	height: 48px !important
+
+@media only screen and (max-width : 1296px)
+	.slider-wrapper .slides .slide .copy h1
+		font-size: 3em
+
+	.copy p, .full-slider-wrapper .slides .first_slide .copy p
+		font-size: 1.1em
+	
+	.full-slider-wrapper .slides .content_out
+		max-width: 100%
+		width: 100%
+	
+@media only screen and (min-width:480px) and (max-width : 768px)
+	.controls_front
+		float: left
+		margin-top: 331px
+		width: 100%
+
+		@media only screen and (max-width : 640px)
+			margin-top: 70px
+
+	.slider-wrapper .slides .first_slide .copy
+		margin-top: 4em
+		width: 100%
+
+
+@media only screen and (max-width : 580px)	
+	.controls_front
+		float: left
+		margin-top: 0px
+		width: 100%
+	.controls_front ul li
+		display: block
+		float: left
+		margin-bottom: 1px
+		overflow: hidden
+		width: 100%
+@media only screen and (max-width : 320px)	
+	.rrssb-buttons li 
+		float: left
+		height: 100%
+		list-style: none outside none
+		margin: 0
+		padding: 0 2.5px
+		width: 100%
+@media only screen and (max-width : 480px)	
+	.controls_front
+		float: left
+		margin-top: 0px
+		width: 100%
+	.controls_front ul li
+		display: block
+		float: left
+		margin-bottom: 1px
+		overflow: hidden
+		width: 100%
+	
+	.slider-wrapper .slides .slide .copy h1
+		font-size: 2em
+
+	#payment-form:after
+		background-image: url("../img/stripe.png")
+		background-position: center center
+		background-repeat: no-repeat
+		bottom: 0
+		content: ""
+		display: block
+		height: 109px
+		left: 0
+		position: absolute
+		width: 269px
+	
+	.nice_form 
+		padding-bottom: 120px
+
+
+#post-
+	.notfound
+		margin: auto
+		max-width: 1280px
+		padding: 40px 40px 0
+		width: auto
+
+		section
+			background: url("../img/trans2.png") repeat scroll 0 0 rgba(0, 0, 0, 0)
+			float: left
+			padding: 40px 40px 0
+			width: 100%
+
+			h1
+				color: #DF2932
+
+			#home_button 
+				display: block
+				float: left
+				margin-left: 2%
+				margin-top: 8px
+				width: 38%
+
+				a
+					background: none repeat scroll 0 0 #38454C
+					color: #FFFFFF !important
+					+bebasimp
+					font-size: 28px !important
+					padding: 7px 20px !important
+					width: auto !important
+					border: 1px solid #38454C
+					cursor: pointer
+					@include transition-property(all)
+					@include transition-duration(.5s)
+					
+					&:hover, &:focus
+						@include transition-duration(.2s)
+						background-color: lighten($red, 10%)
+						border: 1px solid lighten($red, 10%)
+
+			
+			.searchform
+				width: 60%
+				margin-bottom: 50px
+				float: left
+
+				input[type="text"]
+					border: 1px solid #888888
+					font-size: 1.5em
+					left: 0
+					padding: 9.5px 0px 9.5px 9.5px !important
+					right: 20%
+					width: 70%
+
+				input[type="text"]:focus
+					border: 1px solid #DF2932
+
+				input[type="submit"]
+					width: 28% !important
+				
+
+			#content
+				.social, .mob
+					display: none
+				.desk
+					li
+						line-height: 1.2em
+						list-style: none
+						margin-left: .5em
+						margin-bottom: .5em
+						position: relative
+
+						a:before
+							position: absolute
+							content: ''
+							color: #df2932
+							position: absolute
+							width: 0.5em
+							height: 0.5em
+							display: block
+							background-color: #000
+							margin-top: .4em
+							margin-left: 0
+							left: -1.25em
+							@include transition-property(all)
+							@include transition-duration(.5s)
+							
+						a
+							color: #000
+								
+							&:hover, &:focus
+								&:before
+									margin-top: .15em
+									margin-left: -.25em
+									width: 1em
+									height: 1em
+									@include transition-duration(.1s)
+									+bounce
+
+						.loginform_out, .second_lv
+							display: none
+
+		.bottom
+			background: url("../img/bg1.png") repeat scroll 0 0 rgba(0, 0, 0, 0)
+			height: 59px
+			clear: both
+
+
+@media only screen and (max-width : 1062px)	
+	#post-
+		.notfound
+			section	
+				#home_button 
+					width: 100%	
+					margin-bottom: 50px
+					a					
+						width: 100% !important
+			
+				.searchform
+					width: 100%
+					margin-bottom: 25px
+
+@media only screen and (max-width : 780px)	
+	#post-
+		.notfound
+			padding: 0px
+
+				
+@media only screen and (max-width : 520px)	
+	#post-
+		.notfound
+			padding: 0px
+			section	
+				#home_button 
+					a
+						font-size: 20px !important
+
+@media only screen and (max-width : 1024px)	
+	#content
+		.single 
+			article
+				.first
+					height: 500px
+
+
+@media only screen and (max-width : 480px)	
+	.fund-single.fund-single-a
+		height: 263px
+
+		.status
+			height: 62% !important
+
+			h1
+				font-size: 30px !important
+				height: auto !important
+				line-height: 25px !important
+				margin-top: 10px !important
+				overflow: hidden !important
+				text-overflow: ellipsis !important
+				white-space: nowrap !important
+			h2
+				font-size: 20px !important
+				margin-top: -25px !important
+				max-height: 35px !important
+				overflow: hidden !important
+				padding: 8px 10px !important
+				margin-bottom: 1px !important
+
+			.pledge
+				ul
+					li
+						font-size: 20px !important
+
+@media only screen and (max-width : 1120px)		
+	header nav .nav_in .logo
+		display: none	
+
+	header nav .nav_in .social 
+		float: right
+		list-style: none outside none
+		margin-top: 22px
+		width: 43%
+	header nav .nav_in .social li
+		float: right
+		list-style: none outside none
+		margin: 0 5px
+
+
+
+
+
+
+
+
+/* ------------ Create a project page restyle ------------ */
+
+
+
+.nice_form
+	input[type="submit"]	
+		font-family: book !important
+		font-size: 30px !important
+		background: none repeat scroll 0 0 $red !important
+		padding: 10px 20px !important
+		color: #fff !important
+		box-shadow: none !important
+		-webkit-border-radius: 0px !important
+		-moz-border-radius: 0px !important
+		border-radius: 0px !important
+		@include transition-property(all)
+		@include transition-duration(.3s) 
+
+		&:hover
+			background-color: #4B5C65 !important
+		
+
+
+/* ------------ Create a campaign page restyle ------------ */
+
+
+
+.campaign_title
+	float: left
+	display: block
+	width: 50%
+
+	@media only screen and (max-width : 768px)	
+		width: 100% 
+		text-align: left
+
+
+.campaign_awesome
+	float: right
+	display: block
+	width: 50%
+	margin-top: 30px !important
+
+	@media only screen and (max-width : 768px)	
+		float: left
+		width: 100% 
+		text-align: left
+		margin-top: 0px !important
+		margin-bottom: 30px !important
+	p
+		float: right
+		width: auto
+		font-size: 18px !important
+
+		@media only screen and (max-width : 768px)	
+			width: 100% 
+			float: left
+
+		a
+			color: $red !important
+			font-weight: bolder !important
+
+
+.button_sample
+	float: right
+	display: block	
+	font-family: bebas !important
+	font-size: 30px !important
+	background: none repeat scroll 0 0 $red !important
+	padding: 15px !important
+	display: inline-block !important
+	color: #fff !important
+	box-shadow: none
+	-webkit-border-radius: 0px
+	-moz-border-radius: 0px
+	border-radius: 0px
+	margin: 0 20px 0 0 !important
+	margin-bottom: 30px !important
+
+
+.md-profile
+	padding: 0 20px !important
+
+.acf_wysiwyg
+	#insert-media-button
+		display: none !important
+
+	.wp-editor-container
+		border: 1px solid #4B5C65 !important
+		-webkit-border-radius: 0px !important
+		-moz-border-radius: 0px !important
+		border-radius: 0px !important
+
+	.mceToolbar
+		background: none repeat scroll 0 0 #e6e6e6 !important
+		border-bottom: none !important
+
+	.mceIcon
+		color: #4B5C65 !important
+
+	.wp_themeSkin a.mceButtonEnabled:hover, .wp_themeSkin table.mceSplitButton:hover
+		background: none repeat scroll 0 0 #fff
+		border-color: transparent
+
+	.wp_themeSkin a.mceButton:active, .wp_themeSkin a.mceButtonEnabled:active, .wp_themeSkin a.mceButtonSelected:active, .wp_themeSkin a.mceButtonActive, .wp_themeSkin a.mceButtonActive:active, .wp_themeSkin a.mceButtonActive:hover, .wp_themeSkin .mceSplitButtonSelected table, .wp_themeSkin .mceSplitButtonSelected table:hover
+		background: none repeat scroll 0 0 #fff
+		border-color: transparent		
+
+	.mceButton
+		-webkit-border-radius: 0px !important
+		-moz-border-radius: 0px !important
+		border-radius: 0px !important
+		height: 25px !important
+		padding: 2px !important
+		width: 25px !important
+
+	.mceStatusbar
+		display: none !important
+
+
+
+#acf_611
+	&:before
+		background: url("../img/wireframe_picture_createCampaign.png") no-repeat scroll 0 0 rgba(0, 0, 0, 0)
+		background-size: contain 
+		color: #fff
+		content: ""
+		display: block
+		float: right
+		font-family: OS light
+		font-size: 40px
+		height: 377px
+		position: absolute
+		right: 0
+		top: 353px
+		width: 40%
+
+#acf_611, #acf_751, #acf_627
+	display: block !important
+	
+	.acf-conditional_logic-hide
+		display: none !important
+
+	.label
+		font-size: 14px !important
+		margin-bottom: 20px !important
+		color: #9c9c9c !important
+		text-shadow: none !important
+		cursor: none !important
+
+	label
+		font-size: 30px !important
+		color: $red !important
+		margin-bottom: 20px !important
+		font-family: book !important
+
+
+	#acf-field-athlete_name, #acf-field-instagram_url, #acf-field-facebook_url, #acf-field-twitter_url, #acf-field-video, .hasDatepicker, #acf-field-goal, #acf-field-county, #acf-field-country, #acf-field-sports_category, #acf-field-project_type, #acf-field-enter_project_type
+		background-color: transparent !important
+		border: 1px solid #4B5C65 !important
+		box-shadow: none !important
+		padding: 8px !important
+		height: 40px !important
+		opacity: 0.8 !important
+		@include transition-property(all)
+		@include transition-duration(.3s)
+
+		&:hover, &:focus, &:active
+			opacity: 1 !important	
+
+		&:focus
+			border: 1px solid $red !important
+
+	#acf-athlete_name, #acf-facebook_url, #acf-twitter_url, #acf-instagram_url
+		width: 48%
+		float: left
+		display: block
+		height: 150px 
+
+	#acf-deadline, #acf-goal, #acf-currency, #acf-county, #acf-country, #acf-show_hide_supporters, #acf-sports_category, #acf-enter_project_type, #acf-project_type
+		width: 32%
+		float: left
+		display: block
+		height: 150px 
+
+		@media only screen and (max-width : 768px)	
+			width: 100%		
+	
+	#acf-sports_category label, #acf-project_type label, #acf-enter_project_type label,
+		@media only screen and (max-width : 768px)	
+			padding-top: 20px
+
+	#acf-show_hide_supporters 
+		@media only screen and (max-width : 768px)	
+			width: 100% !important
+
+	#acf-athlete_name, #acf-facebook_url, #acf-twitter_url, #acf-instagram_url
+		height: 120px 	
+
+	#acf-twitter_url, #acf-athlete_name, #acf-deadline, #acf-goal, #acf-country, #acf-project_type
+		margin-right: 2%
+
+
+	#acf-hero_image, #acf-image_before, #acf-image_after
+		width: 50%
+		float: left
+		display: block
+
+		label
+			font-size: 18px !important
+			color: #4B5C65 !important
+			margin-bottom: 10px !important	
+			font-weight: bolder !important
+			font-family: os reg !important
+
+	#acf-hero_image, #acf-image_before
+		margin-right: 2%
+
+	#acf-hero_image
+		&:before
+			content: "The visuals"
+			color: #df2932 !important
+			font-size: 30px !important
+			font-family: book !important
+			margin-bottom: 30px !important
+			display: block !important
+			font-weight: bolder !important
+
+	#acf-image_after
+		margin-bottom: 20px !important
+
+	.acf-image-uploader
+		background-color: transparent !important
+		border: 1px solid #4B5C65 !important
+		box-shadow: none !important
+		height: auto !important
+		width: 100% !important
+		@include transition-property(all)
+		@include transition-duration(.3s) 
+
+		&:hover
+			border-color: $red !important
+			.add-image
+				background-color: $red !important
+				border-color: $red !important
+
+		p
+			width: 100% !important	
+			line-height: 32px !important
+			padding: 0 0 0 10px !important
+
+		.no-image, .has-image
+			width: 100% 	
+
+		.add-image
+			font-family: OS Reg !important
+			font-size: 15px !important
+			background: none repeat scroll 0 0 #4B5C65 !important
+			padding: 8px !important
+			display: inline-block !important
+			color: #fff !important
+			box-shadow: none
+			-webkit-border-radius: 0px
+			-moz-border-radius: 0px
+			border-radius: 0px
+			margin: 0px !important
+			float: right !important
+
+		img
+			margin: 0 !important
+
+
+	#acf-content
+		float: left
+		width: 100%
+		display: block
+
+
+	#acf-video
+		float: left
+		width: 100%
+		display: block
+
+
+	#acf-achievements
+		float: left
+		width: 100%
+		display: block
+
+	#acf-updates
+		float: left
+		width: 100%
+		display: block
+
+	#acf-faqs
+		float: left
+		width: 100%
+		display: block
+
+
+#acf_627
+	float: left
+	width: 100%
+	display: block
+	background-color: #f0f0f0
+	overflow: hidden
+	padding: 20px
+
+#acf_751
+	margin-bottom: 0px !important
+
+.field
+	input[type="submit"]
+		float: left
+		display: block	
+		font-family: book !important
+		font-size: 30px !important
+		background: none repeat scroll 0 0 $red !important
+		padding: 10px 20px !important
+		display: inline-block !important
+		color: #fff !important
+		box-shadow: none
+		-webkit-border-radius: 0px
+		-moz-border-radius: 0px
+		border-radius: 0px
+		margin: 0 20px 0 0 !important
+		margin-bottom: 30px !important
+
+
+
+
+#acf_611, #acf_751, #acf_627
+	display: block
+	width: 100%
+	overflow: hidden
+	padding-bottom: 40px !important
+
+
+	.md-profile
+		ul
+			border: none !important
+			background: none !important
+
+
+	.add-row-end
+		font-family: OS Reg !important
+		font-size: 15px !important
+		background: none repeat scroll 0 0 #4B5C65 !important
+		padding: 10px !important
+		display: inline-block !important
+		color: #fff !important
+		box-shadow: none
+		-webkit-border-radius: 0px
+		-moz-border-radius: 0px
+		border-radius: 0px
+		margin: 0px !important
+		float: left !important
+		height: auto !important
+		line-height: 20px !important
+		@include transition-property(all)
+		@include transition-duration(.3s)
+		border: none !important
+
+		&:hover
+			background-color: $red !important
+			border-color: $red !important
+
+
+	.repeater-footer
+		.right
+			float: left !important
+
+	.acf-input-table
+		.row
+			border: 1px solid #4B5C65 !important
+			opacity: 0.8 !important
+			@include transition-property(all)
+			@include transition-duration(.3s)
+
+			&:hover, &:focus, &:active
+				opacity: 1 !important	
+		.order
+			border: 1px solid #4B5C65 !important
+			background-color: #4B5C65 !important
+			text-shadow: none !important
+			color: #fff !important
+			font-family: OS Reg !important
+			font-size: 15px !important
+			@include transition-property(all)
+			@include transition-duration(.3s)
+
+			&:hover
+				background-color: $red !important
+				border: 1px solid $red !important		
+
+		label
+			font-family: OS Reg !important
+			font-size: 18px !important	
+			color: #4B5C65 !important
+
+		.label	
+			background-color: #E6E6E6 !important
+
+			.sub-field-instructions
+				text-shadow: none !important
+
+
+		.acf_input-wrap
+			border: 1px solid #E6E6E6 !important
+			border-right: none !important
+
+		.remove			
+			border: 1px solid #E6E6E6 !important	
+			border-left: none !important
+			background-color: #E6E6E6 !important
+
+		input[type="text"], input[type="number"]
+			background-color: transparent !important
+			border: 1px solid #4B5C65 !important
+			box-shadow: none !important
+			padding: 8px !important
+			height: auto !important
+
+		textarea
+			background-color: transparent !important
+			border: 1px solid #4B5C65 !important
+			box-shadow: none !important
+			padding: 8px !important
+		
+
+		.acf-button-add
+			display: none !important
+
+		.acf-button-remove
+			background: none !important	
+			background-color: #4B5C65 !important		
+			opacity: 1 !important
+			visibility: inherit !important
+			background-position: -62px -112px !important
+			border: none !important
+			-webkit-border-radius: 0px !important
+			-moz-border-radius: 0px !important
+			border-radius: 0px !important
+			box-shadow: none !important
+			height: 30px !important
+			width: 30px !important
+			@include transition-property(all) 
+			@include transition-duration(.3s)
+
+			&:after
+				content: "-"
+				display: block
+				float: right
+				height: 20px
+				position: relative
+				top: 2px
+				left: -1px
+				width: 20px
+				font-family: OS light
+				color: #fff
+				font-size: 40px
+
+			&:hover
+				background-color: $red !important	
+
+
+	#acf-fund_levels
+		width: 100%
+		float: left
+		display: block	
+
+
+	.acf-radio-list
+		li
+			label
+				font-family: OS Reg !important
+				font-size: 18px !important
+				color: #4B5C65 !important
+
+
+
+#acf_627
+	label
+		font-family: OS Reg !important
+		font-size: 18px !important	
+		color: #4B5C65 !important
+
+	#acf-deadline
+		float: left
+		display: block
+
+		&:before
+			content: "The Campaign"
+			color: #df2932 !important
+			font-size: 30px !important
+			font-family: book !important
+			margin-bottom: 30px !important
+			display: block !important
+			font-weight: bolder !important
+			width: 100% !important
+
+	#acf-goal, #acf-currency
+		margin-top: 48px
+
+
+	#acf-currency
+		@media only screen and (max-width : 768px)	
+		margin-top: 0px
+
+		.acf-radio-list.radio.vertical > li
+			float: left
+			height: 40px
+			padding: 9px
+
+			&:first-child
+				padding-left: 0 
+
+
+
+	#acf-county
+		display: none !important
+
+	#acf-show_hide_supporters
+		width: 60%
+		.acf-radio-list.radio.vertical > li
+			float: left
+			height: 40px
+			padding: 9px
+
+			&:first-child
+				padding-left: 0 
+
+			label
+				display: inherit
+
+
+
+
+#acf_611
+	label
+		font-family: OS Reg !important
+		font-size: 18px !important	
+		color: #4B5C65 !important
+
+	#acf-athlete_name
+		float: left
+		display: block
+
+		&:before
+			content: "About you"
+			color: #df2932 !important
+			font-size: 30px !important
+			font-family: book !important
+			margin-bottom: 30px !important
+			display: block !important
+			font-weight: bolder !important
+			width: 100% !important
+
+
+	#acf-facebook_url
+		margin-top: 48px
+
+
+	#acf-hero_image
+		margin-top: 30px	
+
+
+	#acf-content
+		margin-top: 30px	
+		label	
+			font-size: 30px !important
+			color: $red !important
+			margin-bottom: 20px !important
+			font-family: book !important
+
+
+#acf_751
+	#acf-t_and_c
+		float: left
+		display: block
+		margin-top: 30px
+		ul
+			li
+				label
+					color: #9c9c9c !important
+					cursor: none !important
+					font-size: 14px !important
+					margin-bottom: 20px !important
+					text-shadow: none !important
+					font-family: OS Reg !important
+
+/* ------------  User page restyle ------------ */
+
+
+.dashboardmenu
+	@media only screen and (max-width : 520px)		
+		min-height: 89px
+
+		li
+			a
+				@media only screen and (max-width : 768px)
+					font-size: 25px !important	
+				@media only screen and (max-width : 520px)	
+					font-size: 20px !important
+
+#adduser
+	padding-top: 30px
+
+
+#updateuser, .create_project
+	float: right
+	display: block	
+	font-family: book !important
+	font-size: 30px !important
+	background: none repeat scroll 0 0 $red !important
+	padding: 10px 20px !important
+	display: inline-block !important
+	color: #fff !important
+	box-shadow: none !important
+	-webkit-border-radius: 0px !important
+	-moz-border-radius: 0px !important
+	border-radius: 0px !important
+	margin: 15px 0 30px 0 !important
+	@include transition-property(all)
+	@include transition-duration(.3s) 
+
+	&:hover
+		background-color: #4B5C65 !important
+
+.create_project	
+	@media only screen and (max-width : 520px)
+		width: 100% !important
+
+/* ------------  project page restyle ------------ */
+
+
+
+.dash_project
+	padding-top: 20px !important
+	@media only screen and (max-width : 768px)	
+		padding: 2% !important
+
+	.project-thumb
+		.image
+			float: left !important
+			margin-left: 12px !important
+
+	ul
+		border-top: 1px solid rgba(42, 42, 42, 0.1)
+		background: #f5f5f5
+
+		.myprojects
+			border-left: 1px solid rgba(42, 42, 42, 0.1)
+			border-right: 1px solid rgba(42, 42, 42, 0.1)
+			border-bottom: 1px solid rgba(42, 42, 42, 0.1)
+			@include transition-property(all)
+			@include transition-duration(.3s) 
+
+			&:hover
+				background-color: #4B5C65 !important
+
+				.project-name
+					color: #fff
+				.project-item
+					a
+						background-color: #e6e6e6 !important
+						color: #4B5C65 !important
+						&:hover
+							background: #fff !important
+
+				.publish
+					color: #fff !important
+
+					&:before
+						background-color: #fff
+						border: 1px solid #fff
+
+				.draft
+					color: #fff !important
+
+					&:before
+						background-color: #fff
+						border: 1px solid #fff
+			
+
+			.project-thumb 
+				@media only screen and (max-width : 1120px)
+					display: none
+				.image
+					background-color: rgba(42, 42, 42, 0.1)
+
+
+
+			.project-name
+				font-family: book !important
+				font-size: 30px !important	
+				color: #4B5C65
+				letter-spacing: 1px
+				@media only screen and (max-width : 1120px)
+					width: 50% !important	
+					padding: 0 4% !important					
+				@media only screen and (max-width : 768px)	
+					width: 100% !important
+					margin-bottom: 0px !important
+					letter-spacing: 0px !important
+				@media only screen and (max-width : 520px)	
+					width: 100% !important
+
+
+			.publish
+				color: #4B5C65 !important
+
+				&:before
+					background-color: #4B5C65
+					border: 1px solid #4B5C65
+					border-radius: 10px
+					content: ""
+					display: block
+					height: 10px
+					position: absolute
+					right: 12%
+					top: 44%
+					width: 10px
+					-webkit-border-radius: 10px
+					-moz-border-radius: 10px
+					border-radius: 10px
+
+					@media only screen and (max-width : 768px)
+						left: 4%
+						margin-top: 6px
+						top: inherit 
+						right: inherit
+
+			.draft
+				color: #4B5C65 !important
+				opacity: 0.6
+
+				&:before
+					background-color: transparent
+					border: 1px solid #4B5C65
+					border-radius: 10px
+					content: ""
+					display: block
+					height: 10px
+					position: absolute
+					right: 12%
+					top: 44%
+					width: 10px
+					-webkit-border-radius: 10px
+					-moz-border-radius: 10px
+					border-radius: 10px
+					opacity: 0.6
+
+					@media only screen and (max-width : 768px)
+						left: 4%
+						margin-top: 6px
+						top: inherit 
+						right: inherit
+
+
+
+
+
+		li.myprojects:nth-child(2n)
+			background: none repeat scroll 0 0 #e6e6e6 !important
+			@include transition-property(all)
+			@include transition-duration(.3s) 
+
+			&:hover
+				background-color: #4B5C65 !important
+
+				.project-name
+					color: #fff
+				.project-item
+					a
+						background-color: #e6e6e6 !important
+						color: #4B5C65 !important
+						&:hover
+							background: #fff !important
+
+				.publish
+					color: #fff !important
+
+					&:before
+						background-color: #fff
+						border: 1px solid #fff
+
+				.draft
+					color: #fff !important
+
+					&:before
+						background-color: #fff
+						border: 1px solid #fff
+
+		.project-status
+			border-left: 1px solid rgba(42, 42, 42, 0.1) !important
+			background: none !important
+			-webkit-border-radius: 0px !important
+			-moz-border-radius: 0px !important
+			border-radius: 0px !important
+			color: #eee  !important
+			font-size: 15px  !important
+			font-weight: normal !important
+			line-height: 70px  !important
+			margin: 0 !important 
+			text-align: center  !important
+			text-transform: uppercase  !important
+
+			@media only screen and (max-width : 1120px)
+				width: 16% !important	
+
+			@media only screen and (max-width : 768px)
+				width: 100% !important
+				line-height: 20px !important
+				margin-bottom: 20px !important
+				text-align: left !important
+				padding: 0 10% !important
+
+
+		.option-list
+			@media only screen and (max-width : 1120px)
+				width: 34% !important			
+			@media only screen and (max-width : 768px)	
+				width: 100% !important
+				margin: 10px 0 !important
+				padding: 0 2%
+			a
+				font-family: OS Reg !important
+				font-size: 15px !important
+				background: none repeat scroll 0 0 #4B5C65
+				padding: 10px 20px !important
+				display: inline-block !important
+				color: #fff !important
+				box-shadow: none
+				-webkit-border-radius: 0px
+				-moz-border-radius: 0px
+				border-radius: 0px
+				margin: 0 15px 0 0 !important
+				height: auto !important
+				line-height: 20px !important
+				@include transition-property(all)
+				@include transition-duration(.3s)
+				border: none !important
+				float: right
+
+				@media only screen and (max-width : 768px)
+					width: 29% !important
+					margin: 2% !important
+					text-align: center
+					float: left
+
+				&:hover
+					background-color: $red !important
+					border-color: $red !important
+
+				&:after
+					content: "" !important
+
+			.delete_btn
+				background-color: #7a8b94
+
+
+
+/* ------------  payment page restyle ------------ */
+
+.payment-errors
+	background-color: rgba(223, 41, 50, 0.8)
+	color: white
+	display: block
+	font-size: 15px
+	left: 0
+	padding: 10px 10px 9px
+	position: fixed
+	top: 0
+	width: 100% !important
+	z-index: 999999
+
+
+
+#payment-form
+	@media only screen and (max-width : 520px)
+		&:after
+			position: relative
+			top: -136px
+			margin: 0 auto
+
+	label
+		font-family: OS Reg !important
+		font-size: 15px !important	
+		color: #4B5C65 !important
+		margin-bottom: 5px
+		display: block
+		max-width: 100% !important
+		width: 100% !important
+
+	.field
+		margin-bottom: 15px	
+
+
+	input[type="text"], input[type="number"], input[type="email"], select
+		background-color: transparent !important
+		border: 1px solid #4B5C65 !important
+		box-shadow: none !important
+		padding: 8px !important
+		height: 40px !important
+		opacity: 0.8 !important
+		@include transition-property(all)
+		@include transition-duration(.3s)
+		width: 100%
+		display: block
+		opacity: 0.8
+
+		&:hover, &:focus, &:active
+			opacity: 1 !important	
+
+		&:focus
+			border: 1px solid $red !important
+
+	.s_card_info, .s_adress_info, .s_personal_info, .s_donation_info
+		border: 3px solid #E6E6E6
+		display: block
+		margin: 20px 0 
+	
+
+
+	h2
+		margin-top: 0 !important
+		line-height: 32px
+		background-color: #e6e6e6
+		width: 100%
+		letter-spacing: 1px
+		color: #4b5c65
+		font-weight: normal
+
+		b
+			background-color: #4b5c65
+			color: #fff
+			font-weight: bolder
+			display: inline-block
+			padding: 10px
+			margin-right: 15px
+			height: 50px
+			padding: 10px
+			width: 50px
+			text-align: center
+
+	.s_donation_info
+		p
+			color: $red !important
+			font-weight: bold
+			max-width: 600px	
+			margin-left: auto
+			margin-right: auto
+			padding-left: 0.7em
+
+	#ddonation_amount, #ddonation_amount_hidden
+		label
+			color: $red !important
+			font-weight: bold	
+
+		select, #rdonation_amount_hidden
+			border: 3px solid $red !important
+			color: $red !important
+
+			option
+				color: #4b5c65 !important			
+
+
+
+	.field input[type="checkbox"] + label:after
+		float: left
+		margin-left: 0
+		margin-right: 1em
+		top: 0
+
+
+	#daddress1
+		margin-bottom: 0 !important
+		padding-bottom: 0 !important
+
+	
+	.secured_info_wrapper
+		position: relative
+		margin: 40px auto
+		max-width: 600px
+		padding: 0.5em
+
+		@media only screen and (max-width : 500px)
+			padding: 1em
+
+	.secured_info
+		background-color: transparent
+		border: 2px solid #4E7BA0
+		color: #4b5c65
+		padding: 10px
+		display: block
+		border-left: 40px solid #4E7BA0
+
+		&:before
+			background: url("../img/secure_icon.svg") no-repeat scroll 0 0 rgba(0, 0, 0, 0)
+			content: ""
+			display: block
+			height: 20px
+			position: absolute
+			margin-left: -37px
+			top: 33px
+			width: 20px
+
+		p
+			font-size: 14px
+			line-height: 16px
+			margin-bottom: 5px
+			margin-top: 0 !important
+			
+			&:first-child
+				font-size: 16px
+				line-height: 16px
+				font-weight: bold
+				color: #4E7BA0
+			
+			&:last-child
+				margin-bottom: 0
+
+	.form-submit
+		width: 100%
+
+	#submit_payment
+		margin-left: 20px
+		display: block
+		margin: 0 auto
+		&:hover
+			border: 1px solid #4B5C65
+		@media only screen and (max-width : 930px)
+			float: right
+		@media only screen and (max-width : 520px)
+			float: inherit
+			margin-top: 100px
+
+	.s_wrapper
+		max-width: 600px
+		padding: 0.5em
+		overflow: hidden
+		display: block
+		margin: 0 auto
+
+		@media only screen and (max-width : 480px)
+			padding: 1em
+
+		#dfname
+			width: 48% !important
+			margin-right: 4% !important
+			float: left !important
+			display: inline-block
+			padding: 0 !important
+
+		#dlname
+			width: 48%
+			display: inline-block
+			padding: 0 !important
+
+
+	#dexp
+		margin-bottom: 40px
+		.half
+			width: 50% !important
+			float: left !important
+			display: inline-block
+			padding: 0 !important
+
+#content
+	.status-publish
+		@media only screen and (max-width : 768px)
+			top: 7em
+	.status-publish_edit
+		@media only screen and (max-width : 768px)
+			top: 8em !important
+
+header nav .nav_in .social
+	@media only screen and (max-width : 1120px)
+		margin-right: 4px !important
+		margin-top: 14px !important
+		width: 55% !important
+
+
+
+
+header nav .nav_in .desk li
+	padding: 8px 7px !important
+
+
+.acf_blog_img
+	width: 100%
+	height: 300px
+	background-size: cover !important
+	background-position: center !important
+	display: block
+	margin-bottom: 25px
+
+
+/* ---------------------------------------- General UI ---------------------------------------- */
+
+.bp_wrapper
+	h1
+		@media only screen and (max-width : 768px)
+			margin-left: 10px
+			font-size: 55px !important
+
+		@media only screen and (max-width : 480px)
+			font-size: 40px !important
+
+	.bp
+		width: 100% !important
+		@media only screen and (max-width : 480px)
+			padding: 20px !important
+
+	.bp_item
+		width: 29%
+		display: block
+		float: left
+		margin: 2%
+		height: auto
+
+		@media only screen and (max-width : 768px)
+			width: 46%
+			margin: 2%
+		
+		@media only screen and (max-width : 480px)
+			width: 100%
+			margin: 0
+
+		.bp_logo
+			width: 100%
+			display: block
+			
+			img
+				display: block
+				margin-bottom: 40px
+				margin-left: auto !important
+				margin-right: auto !important
+				margin-top: 0 !important
+				max-width: 100%
+				width: 100%
+
+		.bp_copy
+			width: 100%
+			color: black
+			font-size: 15px
+			line-height: 20px
+
+
+
+/* ---------------------------------------- Thank you for supporting ---------------------------------------- */
+
+
+.tyfs
+
+	.tyfs_title
+		display: block
+		width: 100%
+		clear: both
+		margin-bottom: 40px
+
+		h1
+			text-align: center
+			font-size: 70px !important
+			@media only screen and (max-width : 480px)
+				font-size: 50px !important
+
+
+		h2
+			text-align: center
+			color: #4b5b65
+			font-weight: 100 !important
+			letter-spacing: 2px
+			margin-top: 5px !important
+		p
+			text-align: center
+			width: 100% !important
+			margin-top: 25px
+			color: #4B5B65
+			
+		.tyfs_bar
+			padding-bottom: 20px
+			margin-bottom: 40px
+			width: 50%
+			border-bottom: 1px solid #bfc6cb
+			display: block
+			margin: 0 auto
+
+	.tyfs_box
+		background-color: #eef1f3
+		border: 1px solid #b2c2cc
+		display: block
+		width: 46%
+		margin: 2%
+		padding: 20px
+		float: left
+		color: #4b5b65
+		text-align: center
+		min-height: 227px
+
+		@media only screen and (max-width : 480px)
+			width: 100%
+			margin: 0 0 20px 0
+			min-height: inherit
+
+		img
+			display: block
+			margin: 0 auto
+			width: 80px
+
+		ul
+			padding: 0 !important
+			margin-bottom: 0 !important
+			li
+				width: 18% !important
+				margin-left: 1% !important
+				margin-right: 1% !important
+				list-style: none !important
+
+				&:before
+					display: none !important
+
+				a
+					.icon
+						left: 0 !important
+						margin: 0 auto !important
+						width: 100% !important
+
+	.tyfs_bottom
+		margin-bottom: 0px
+		margin-top: 40px
+
+		h2
+			font-family: bebas
+			color: #E74140
+
+		.tyfs_bar
+			padding-bottom: 5px
+			margin-bottom: 20px !important
+
+
+	.tyfs_boxwrapper
+		overflow: hidden
+		display: block
+
+	.tyfs_red
+		@include transition-property(all)
+		@include transition-duration(.3s)
+		&:hover
+			background-color: #e4e7e9
+
+
+
+
+#mce-responses
+	margin-top: 20px
+	width: 100% !important
+	display: block !important
+	color: white
+
+
+
+/* ---------------------------------------- awards footer ---------------------------------------- */
+
+.f_award_wrapper
+	width: 100%
+	display: block
+	overflow: hidden
+	background-color: white
+	margin-top: 40px
+
+	.f_award
+		padding: 40px
+		margin: auto
+		max-width: 1280px
+		width: auto
+		overflow: hidden
+
+		h4
+			text-align: center !important
+			color: #4B5C65 !important
+			display: inline-block !important
+			font-family: book !important
+			font-size: 35px !important
+			padding: 0 10px !important
+			width: 100% !important
+			margin-bottom: 40px !important
+
+		ul
+			width: 100%
+			padding-left: 0px !important
+
+			li
+				width: 33.33%
+				display: block
+				float: left
+
+
+
+				@media only screen and (max-width : 768px)
+					width: 100%
+					border-left: none !important
+					border-right: none !important			
+					border-bottom: 1px solid #dedede
+
+					&:last-child
+						border-bottom: none
+						border-top: none !important
+
+				&:last-child
+					border-left: 1px solid #dedede
+
+
+				&:first-child
+					border-right: 1px solid #dedede
+
+				&:last-child
+					border-left: 1px solid #dedede
+
+				a
+					color: #4B5C65 !important 
+
+					&:hover
+						p
+							opacity: 0.8
+						img
+							opacity: 0.8
+
+					p
+						display: block
+						margin-bottom: 20px
+						text-align: center
+						font-size: 1em
+						width: 100%
+						padding: 0px 20px
+						opacity: 1
+						@include transition-property(all)
+						@include transition-duration(.3s)
+
+						@media only screen and (max-width : 768px)
+							font-size: 0.75em
+					img
+						max-width: 100%
+						width: 200px
+						margin: 0 auto
+						display: block
+						opacity: 1
+						@include transition-property(all)
+						@include transition-duration(.3s)
+
+						@media only screen and (max-width : 768px)
+							display: none
+
+
+
+
+/* ---------------------------------------- My Profile ---------------------------------------- */
+
+
+.my_profile_wrapper
+
+	h2
+		color: #4b5c65
+		font-weight: normal
+		letter-spacing: 1px
+		line-height: 32px
+		margin-top: 0 !important
+		width: 100%
+		text-align: center
+		max-width: 650px
+		margin: 0 auto 20px	
+
+		b
+			font-size: 25px
+			font-weight: lighter !important	
+
+	p
+		margin: 0 auto !important
+		text-align: center
+
+	i
+		color: $red
+
+	label
+		color: #4b5c65 !important
+		font-family: OS Reg !important
+		font-size: 15px !important
+
+	input[type="text"], input[type="password"], input[type="email"]
+		background-color: transparent !important
+		border: 1px solid #4b5c65 !important
+		box-shadow: none !important
+		display: block
+		height: 40px !important
+		opacity: 0.8 !important
+		padding: 8px !important
+		transition-duration: 0.3s
+		transition-property: all
+		width: 60%
+
+	.stripe_title_icon_wrapper
+		padding-top: 40px
+		border-top: 1px solid #E6E6E6
+		display: block
+		margin: 40px auto 20px auto
+
+		.stripe_title_icon
+			background: url("../img/secure_round_icon.png") no-repeat scroll 0 0 rgba(0, 0, 0, 0)
+			display: block
+			height: 50px
+			margin: 0 auto
+			width: 50px
+
+
+	.stripe-connect 
+		display: block
+		margin-bottom: 1px
+		margin: 0 auto 20px auto
+
+		-webkit-font-smoothing: antialiased
+		border: 0
+		padding: 1px
+		height: 50px
+		text-decoration: none
+		width: 205px
+		cursor: pointer
+
+		-moz-user-select: none
+		-webkit-user-select: none
+		-ms-user-select: none
+		user-select: none
+
+
+	.stripe-connect span 
+		display: block
+		position: relative
+		padding: 0 12px 0 44px
+		height: 48px
+
+		background: #306199
+
+		font-size: 14px
+		line-height: 47px
+		color: white
+		font-weight: bold
+		font-family: "Helvetica Neue", Helvetica, Arial, sans-serif
+		@include transition-property(all)
+		@include transition-duration(.3s)
+
+		&:hover
+			background-color: #4E7BA0
+
+	.stripe-connect span:before 
+		content: ''
+		display: block
+		position: absolute
+		left: 11px
+		top: 50%
+		width: 23px
+		height: 48px
+		margin-top: -12px
+		background-repeat: no-repeat
+		background-size: 23px 24px
+
+
+	.stripe-connect:active 
+		background: #306199
+
+
+	.stripe-connect:active span 
+		color: #EEE
+		background: #306199
+
+	.stripe-connect:active span:before 
+
+
+
+	.stripe-connect.light-blue 
+		background: #306199
+
+	.stripe-connect.light-blue span 
+		color: #556F88
+		background: #306199
+
+
+	.stripe-connect.light-blue:active 
+		background: #306199
+
+
+	.stripe-connect.light-blue:active span 
+		color: #556F88
+		background: #306199
+
+	.stripe-connect.dark 
+		background: #306199
+
+
+	/* Images*/
+
+	.stripe-connect span:before, .stripe-connect.blue span:before
+		background-image: url("data:image/png;base64,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")
+
+
+	.stripe-connect.light-blue span:before
+		background-image: url("data:image/pngbase64,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")
+
+
+	/* Retina support */
+
+	@media only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min--moz-device-pixel-ratio: 1.5), only screen and (min-device-pixel-ratio: 1.5)
+
+		.stripe-connect span:before, .stripe-connect.blue span:before
+			background-image: url("data:image/pngbase64,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")
+
+		.stripe-connect.light-blue span:before
+			background-image: url("data:image/pngbase64,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")
+
+
+	.stripe_data_hide
+		display: none
+
+	.powered_stripe
+		padding-bottom: 40px
+		border-bottom: 1px solid #E6E6E6
+		display: block
+		margin: 40px auto 20px auto
+
+		svg
+			display: block
+			margin: 40px auto 0
+			width: 150px
+
+
+	#updateuser
+		display: block !important
+		margin: 15px auto 30px !important
+		width: 205px
+		float: none !important
+
+
+.pb_iphone_wp
+	display: block
+	float: left
+	margin-bottom: 20px
+	margin-top: 20px
+	width: 100%	
+
+	p
+		max-width: 100% !important
+
+.edit_connect_stripe
+	margin-top: 70px
+
+	h4
+		color: #4b5c65 !important
+		font-weight: normal !important
+		letter-spacing: 1px
+		line-height: 32px
+		margin-top: 0 !important
+		width: 100%
+		text-align: center
+		max-width: 650px
+		margin: 0 auto 20px	
+
+		b
+			font-size: 25px !important
+			font-weight: lighter !important	
+
+	p
+		margin: 0 auto !important
+		text-align: center
+
+	i
+		color: $red
+
+	.stripe_title_icon_wrapper
+		padding-top: 40px
+		border-top: 1px solid #E6E6E6
+		display: block
+		margin: 40px auto 20px auto
+
+		.stripe_title_icon
+			background: url("../img/secure_round_icon.png") no-repeat scroll 0 0 rgba(0, 0, 0, 0)
+			display: block
+			height: 50px
+			margin: 0 auto
+			width: 50px
+
+		.stripe_title_icon_ok
+			background: url("../img/ok_round_icon.png") no-repeat scroll 0 0 rgba(0, 0, 0, 0)
+			display: block
+			height: 50px
+			margin: 0 auto
+			width: 50px
+
+	.stripe-connect 
+		display: block
+		margin-bottom: 1px
+		margin: 0 auto 20px auto
+
+		-webkit-font-smoothing: antialiased
+		border: 0
+		padding: 1px
+		height: 50px
+		text-decoration: none
+		width: 205px
+		cursor: pointer
+
+		-moz-user-select: none
+		-webkit-user-select: none
+		-ms-user-select: none
+		user-select: none
+
+
+	.stripe-connect span 
+		display: block
+		position: relative
+		padding: 0 12px 0 44px
+		height: 48px
+
+		background: #306199
+
+		font-size: 14px
+		line-height: 47px
+		color: white
+		font-weight: bold
+		font-family: "Helvetica Neue", Helvetica, Arial, sans-serif
+		@include transition-property(all)
+		@include transition-duration(.3s)
+
+		&:hover
+			background-color: #4E7BA0
+
+	.stripe-connect span:before 
+		content: ''
+		display: block
+		position: absolute
+		left: 11px
+		top: 50%
+		width: 23px
+		height: 48px
+		margin-top: -12px
+		background-repeat: no-repeat
+		background-size: 23px 24px
+
+
+	.stripe-connect:active 
+		background: #306199
+
+
+	.stripe-connect:active span 
+		color: #EEE
+		background: #306199
+
+	.stripe-connect:active span:before 
+
+
+
+	.stripe-connect.light-blue 
+		background: #306199
+
+	.stripe-connect.light-blue span 
+		color: #556F88
+		background: #306199
+
+
+	.stripe-connect.light-blue:active 
+		background: #306199
+
+
+	.stripe-connect.light-blue:active span 
+		color: #556F88
+		background: #306199
+
+	.stripe-connect.dark 
+		background: #306199
+
+
+
+
+	.stripe-connect span:before, .stripe-connect.blue span:before
+		background-image: url("data:image/png;base64,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")
+
+
+	.stripe-connect.light-blue span:before
+		background-image: url("data:image/pngbase64,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")
+
+
+	/* Retina support */
+
+	@media only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min--moz-device-pixel-ratio: 1.5), only screen and (min-device-pixel-ratio: 1.5)
+
+		.stripe-connect span:before, .stripe-connect.blue span:before
+			background-image: url("data:image/pngbase64,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")
+
+		.stripe-connect.light-blue span:before
+			background-image: url("data:image/pngbase64,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")
+
+
+	.stripe_data_hide
+		display: none
+
+	.form-password
+		margin: 20px auto 20px auto
+
+	.powered_stripe
+		padding-bottom: 40px
+		display: block
+		margin: 40px auto 20px auto
+
+		svg
+			display: block
+			margin: 40px auto 0
+			width: 150px
+
+.entry-content .memberdeck .md-profile #stripe-connect-header
+	color: #4b5c65 !important
+	font-weight: normal
+	letter-spacing: 1px
+	line-height: 32px
+	margin-top: 0 !important
+	width: 100%
+	text-align: center
+	max-width: 650px
+	margin: 0 auto 20px !important
+	font-size: 38px
+
+.entry-content .memberdeck .md-profile #stripe-connect-header b
+	font-size: 25px
+	font-weight: lighter !important
+
+.pldg-register
+	h3
+		font-family: book !important
+		font-size: 38px !important
+	#heading
+		color: #CA3433
+		text-align: center
+
+	#sub-heading
+		text-align: center
+
+	#register-form
+		height: 500px
+		background-size: cover
+
+		#register-form-form
+			width: 380px
+			float: right
+			height: 100%
+			background-color: #2d425c
+			padding-top: 20px
+			padding-left: 20px
+			padding-right: 20px
+			padding-bottom: 20px
+			
+			@media only screen and (max-width : 780px)
+				width: 100%
+
+			form .input 
+				width: 100%
+				height: 40px
+				line-height: 40px
+				font-size: 20px
+				padding-left: 10px
+				margin-bottom: 10px
+			
+			form #register-form-button
+				height: 64px
+				margin-top: 0px !important
+				margin-bottom: 10px
+
+		#register-form-title
+			color: white !important
+			text-align: center
+
+		#register-form-footer
+			color: white !important
+			text-align: center
+			font-size: 24px !important
+
+		#register-form-button
+			width: 100%
+			background-image: -webkit-gradient( linear, right bottom, right top, color-stop(0, #e51837), color-stop(0.66, rgb(255, 50, 81)) )
+			border: #e51837 solid 1px
+			height: 64px
+			font-size: 22px
+			border-radius: 5px
+
+		p input.button
+			height: 60px
+			margin-top: 0px !important
+	
+	#testimonial h3
+		color: black !important
+		font-size: 28px !important
+	
+	#testimonial img
+		float: left
+		margin-right: 40px
+		margin-bottom: 40px
+
+	#success-stories h3
+		text-align: center
+	
+	#benefits
+		background-color: #d8d8d8
+		border: 1px solid #d8d8d8
+		border-radius: 0px 0px 0px 0px
+		margin: 5%
+		width: 90%
+		@media only screen and (min-width : 1290px)
+			padding-bottom: 40px
+
+		h3
+			text-align: center
+			margin-bottom: 20px !important
+			margin-top: 20px !important
+
+		#benefits-content
+			display: inline-block
+			width: 44%
+			margin: 2%
+			margin-top: 0%
+			height: 300px
+			font-size: 16px
+
+			@media only screen and (max-width : 1290px)
+				width: 100%
+				display: block
+				margin: auto
+				height: inherit
+
+			ul
+				list-style-image: url('../img/check.png')
+
+		#benefits-image
+			width: 100%
+			min-height: 240px
+
+			@media only screen and (max-width : 1290px)
+				min-height: inherit
+
+		#benefits-image-div
+			height: 300px
+			float: left
+			width: 50%
+			margin-bottom: 2%
+
+			@media only screen and (max-width : 1290px)
+				width: 50%
+				display: block
+				margin: auto
+				text-align: center
+				float: none
+				height: inherit
+
+			@media only screen and (max-width : 780px)
+				width: 100%
+
+	#testimonials .testimonial-div
+		width: 46%
+		float: left
+		margin: 2%
+		position: relative
+
+		.testimonial-text
+			top: -50px
+			position: relative
+			border: 2px solid #d8d8d8
+			border-radius: 6px
+			padding: 2%
+			padding-top: 12%
+
+			.testimonial-name
+				text-align: right
+
+	#testimonials img		
+		width: 175px
+		height: 105px
+		display: block
+		margin: auto
+		position: relative
+		z-index: 1
+
+	.testimonial-image
+		float: left
+		min-width: 100px
+		min-height: 100px
+		margin-right: 20px
+		margin-bottom: 20px
+
+	#testimonial-lower
+		margin-bottom: 5%
+
+	#testimonial-upper
+		margin-top: 5%
+		margin-bottom: 5%
+
+	#register
+		padding-bottom: 5%
+	
+	#registerform label
+		display: none
+	
+	#registerform
+		#pass-strength-result, .indicator-hint
+			display: none
+
+		br
+			display: none
+		p
+			width: 100%
+			margin: 0%
+
+			input
+				width: 100%
+				height: 40px
+				line-height: 40px
+				font-size: 20px
+				padding-left: 10px
+				margin-bottom: 10px
+
+	.fund-single h2
+		color: white
+
+	.success-story
+		width: 33%
+		display: inline
+		float: left
+		padding: 1%
+
+		@media only screen and (max-width : 950px)
+			width: 100%
+		
+		.fund-single-a
+			width: 100%
+
+		.success-story-name
+			text-align: center
+			width: 100%
+
+		.success-story-find-out
+			width: 100%
+			text-align: center
+			
+			a
+				text-align: center			
+				color: black
+
+		.status h1
+			margin-bottom: 30px
+	
+	.social-tiles	
+		display: inherit
+	
+		.social-tile
+			margin-right: 10px
+			float: left
+		
+		@media only screen and (min-width : 1290px)
+			float: right
+
+		@media only screen and (min-width : 1290px)
+			position: relative
+			top: -70px
+
+		
